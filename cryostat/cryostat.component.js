@@ -20,6 +20,7 @@ angular.module("cryostat", []).component("cryostat", {
                 .get("php-db-conn/np02cachedvals.php?elemName=cryostat")
                 .then(function (result) {
                     const res = result.data;
+                    console.log(res);
 
                     self.NP02_DCS_01_TSS_001_AA_BA = res["47897559194395"][0];
                     self.NP02_DCS_01_TSS_001_AA_BB = res["47897575971611"][0];
