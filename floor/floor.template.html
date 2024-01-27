@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="css/floor.css">
+<div class="container">
+    <div id="pageTitle">{{$ctrl.pageTitle}}</div>
+    <img id="detector" src="img/floor.png" alt="floor"/>
+    <div id="timestamp_label">Timestamp:<br/><span id="timestamp">{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span></div>
+    <div id="ambient">Humidity:<br/><a target="_blank" href="#!/histogram/47910779640603"><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a><br/>Ambient temperature:<br/><a target="_blank" href="#!/histogram/47910796417819"><span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span></a><br/>Ambient pressure:<br/><a target="_blank" href="#!/histogram/47910813195035"><span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span></a></div>
+    <div id="air813">
+        AIR_08_13: <br/><a target="_blank" href="#!/histogram/47900579093275"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_08_13 | number: 1 }}K</span></a>
+    </div>
+    <div id="air814">
+        AIR_08_14: <br/><a target="_blank" href="#!/histogram/47900595870491"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_08_14 | number: 1 }}K</span></a>
+    </div>
+    <div id="air815">
+        AIR_08_15: <br/><a target="_blank" href="#!/histogram/47900612647707"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_08_15 | number: 1 }}K</span></a>
+    </div>
+    <div id="air816">
+        AIR_08_16: <br/><a target="_blank" href="#!/histogram/47900629424923"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_08_16 | number: 1 }}K</span></a>
+    </div>
+    <div id="air817">
+        AIR_08_17: <br/><a target="_blank" href="#!/histogram/47900646202139"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_08_17 | number: 1 }}K</span></a>
+    </div>
+    <div id="air818">
+        AIR_08_18: <br/><a target="_blank" href="#!/histogram/47900662979355"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_08_18 | number: 1 }}K</span></a>
+    </div>
+
+</div>

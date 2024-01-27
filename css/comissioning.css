@@ -1,0 +1,77 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+} 
+.ambient {
+  margin-top: 50px;
+  display: flex;
+  position: relative;
+  right: 4vw;
+  justify-content: flex-end;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+  padding-bottom: 20px;
+}
+.ambient_content {
+  border: 1px solid white;
+  padding: 4px 10px;
+  text-align: right;
+}
+.page_title_and_timestamps {
+  padding-bottom: 15px;
+}
+.dqm__link {
+  color: green;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 12px;
+}
+.table {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.table_wrapper {
+  padding: 0 10px;
+}
+.table__row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.data__cell {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: center;
+  line-height: 100%;
+  flex-grow: 1;
+}
+.data__cell,
+.ambient_content {
+  color: white;
+  font-size: 12px;
+
+}
+@media screen and (min-width: 620px) {
+  .table__row {
+    flex-direction: row;
+
+  }
+}
+@media screen and (min-width: 767px) {
+  .data__cell,
+  .ambient_content {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .data__cell,
+  .ambient_content {
+    font-size: 18px;
+  }
+  .table {
+    padding-top: 80px;
+  }
+}

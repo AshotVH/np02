@@ -1,0 +1,229 @@
+<link rel="stylesheet" href="css/purity.css">
+<div class="container">
+    <div id="pageTitle">{{$ctrl.pageTitle}}</div>
+    <div id="timestamp_label" style="position: fixed; right: 0;">Timestamp:<br/><span id="timestamp" style="font-size: 2.2vmin;">{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span></div>
+
+
+    <table id="prm0">
+        <tr>
+            <th colspan="2">PrM 0</th>
+        </tr>
+        <tr>
+            <td>Electron lifetime:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_e_lifetime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_e_lifetime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Corrected electron lifetime:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_corrected_e_lifetime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_corrected_e_lifetime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Electron drift time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_e_driftime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_e_driftime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode peak voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_Q_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_Q_C | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode peak time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_T_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_T_C | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode baseline voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_BL_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_BL_C | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode peak voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_Q_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_Q_A | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode peak time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_T_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_T_A | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode baseline voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM0_PrM_BL_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM0_PrM_BL_A | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Voltage On/Off Status</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel00_Status_On"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel00_Status_On == 1 ? "On" : "Off" }} </span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Sense Voltage</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel00_MeasurementSenseVoltage"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel00_MeasurementSenseVoltage__online___value | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Current</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel00_MeasurementCurrent"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel00_MeasurementCurrent__online___value | number: 5 }} A</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Measurement Temperature</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel00_MeasurementTemperature"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel00_MeasurementTemperature__online___value | number: 5 }} &#8451;</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Voltage On/Off Status</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel00_Status_On"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel00_Status_On == 1 ? "On" : "Off" }} </span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Sense Voltage</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel00_MeasurementSenseVoltage"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel00_MeasurementSenseVoltage__online___value | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Current</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel00_MeasurementCurrent"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel00_MeasurementCurrent__online___value | number: 5 }} A</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Measurement Temperature</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel00_MeasurementTemperature"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel00_MeasurementTemperature__online___value | number: 5 }} &#8451;</span></a></td>
+        </tr>
+    </table>
+
+    <table id="prm1">
+        <tr>
+            <th colspan="2">PrM 1</th>
+        </tr>
+        <tr>
+            <td>Electron lifetime:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_e_lifetime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_e_lifetime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Corrected electron lifetime:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_corrected_e_lifetime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_corrected_e_lifetime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Electron drift time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_e_driftime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_e_driftime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode peak voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_Q_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_Q_C | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode peak time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_T_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_T_C | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode baseline voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_BL_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_BL_C | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode peak voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_Q_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_Q_A | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode peak time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_T_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_T_A | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode baseline voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM1_PrM_BL_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM1_PrM_BL_A | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Voltage On/Off Status</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel01_Status_On"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel01_Status_On == 1 ? "On" : "Off" }} </span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Sense Voltage</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel01_MeasurementSenseVoltage"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel01_MeasurementSenseVoltage__online___value | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Current</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel01_MeasurementCurrent"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel01_MeasurementCurrent__online___value | number: 5 }} A</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Measurement Temperature</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel01_MeasurementTemperature"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel01_MeasurementTemperature__online___value | number: 5 }} &#8451;</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Voltage On/Off Status</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel01_Status_On"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel01_Status_On == 1 ? "On" : "Off" }} </span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Sense Voltage</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel01_MeasurementSenseVoltage"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel01_MeasurementSenseVoltage__online___value | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Current</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel01_MeasurementCurrent"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel01_MeasurementCurrent__online___value | number: 5 }} A</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Measurement Temperature</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel01_MeasurementTemperature"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel01_MeasurementTemperature__online___value | number: 5 }} &#8451;</span></a></td>
+        </tr>
+    </table>
+
+    <table id="prm2">
+        <tr>
+            <th colspan="2">PrM 2</th>
+        </tr>
+        <tr>
+            <td>Electron lifetime:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_e_lifetime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_e_lifetime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Corrected electron lifetime:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_corrected_e_lifetime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_corrected_e_lifetime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Electron drift time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_e_driftime"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_e_driftime | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode peak voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_Q_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_Q_C | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode peak time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_T_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_T_C | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode baseline voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_BL_C"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_BL_C | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode peak voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_Q_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_Q_A | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode peak time:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_T_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_T_A | number: 5 }} ms</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode baseline voltage:</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_PrM2_PrM_BL_A"><span class="value">{{ $ctrl.NP02_DCS_01_PrM2_PrM_BL_A | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Voltage On/Off Status</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel02_Status_On"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel02_Status_On == 1 ? "On" : "Off" }} </span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Sense Voltage</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel02_MeasurementSenseVoltage"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel02_MeasurementSenseVoltage__online___value | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Current</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel02_MeasurementCurrent"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel02_MeasurementCurrent__online___value | number: 5 }} A</span></a></td>
+        </tr>
+        <tr>
+            <td>Cathode Measurement Temperature</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel02_MeasurementTemperature"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board2_Channel02_MeasurementTemperature__online___value | number: 5 }} &#8451;</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Voltage On/Off Status</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel02_Status_On"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel02_Status_On == 1 ? "On" : "Off" }} </span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Sense Voltage</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel02_MeasurementSenseVoltage"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel02_MeasurementSenseVoltage__online___value | number: 5 }} V</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Current</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel02_MeasurementCurrent"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel02_MeasurementCurrent__online___value | number: 5 }} A</span></a></td>
+        </tr>
+        <tr>
+            <td>Anode Measurement Temperature</td>
+            <td><a target="_blank" ng-href="#!/histogram/NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel02_MeasurementTemperature"><span class="value"> {{ $ctrl.NP02_DCS_01_Wiener_MPOD_PrM_Board3_Channel02_MeasurementTemperature__online___value | number: 5 }} &#8451;</span></a></td>
+        </tr>
+    </table>
+
+</div>

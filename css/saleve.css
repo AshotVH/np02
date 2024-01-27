@@ -1,0 +1,704 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.container {
+  position: relative;
+}
+.table_text {
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: azure;
+  font-size: 8px;
+  line-height: 150%;
+}
+.saleve__img {
+  position: absolute;
+  width: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+}
+.ambient {
+  position: absolute;
+  right: 4vw;
+  top: 400px;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.2s;
+}
+.ambient_content {
+  border: 1px solid white;
+  padding: 5px 6px;
+  text-align: right;
+}
+.data_container {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.saleve__data_table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 95%;
+}
+.data_cell {
+  border: 1px solid white;
+  padding: 4px 5px;
+  min-width: 150px;
+  margin: 1px;
+}
+.data_cell div {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 480px) {
+  .table_text {
+    font-size: 10px;
+  }
+  .saleve__img {
+    top: 35px;
+    width: 200px;
+  }
+  .data_container {
+    padding-top: 130px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .data_container {
+    padding-top: 170px;
+  }
+  .saleve__data_table {
+    justify-content: center;
+  }
+  .ambient {
+    top: 500px;
+  }
+  .saleve__img {
+    width: 280px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .saleve__img {
+    width: 380px;
+    top: 50px;
+  }
+  .data_container {
+   padding-top: 250px;
+  }
+}
+
+@media screen and (max-height: 1080px) {
+  #left {
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    width: 25vw;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #right {
+    position: fixed;
+    right: 30vw;
+    top: 10vh;
+    width: 15vw;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B4_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 46vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #DS_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 51vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_01 {
+    position: fixed;
+    left: 70vw;
+    top: 23vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_02 {
+    position: fixed;
+    left: 70vw;
+    top: 35vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_03 {
+    position: fixed;
+    left: 65vw;
+    top: 45vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B3_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 55vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B2_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 64vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_01 {
+    position: fixed;
+    left: 70vw;
+    bottom: 10vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_02 {
+    position: fixed;
+    left: 70vw;
+    bottom: 7vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_03 {
+    position: fixed;
+    left: 70vw;
+    bottom: 4vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_04 {
+    position: fixed;
+    left: 51vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_01 {
+    position: fixed;
+    left: 33vw;
+    bottom: 9vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_02 {
+    position: fixed;
+    left: 41vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_03 {
+    position: fixed;
+    left: 25vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_01 {
+    position: fixed;
+    right: 15vw;
+    top: 79vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_02 {
+    position: fixed;
+    right: 15vw;
+    top: 76vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_03 {
+    position: fixed;
+    right: 15vw;
+    top: 72vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_04 {
+    position: fixed;
+    right: 15vw;
+    top: 65vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+}
+
+@media screen and (min-height: 1100px) and (max-height: 2000px) {
+  #left {
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    width: 25vw;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #right {
+    position: fixed;
+    right: 30vw;
+    top: 10vh;
+    width: 15vw;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B4_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 46vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #DS_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 51vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_01 {
+    position: fixed;
+    left: 70vw;
+    top: 23vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_02 {
+    position: fixed;
+    left: 70vw;
+    top: 35vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_03 {
+    position: fixed;
+    left: 65vw;
+    top: 45vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B3_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 55vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B2_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 64vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_01 {
+    position: fixed;
+    left: 70vw;
+    bottom: 10vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_02 {
+    position: fixed;
+    left: 70vw;
+    bottom: 7vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_03 {
+    position: fixed;
+    left: 70vw;
+    bottom: 4vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_04 {
+    position: fixed;
+    left: 51vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_01 {
+    position: fixed;
+    left: 33vw;
+    bottom: 9vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_02 {
+    position: fixed;
+    left: 41vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_03 {
+    position: fixed;
+    left: 25vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_01 {
+    position: fixed;
+    right: 15vw;
+    top: 79vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_02 {
+    position: fixed;
+    right: 15vw;
+    top: 76vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_03 {
+    position: fixed;
+    right: 15vw;
+    top: 72vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_04 {
+    position: fixed;
+    right: 15vw;
+    top: 65vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+}
+
+@media screen and (min-height: 1100px) and (min-width: 3000px) {
+  #left {
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    width: 25vw;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #right {
+    position: fixed;
+    right: 30vw;
+    top: 10vh;
+    width: 15vw;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B4_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 46vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #DS_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 51vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_01 {
+    position: fixed;
+    left: 70vw;
+    top: 23vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_02 {
+    position: fixed;
+    left: 70vw;
+    top: 35vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #TC_SS_03 {
+    position: fixed;
+    left: 65vw;
+    top: 45vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B3_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 55vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #B2_SS_01 {
+    position: fixed;
+    left: 15vw;
+    top: 64vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_01 {
+    position: fixed;
+    left: 70vw;
+    bottom: 10vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_02 {
+    position: fixed;
+    left: 70vw;
+    bottom: 7vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_03 {
+    position: fixed;
+    left: 70vw;
+    bottom: 4vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #BC_SS_04 {
+    position: fixed;
+    left: 51vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_01 {
+    position: fixed;
+    left: 33vw;
+    bottom: 9vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_02 {
+    position: fixed;
+    left: 41vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MEM_SS_03 {
+    position: fixed;
+    left: 25vw;
+    bottom: 5vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_01 {
+    position: fixed;
+    right: 15vw;
+    top: 79vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_02 {
+    position: fixed;
+    right: 15vw;
+    top: 76vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_03 {
+    position: fixed;
+    right: 15vw;
+    top: 72vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #MC_LSS_04 {
+    position: fixed;
+    right: 15vw;
+    top: 65vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+}

@@ -1,0 +1,252 @@
+
+@media screen and (max-height: 1080px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  #detector {
+    display: block;
+    position: fixed;
+    top: 15vh;
+    left: 5vw;
+    height: 75vh;
+  }
+
+  #ambient {
+    position: fixed;
+    right: 10vw;
+    top: 20vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #bellegarde {
+    position: fixed;
+    left: 50vw;
+    top: 75vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #jura {
+    position: fixed;
+    left: 15vw;
+    top: 75vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #lausanne {
+    position: fixed;
+    left: 15vw;
+    top: 20vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #saleve {
+    position: fixed;
+    left: 50vw;
+    top: 20vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #topSide {
+    position: fixed;
+    left: 34vw;
+    top: 40vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+}
+
+@media screen and (min-height: 1100px) and (max-height: 2000px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  #detector {
+    display: block;
+    position: fixed;
+    top: 35vh;
+    left: 15vw;
+    width: 85vmin;
+  }
+
+  #ambient {
+    position: fixed;
+    right: 10vw;
+    top: 20vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #bellegarde {
+    position: fixed;
+    left: 45vw;
+    top: 68vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #jura {
+    position: fixed;
+    left: 20vw;
+    top: 68vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #lausanne {
+    position: fixed;
+    left: 20vw;
+    top: 37vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #saleve {
+    position: fixed;
+    left: 45vw;
+    top: 37vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #topSide {
+    position: fixed;
+    left: 35vw;
+    top: 49vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+}
+
+@media screen and (min-height: 2000px) and (min-width: 3000px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  #detector {
+    display: block;
+    position: fixed;
+    top: 25vh;
+    left: 20vw;
+    width: 100vmin;
+  }
+
+  #ambient {
+    position: fixed;
+    right: 10vw;
+    top: 20vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+  }
+
+  #bellegarde {
+    position: fixed;
+    left: 60vw;
+    top: 65vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #jura {
+    position: fixed;
+    left: 35vw;
+    top: 65vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #lausanne {
+    position: fixed;
+    left: 35vw;
+    top: 30vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #saleve {
+    position: fixed;
+    left: 65vw;
+    top: 30vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+
+  #topSide {
+    position: fixed;
+    left: 45vw;
+    top: 35vh;
+    text-align: right;
+    color: gray;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2vmin;
+    background-color: #333333;
+  }
+}

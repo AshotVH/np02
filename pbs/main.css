@@ -1,0 +1,63 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 2.0vw;
+}
+
+#descr {
+    position: relative;
+    top: 3vh;
+}
+
+#generator {
+    position: relative;
+    top: 4vh;
+}
+
+#tGen {
+    position: relative;
+    top: 5vh;
+}
+
+#PBSID {
+    position: relative;
+    top: 5vh;
+}
+
+#codes {
+    position: relative;
+    top: 5vh;
+}
+
+#barcode {
+    position: relative;
+}
+
+#qrcode {
+    position: absolute;
+    top: 0vh;
+    left: 40vw;
+}
+
+#decoder {
+    position: relative;
+    top: 10vh;
+}
+
+#resultIDempty {
+    position: relative;
+    top: 2vh;
+    left: 2vw;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+}
+
+#camscan {
+    position: relative;
+    top: 15vh;
+}

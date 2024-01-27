@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="css/camera.css">
+<link rel="stylesheet" href="css/VLCPlayer.css">
+<div class="crate_container">
+    <div id="pageTitle">{{$ctrl.pageTitle}}</div>
+    <div class="videogular-container">
+    <videogular vg-theme="controller.config.theme">
+        <vg-media vg-src="controller.config.sources" vg-dash>
+        </vg-media>
+    </videogular>
+    </div>
+
+    <!--a href="http://np02-cam-002.cern.ch/video1.mjpeg" target="_blank"><img id="cam-202" src="http://np02-cam-202.cern.ch/video1.mjpeg" style="position: absolute; top: 70vh; left: 40vw; width: 25vh;"></a>
+    <a href="http://np02-cam-003.cern.ch/video1.mjpeg" target="_blank"><img id="cam-203" src="http://np02-cam-203.cern.ch/video1.mjpeg" style="position: absolute; top: 70vh; left: 60vw; width: 25vh;"></a>
+    <a href="http://np02-cam-201.cern.ch/video1.mjpeg" target="_blank"><img id="cam-201" src="http://np02-cam-201.cern.ch/video1.mjpeg" style="position: absolute; top: 70vh; left: 20vw; width: 25vh;"/></a>
+    <a href="http://np02-cam-202.cern.ch/video1.mjpeg" target="_blank"><img id="cam-202" src="http://np02-cam-202.cern.ch/video1.mjpeg" style="position: absolute; top: 70vh; left: 40vw; width: 25vh;"></a>
+    <a href="http://np02-cam-203.cern.ch/video1.mjpeg" target="_blank"><img id="cam-203" src="http://np02-cam-203.cern.ch/video1.mjpeg" style="position: absolute; top: 70vh; left: 60vw; width: 25vh;"></a-->
+    <a href="http://np02-cam-201.cern.ch/video1.mjpeg" target="_blank"><img id="cam-201" src="http://np02-cam-201.cern.ch/video1.mjpeg" style="position: absolute; top: 70vh; left: 20vw; width: 25vh;"/></a>
+    <a href="http://np02-cam-202.cern.ch/video1.mjpeg" target="_blank"><img id="cam-202" src="http://np02-cam-202.cern.ch/video1.mjpeg" style="position: absolute; top: 70vh; left: 40vw; width: 25vh;"></a>
+    <a href="http://np02-cam-203.cern.ch/video1.mjpeg" target="_blank"><img id="cam-203" src="http://np02-cam-203.cern.ch/video1.mjpeg" style="position: absolute; top: 70vh; left: 60vw; width: 25vh;"></a>
+    <vlcplayer vlc-url="rtsp://protodune-dp01.cern.ch:554" vlc-filename="live1.sdp" vlc-autoplay="true"></vlcplayer>
+    <div id="ambient">Humidity:<br/><a target="_blank" href="#!/histogram/NP02_MHT0100AI"><span class="value">{{ $ctrl.NP02_MHT0100AI[0].Mnish | number: 1 }} %</span></a><br/>Ambient temperature:<br/><a target="_blank" href="#!/histogram/NP02_TT0100AI"><span class="value">{{ $ctrl.NP02_TT0100AI[0].Mnish | number: 1 }} &#8451;</span></a><br/>Ambient pressure:<br/><a target="_blank" href="#!/histogram/NP02_PT0106AI"><span class="value">{{ $ctrl.NP02_PT0106AI[0].Mnish | number: 1 }} mbar</span></a></div>
+</div>

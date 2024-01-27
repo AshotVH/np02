@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  ng-app="ng02SlowControlApp"
+  xmlns:style="http://www.w3.org/1999/xhtml"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height, initial-scale=1"
+    />
+    <title>NP02 Slow Control Web Interface</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="dependencies/angular-moment.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-sanitize.min.js"></script>
+    <script src="dependencies/hammer.js"></script>
+    <!-- <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/boost.js"></script> -->
+    <script src="dependencies/highcharts/highstock.js"></script>
+    <script src="dependencies/highcharts/exporting.js"></script>
+    <script src="dependencies/highcharts/series-label.js"></script>
+    <script src="dependencies/highcharts/boost.js"></script>
+    <script src="https://highcharts.github.io/export-csv/export-csv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="dependencies/highcharts-export-clientside.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="home/home.module.js"></script>
+    <script src="home/home.component.js"></script>
+    <script src="dependencies/leader-line.js"></script>
+    <script src="bellegarde/bellegarde.module.js"></script>
+    <script src="bellegarde/bellegarde.component.js"></script>
+    <script src="cachedhist/cachedhist.module.js"></script>
+    <script src="cachedhist/cachedhist.component.js"></script>
+    <script src="comissioning/comissioning.module.js"></script>
+    <script src="comissioning/comissioning.component.js"></script>
+    <script src="crptemps/crptemps.module.js"></script>
+    <script src="crptemps/crptemps.component.js"></script>
+    <script src="cryogenics/cryogenics.module.js"></script>
+    <script src="cryogenics/cryogenics.component.js"></script>
+    <script src="cryostat/cryostat.module.js"></script>
+    <script src="cryostat/cryostat.component.js"></script>
+    <script src="floor/floor.module.js"></script>
+    <script src="floor/floor.component.js"></script>
+    <script src="gauges/gauges.module.js"></script>
+    <script src="gauges/gauges.component.js"></script>
+    <script src="groundplanes/groundplanes.module.js"></script>
+    <script src="groundplanes/groundplanes.component.js"></script>
+    <script src="histogram/histogram.module.js"></script>
+    <script src="histogram/histogram.component.js"></script>
+    <script src="histogramaverage/histogramaverage.module.js"></script>
+    <script src="histogramaverage/histogramaverage.component.js"></script>
+    <script src="histogramrange/histogramrange.module.js"></script>
+    <script src="histogramrange/histogramrange.component.js"></script>
+    <script src="inside/inside.module.js"></script>
+    <script src="inside/inside.component.js"></script>
+    <script src="insidelayout/insidelayout.module.js"></script>
+    <script src="insidelayout/insidelayout.component.js"></script>
+    <script src="jura/jura.module.js"></script>
+    <script src="jura/jura.component.js"></script>
+    <script src="lausanne/lausanne.module.js"></script>
+    <script src="lausanne/lausanne.component.js"></script>
+    <script src="lems/lems.module.js"></script>
+    <script src="lems/lems.component.js"></script>
+    <script src="links/links.module.js"></script>
+    <script src="links/links.component.js"></script>
+    <script src="multiplexer/multiplexer.module.js"></script>
+    <script src="multiplexer/multiplexer.component.js"></script>
+    <script src="pds/pds.module.js"></script>
+    <script src="pds/pds.component.js"></script>
+    <script src="purity/purity.module.js"></script>
+    <script src="purity/purity.component.js"></script>
+    <script src="saleve/saleve.module.js"></script>
+    <script src="saleve/saleve.component.js"></script>
+    <script src="straingaugeshist/straingaugeshist.module.js"></script>
+    <script src="straingaugeshist/straingaugeshist.component.js"></script>
+    <script src="tinternal/tinternal.module.js"></script>
+    <script src="tinternal/tinternal.component.js"></script>
+    <script src="underfloor/underfloor.module.js"></script>
+    <script src="underfloor/underfloor.component.js"></script>
+    <script src="zmonitor/zmonitor.module.js"></script>
+    <script src="zmonitor/zmonitor.component.js"></script>
+    <script src="coldbox/coldbox.module.js"></script>
+    <script src="coldbox/coldbox.component.js"></script>
+    <script src="vdcontrol/vdcontrol.module.js"></script>
+    <script src="vdcontrol/vdcontrol.component.js"></script>
+    <script src="pl506/pl506.module.js"></script>
+    <script src="pl506/pl506.component.js"></script>
+    <script src="vdcam/vdcam.module.js"></script>
+    <script src="vdcam/vdcam.component.js"></script>
+    <script src="histogramvd/histogramvd.module.js"></script>
+    <script src="histogramvd/histogramvd.component.js"></script>
+    <script src="testpage/testpage.component.js"></script>
+
+    <script>
+      function closeNav(event) {
+        event.stopPropagation();
+        document.getElementById("menu").classList.remove("sidenav--opened");
+      }
+
+      function toggleNav() {
+        document.getElementById("menu").classList.toggle("sidenav--opened");
+      }
+    </script>
+  </head>
+
+  <body>
+    <img
+      class="openbtn"
+      onclick="toggleNav()"
+      id="knopka"
+      src="img/menu_icon.png"
+    />
+    <div id="menu" class="sidenav" onclick="toggleNav()">
+      <div class="closebtn" onclick="closeNav()">
+        <img class="closebtn_img" src="img/menu_exit.png" alt="close menu" />
+      </div>
+      <a href="#!/">Home</a>
+      <a href="#!/cryostat">NP02 Cryostat</a>
+      <a href="#!/straingaugeshist">NP02 Gauges</a>
+      <a href="#!/inside">NP02 T-Insulation</a>
+      <a href="#!/tinternal">NP02 T-Internal</a>
+      <a href="#!/crptemps">NP02 CRP Temperatures</a>
+      <a href="#!/multiplexer">NP02 T-multiplexer</a>
+      <!--    <a href="#!/purity">NP02 Purity Monitors</a>-->
+      <a
+        href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/camera-test/index.html"
+        >NP02 Cameras</a
+      >
+      <a href="#!/zmonitor">NP02 Z-monitor</a>
+      <a href="#!/comissioning">NP02 Commissioning</a>
+      <a href="#!/cryogenics">NP02 Cryogenics</a>
+      <a href="#!/groundplanes">NP02 High Voltage</a>
+      <a href="#!/lems">NP02 LEMs</a>
+      <a href="#!/pds">NP02 PDS</a>
+      <a href="#!/coldbox">NP02 Coldbox</a>
+      <a href="#!/vdcontrol">NP02 VD HV CRP Control</a>
+      <a href="#!/pl506">NP02 VD PL506 Control</a>
+      <a href="#!/vdcam">NP02 VD Camera Control</a>
+      <a href="#">Charge monitoring (in progress)</a>
+      <a href="#!/underfloor">NP02 Under floor</a>
+      <a href="#!/links">Useful links</a>
+      <a href="#!/testpage">Test Page</a>
+      <a href="mailto:cernbox-project-np02-slow-control-admins@cern.ch"
+        >Contact web admins</a
+      >
+    </div>
+    <div ng-view></div>
+  </body>
+</html>

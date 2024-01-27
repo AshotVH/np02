@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="css/underfloor.css">
+<div class="container">
+    <div class="page_title_and_timestamps">
+        <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+        <div id="timestamp_label" class="timestamp_label">
+          Timestamp:<br />
+          <span id="timestamp" class="timestamp"
+            >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+          >
+        </div>
+    <div class="det_img_wrapper">
+        <div class="det_img_container">
+            <img class="udfl_det_img" src="img/underfloor.png" alt="underfloor"/>
+            <div class="sensor_item">
+                TE0010: <br/><a target="_blank" href="#!/histogram/47899773786907"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_13 | number: 1 }}K</span></a>
+            </div>
+            <div class="sensor_item">
+                TE0011: <br/><a target="_blank" href="#!/histogram/47899790564123"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_14 | number: 1 }}K</span></a>
+            </div>
+            <div class="sensor_item">
+                TE0012: <br/><a target="_blank" href="#!/histogram/47899807341339"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_15 | number: 1 }}K</span></a>
+            </div>
+            <div class="sensor_item">
+                TE0013: <br/><a target="_blank" href="#!/histogram/47899824118555"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_16 | number: 1 }}K</span></a>
+            </div>
+            <div class="sensor_item">
+                TE0014: <br/><a target="_blank" href="#!/histogram/47899840895771"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_17 | number: 1 }}K</span></a>
+            </div>
+            <div class="sensor_item">
+                TE0015: <br/><a target="_blank" href="#!/histogram/47899857672987"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_18 | number: 1 }}K</span></a>
+            </div>
+            <div class="sensor_item">
+                TE0016: <br/><a target="_blank" href="#!/histogram/47899874450203"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_19 | number: 1 }}K</span></a>
+            </div>
+            <div class="sensor_item">
+                TE0017: <br/><a target="_blank" href="#!/histogram/47899891227419"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_20 | number: 1 }}K</span></a>
+            </div>
+            <div class="sensor_item">
+                TE0018: <br/><a target="_blank" href="#!/histogram/47899908004635"><span class="value">{{ $ctrl.NP02_DCS_01_AIR_06_21 | number: 1 }}K</span></a>
+            </div>
+            <div class="beam_entrance">Beam entrance</div>
+            <div class="protego">Protego</div>
+            <div class="top_view">Top view</div>
+        </div>
+    </div>
+       
+   
+
+    <div
+    id="ambient"
+    class="ambient"
+    ng-model="toggle10"
+    ng-class="toggle10 ? 'data-container--large' : ''"
+    ng-click="toggle10=!toggle10"
+  >
+    <div class="ambient_content table_text">
+      Humidity:
+      <br />
+      <a target="_blank" href="#!/histogram/47910779640603">
+        <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+      </a>
+      <br />
+      Ambient temperature:
+      <br />
+      <a target="_blank" href="#!/histogram/47910796417819">
+        <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+      </a>
+      <br />
+      Ambient pressure:
+      <br />
+      <a target="_blank" href="#!/histogram/47910813195035">
+        <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+      </a>
+    </div>
+  </div>
+</div>

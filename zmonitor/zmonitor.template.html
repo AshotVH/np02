@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="css/zmonitor.css">
+<div class="zmonitor_container">
+    <div class="container">
+        <div class="page_title_and_timestamps">
+          <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+          <div id="timestamp_label" class="timestamp_label">
+            Timestamp:<br />
+            <span id="timestamp" class="timestamp"
+              >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+            >
+          </div>
+        </div>
+    </div>
+
+    <div class="zmonitor_table">
+        <div class="zmonitor_table__item table_text">RES: <a target="_blank" href="#!/histogram/47364161143323"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_RES | number: 2 }} &#8486;</span></a></div>
+        <div class="zmonitor_table__item table_text">TH: <a target="_blank" href="#!/histogram/47364161143579"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_TH | number: 2 }} &#8486;</span></a></div>
+        <div class="zmonitor_table__item table_text">Mag: <a target="_blank" href="#!/histogram/47364161143835"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_mag | number: 2 }}</span></a></div>
+        <div class="zmonitor_table__item table_text">I: <a target="_blank" href="#!/histogram/47364161144091"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_I | number: 2 }}</span></a></div>
+        <div class="zmonitor_table__item table_text">Q: <a target="_blank" href="#!/histogram/47364161144347"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_Q | number: 2 }}</span></a></div>
+    </div>
+    
+    <div id="ambient" class="ambient">
+        <div class="ambient_content table_text">
+        Humidity:
+        <br/>
+        <a target="_blank" href="#!/histogram/47910779640603">
+            <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+        </a>
+        <br/>
+        Ambient temperature:
+        <br/>
+        <a target="_blank" href="#!/histogram/47910796417819">
+            <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+        </a>
+        <br/>
+        Ambient pressure:
+        <br/>
+        <a target="_blank" href="#!/histogram/47910813195035">
+            <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+        </a>
+    </div>
+    </div>
+
+</div>

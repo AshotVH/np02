@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="css/groundplanes.css">
+<div class="container">
+    <div class="page_title_and_timestamps">
+    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+    <div id="timestamp_label" class="timestamp_label">Timestamp:<br/><span id="timestamp" class="timestamp">{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span>
+    </div>
+    </div>
+    <!-- ****** -->
+    <nav class="navbar">
+        <div class="navbar__text">History For</div>
+        <div class="navbar__buttons">
+      <ul>
+        <li
+          class="navbar__button"
+        >
+          <span ng-click="$ctrl.dayChanger(0.125)">1 hour</span>
+        </li>
+        <li  class="navbar__button">
+          <span ng-click="$ctrl.dayChanger(0.33)"
+            >6 hours</span
+          >
+        </li>
+        <li class="navbar__button">
+          <span ng-click="$ctrl.dayChanger(0.5)"
+            >12 hours</span
+          >
+        </li>
+        <li class="navbar__button">
+          <span  ng-click="$ctrl.dayChanger(1)">1 day</span>
+        </li>
+        <li class="navbar__button">
+          <span ng-click="$ctrl.dayChanger(3)"
+            >3 days</span
+          >
+        </li>
+        <li class="navbar__button">
+          <span ng-click="$ctrl.dayChanger(7)"
+            >7 days</span
+          >
+        </li>
+        <li class="navbar__button">
+          <span ng-click="$ctrl.dayChanger(10)"
+            >10 days</span
+          >
+        </li>
+      </ul>
+        </div>
+    </nav>
+    <!-- ****** -->
+    <div class="charts_container">
+        <div id="container0" class="chart_container">Placeholder for chart</div>
+        <div id="container1" class="chart_container">Placeholder for chart</div>
+    </div>
+    <div class="data_table_container">
+        <div class="data_table table_text">
+            <div class="data_table__column">
+                <div class="data_table__cell">Current (Measured): <a target="_blank" ng-href="#!/histogram/47363557163291"><span class="value">{{ $ctrl.NP02_DCS_01_Heinz_I | number: 5}} &#181;A</span></a></div>
+                <div class="data_table__cell">DCS Current limit: <a target="_blank" ng-href="#!/histogram/47363590717723"><span class="value">{{ $ctrl.NP02_DCS_01_Heinz_Limit | number: 5}} &#181;A</span></a></div>
+                <div class="data_table__cell">Voltage Raw: <a target="_blank" ng-href="#!/histogram/47363691381019"><span class="value">{{ $ctrl.NP02_DCS_01_Heinz_V_Raw | number: 5}} V</span></a></div>
+                <div class="data_table__cell">Heinzinger On/Off status: <a target="_blank" ng-href="#!/histogram/47363607494939"><span class="value">{{ $ctrl.NP02_DCS_01_Heinz_OnOff_Sts?"On":"Off" }}</span></a></div>
+                <div class="data_table__cell">FFS Current: <a target="_blank" ng-href="#!/histogram/47955658727963"><span class="value">{{ $ctrl.NP02_DCS_01_FFS_I | number: 5}} &#181;A</span></a></div>
+                <div class="data_table__cell">FFS Voltage: <a target="_blank" ng-href="#!/histogram/47955658729243"><span class="value">{{ $ctrl.NP02_DCS_01_FFS_V | number: 5}} V</span></a></div>
+            </div>
+            <div class="data_table__column">
+                <div class="data_table__cell">Grid 1 Current: <a target="_blank" ng-href="#!/histogram/47955675505179"><span class="value">{{ $ctrl.NP02_DCS_01_GRID1_I | number: 1 }} &#181;A</span></a></div>
+                <div class="data_table__cell">Grid 1 Voltage: <a target="_blank" ng-href="#!/histogram/47955675506459"><span class="value">{{ $ctrl.NP02_DCS_01_GRID1_V | number: 1 }} V</span></a></div>
+                <div class="data_table__cell">Grid 2 Current: <a target="_blank" ng-href="#!/histogram/47955692282395"><span class="value">{{ $ctrl.NP02_DCS_01_GRID2_I | number: 1 }} &#181;A</span></a></div>
+                <div class="data_table__cell">Grid 2 Voltage: <a target="_blank" ng-href="#!/histogram/47955692283675"><span class="value">{{ $ctrl.NP02_DCS_01_GRID2_V | number: 1 }} V</span></a></div>
+                <div class="data_table__cell">Grid 3 Current: <a target="_blank" ng-href="#!/histogram/47955742614043"><span class="value">{{ $ctrl.NP02_DCS_01_GRID3_I | number: 1 }} &#181;A</span></a></div>
+                <div class="data_table__cell">Grid 3 Voltage: <a target="_blank" ng-href="#!/histogram/47955742615323"><span class="value">{{ $ctrl.NP02_DCS_01_GRID3_V | number: 1 }} V</span></a></div>
+                <div class="data_table__cell">Grid 4 Current: <a target="_blank" ng-href="#!/histogram/47955725836827"><span class="value">{{ $ctrl.NP02_DCS_01_GRID4_I | number: 1 }} &#181;A</span></a></div>
+                <div class="data_table__cell">Grid 4 Voltage: <a target="_blank" ng-href="#!/histogram/47955725838107"><span class="value">{{ $ctrl.NP02_DCS_01_GRID4_V | number: 1 }} V</span></a></div>
+            </div>
+            <div class="data_table__column">
+                <div class="data_table__cell">LEM CRP1 top MAX: <span class="value">{{ $ctrl.CRP1_top_max | number: 1 }} V</span></div>
+                <div class="data_table__cell">LEM CRP1 bottom MAX: <span class="value">{{ $ctrl.CRP1_bottom_max | number: 1 }} V</span></div>
+                <div class="data_table__cell">LEM CRP2 top MAX: <span class="value">{{ $ctrl.CRP2_top_max | number: 1 }} V</span></div>
+                <div class="data_table__cell">LEM CRP2 bottom MAX: <span class="value">{{ $ctrl.CRP2_bottom_max | number: 1 }} V</span></div>
+            </div>
+        </div>
+    </div>
+  
+    <div id="ambient" class="ambient">
+        <div class="ambient_content table_text">
+        Humidity:
+        <br/>
+        <a target="_blank" href="#!/cachedhist/47878785489690">
+          <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+        </a>
+        <br/>Ambient temperature:<br/>
+        <a target="_blank" href="#!/histogram/NP02_DCS_V21-CPC_AnalogInput-00008.ProcessInput.PosSt"><span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span></a><br/>Ambient pressure:<br/><a target="_blank" href="#!/histogram/NP02_DCS_V21-CPC_AnalogInput-00009.ProcessInput.PosSt">
+          <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+        </a>
+        </div>
+    </div>
+</div>

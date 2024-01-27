@@ -1,0 +1,196 @@
+<link rel="stylesheet" href="css/straingaugeshist.css" />
+
+<!-- ****** -->
+<nav class="navbar">
+  <div class="navbar__text">History For</div>
+  <div class="navbar__buttons">
+    <ul>
+      <li
+        class="navbar__button"
+      >
+        <span ng-click="$ctrl.dayChanger(0.125)">1 hour</span>
+      </li>
+      <li  class="navbar__button">
+        <span ng-click="$ctrl.dayChanger(0.33)"
+          >6 hours</span
+        >
+      </li>
+      <li class="navbar__button">
+        <span ng-click="$ctrl.dayChanger(0.5)"
+          >12 hours</span
+        >
+      </li>
+      <li class="navbar__button">
+        <span  ng-click="$ctrl.dayChanger(1)">1 day</span>
+      </li>
+      <li class="navbar__button">
+        <span ng-click="$ctrl.dayChanger(3)"
+          >3 days</span
+        >
+      </li>
+      <li class="navbar__button">
+        <span ng-click="$ctrl.dayChanger(7)"
+          >7 days</span
+        >
+      </li>
+      <li class="navbar__button">
+        <span ng-click="$ctrl.dayChanger(10)"
+          >10 days</span
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="navbar__page_links">
+    <button
+      class="button-12"
+      type="button"
+      id="bellegarde"
+      ng-click="$ctrl.sideChanger(0)"
+    >
+      Bellegarde side
+    </button>
+    <button
+      class="button-12"
+      type="button"
+      id="jura"
+      ng-click="$ctrl.sideChanger(1)"
+    >
+      Jura side
+    </button>
+    <button
+      class="button-12"
+      type="button"
+      id="lausanne"
+      ng-click="$ctrl.sideChanger(2)"
+    >
+      Lausanne side
+    </button>
+    <button
+      class="button-12"
+      type="button"
+      id="saleve"
+      ng-click="$ctrl.sideChanger(3)"
+    >
+      Saleve side
+    </button>
+  </div>
+  <div class="navbar charts_buttons">
+    <div class="navbar__text" ng-click="$ctrl.toggleChartButtons()">
+      Show Chart
+      <span class="toggle_button">
+        <i class="fa-solid fa-circle-chevron-down fa-lg"></i>
+      </span>
+    </div>
+    <div
+      class="navbar__buttons"
+      ng-class="{charts_buttons_visible:isChartsButtonsVisible}"
+    >
+      <ul>
+        <li class="charts_button" ng-class="{'navbar__button--selected':isGChartOpen[0]}" ng-click="$ctrl.showChart(0)">
+          <span>Chart 1</span>
+        </li>
+        <li
+          class="charts_button" ng-class="{'navbar__button--selected':isGChartOpen[1]}"
+          ng-click="$ctrl.showChart(1)"
+        >
+          <span>Chart 2</span>
+        </li>
+        <li
+          class="charts_button" ng-class="{'navbar__button--selected':isGChartOpen[2]}"
+          ng-click="$ctrl.showChart(2)"
+        >
+          <span>Chart 3</span>
+        </li>
+        <li
+          class="charts_button" ng-class="{'navbar__button--selected':isGChartOpen[3]}"
+          ng-click="$ctrl.showChart(3)"
+        >
+          <span>Chart 4</span>
+        </li>
+        <li
+          class="charts_button" ng-class="{'navbar__button--selected':isGChartOpen[4]}"
+          ng-click="$ctrl.showChart(4)"
+        >
+          <span>Chart 5</span>
+        </li>
+        <li
+          class="charts_button" ng-class="{'navbar__button--selected':isGChartOpen[5]}"
+          ng-click="$ctrl.showChart(5)"
+        >
+          <span>Chart 6</span>
+        </li>
+        <li
+          class="charts_button" ng-class="{'navbar__button--selected':isGChartOpen[6]}"
+          ng-click="$ctrl.showChart(6)"
+        >
+          <span>Chart 7</span>
+        </li>
+        <li
+          class="charts_button" ng-class="{'navbar__button--selected':isGChartOpen[7]}"
+          ng-click="$ctrl.showChart(7)"
+        >
+          <span>Chart 8</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ****** -->
+<main class="gauges_containers">
+  <div
+    id="container0"
+    class="gauges_container"
+    ng-class="{gauges_container_visible:isGChartOpen[0]}"
+  >
+    Placeholder for chart
+  </div>
+  <div
+    id="container1"
+    class="gauges_container"
+    ng-class="{gauges_container_visible:isGChartOpen[1]}"
+  >
+    Placeholder for chart
+  </div>
+  <div
+    id="container2"
+    class="gauges_container"
+    ng-class="{gauges_container_visible:isGChartOpen[2]}"
+  >
+    Placeholder for chart
+  </div>
+  <div
+    id="container3"
+    class="gauges_container"
+    ng-class="{gauges_container_visible:isGChartOpen[3]}"
+  >
+    Placeholder for chart
+  </div>
+  <div
+    id="container4"
+    class="gauges_container"
+    ng-class="{gauges_container_visible:isGChartOpen[4]}"
+  >
+    Placeholder for chart
+  </div>
+  <div
+    id="container5"
+    class="gauges_container"
+    ng-class="{gauges_container_visible:isGChartOpen[5]}"
+  >
+    Placeholder for chart
+  </div>
+  <div
+    id="container6"
+    class="gauges_container"
+    ng-class="{gauges_container_visible:isGChartOpen[6]}"
+  >
+    Placeholder for chart
+  </div>
+  <div
+    id="container7"
+    class="gauges_container"
+    ng-class="{gauges_container_visible:isGChartOpen[7]}"
+  >
+    Placeholder for chart
+  </div>
+</main>

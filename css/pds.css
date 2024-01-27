@@ -1,0 +1,131 @@
+@media screen and (max-width: 1080px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #pageTitle {
+        position: absolute;
+        display: block;
+        top: 7vh;
+        left: 50vw;
+    }
+
+    #detector {
+        /*display: block;*/
+        position: fixed;
+        top: 5vh;
+        left: 8.5vw;
+        width: 45vw;
+    }
+
+    #ambient {
+        position: fixed;
+        right: 5vw;
+        top: 20vh;
+        text-align: right;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+}
+@media screen and (max-height: 1080px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #pageTitle {
+        position: absolute;
+        display: block;
+        top: 40vh;
+        left: 35vw;
+    }
+
+    #detector {
+        /*display: block;*/
+        position: fixed;
+        top: 5vh;
+        left: 8.5vw;
+        width: 45vw;
+    }
+
+    #ambient {
+        position: fixed;
+        right: 5vw;
+        top: 20vh;
+        text-align: right;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+}
+
+@media screen and (min-height: 1081px) and (min-width: 2000px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #pageTitle {
+        top: 2vh;
+        left: 35vw;
+    }
+
+    #detector {
+        position: fixed;
+        top: 5vh;
+        left: 8.5vw;
+        width: 45vw;
+    }
+
+    #ambient {
+        position: fixed;
+        right: 5vw;
+        top: 20vh;
+        text-align: right;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+}
+
+@media screen and (min-height: 2000px) and (min-width: 3000px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #detector {
+        position: fixed;
+        top: 5vh;
+        left: 8.5vw;
+        width: 45vw;
+    }
+
+    #ambient {
+        position: fixed;
+        right: 2vw;
+        bottom: 10vh;
+        text-align: right;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+}

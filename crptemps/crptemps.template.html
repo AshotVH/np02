@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="css/crptemps.css">
+<div class="container">
+    <div id="pageTitle">{{$ctrl.pageTitle}}</div>
+    <img id="detector" src="img/crptemps.png" alt="crptemps"/>
+    <div id="timestamp_label">Timestamp:<br/><span id="timestamp">{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span></div>
+    <div id="ambient">Humidity:<br/><a target="_blank" href="#!/histogram/47910779640603"><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a><br/>Ambient temperature:<br/><a target="_blank" href="#!/histogram/47910796417819"><span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span></a><br/>Ambient pressure:<br/><a target="_blank" href="#!/histogram/47910813195035"><span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span></a></div>
+    <div id="v422-424">
+        <a target="_blank" href="#!/histogram/47898968480539">TE0413: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[0] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47899002034971">TE0415: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[1] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v419-421">
+        <a target="_blank" href="#!/histogram/47899018812187">TE0416: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[2] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47899052366619">TE0418: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[3] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v410-412">
+        <a target="_blank" href="#!/histogram/47899069143835">TE0419: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[4] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47899102698267">TE0421: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[5] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v407-409">
+        <a target="_blank" href="#!/histogram/47899119475483">TE0422: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[6] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47899153029915">TE0424: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[7] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v222-224">
+        <a target="_blank" href="#!/histogram/47898750376731">TE0324: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[23] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898733599515">TE0323: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[22] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898716822299">TE0322: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[21] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v219-221">
+        <a target="_blank" href="#!/histogram/47898700045083">TE0321: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[20] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898683267867">TE0320: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[19] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898666490651">TE0319: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[18] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v213-218">
+        <a target="_blank" href="#!/histogram/47898649713435">TE0318: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[17] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898632936219">TE0317: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[16] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898616159003">TE0316: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[15] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898599381787">TE0315: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[14] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898582604571">TE0314: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[13] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898565827355">TE0313: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[12] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v210-212">
+        <a target="_blank" href="#!/histogram/47898549050139">TE0312: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[11] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898532272923">TE0311: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[10] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898515495707">TE0310: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[9] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v207-209">
+        <a target="_blank" href="#!/histogram/47898498718491">TE0309: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[8] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898481941275">TE0308: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[7] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898465164059">TE0307: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[6] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v201-206">
+        <a target="_blank" href="#!/histogram/47898448386843">TE0306: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[5] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898431609627">TE0305: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[4] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898414832411">TE0304: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[3] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898398055195">TE0303: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[2] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898381277979">TE0302: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[1] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898364500763">TE0301: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[0] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v122-124">
+        <a target="_blank" href="#!/histogram/47898347723547">TE0224: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[23] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898330946331">TE0223: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[22] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898314169115">TE0222: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[21] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v119-121">
+        <a target="_blank" href="#!/histogram/47898297391899">TE0221: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[20] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898280614683">TE0220: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[19] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898263837467">TE0219: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[18] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v113-118">
+        <a target="_blank" href="#!/histogram/47898247060251">TE0218: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[17] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898230283035">TE0217: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[16] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898213505819">TE0216: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[15] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898196728603">TE0215: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[14] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898179951387">TE0214: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[13] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898163174171">TE0213: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[12] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v110-112">
+        <a target="_blank" href="#!/histogram/47898146396955">TE0212: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[11] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898129619739">TE0211: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[10] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898112842523">TE0210: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[9] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v107-109">
+        <a target="_blank" href="#!/histogram/47898096065307">TE0209: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[8] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898079288091">TE0208: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[7] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898062510875">TE0207: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[6] | number: 1 }}K</span><br/>
+    </div>
+    <div id="v101-106">
+        <a target="_blank" href="#!/histogram/47898045733659">TE0206: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[5] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898028956443">TE0205: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[4] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47898012179227">TE0204: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[3] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47897995402011">TE0203: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[2] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47897978624795">TE0202: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[1] | number: 1 }}K</span><br/>
+        <a target="_blank" href="#!/histogram/47897961847579">TE0201: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[0] | number: 1 }}K</span><br/>
+    </div>
+
+</div>

@@ -1,0 +1,302 @@
+@media screen and (max-height: 1080px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #detector {
+        /*display: block;*/
+        position: fixed;
+        top: 15vh;
+        left: 20vw;
+        width: 43vw;
+    }
+
+    #air813 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 26vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air814 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 32vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air815 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 38vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air816 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 26vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air817 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 32vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air818 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 38vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #ambient {
+        position: fixed;
+        right: 5vw;
+        top: 20vh;
+        text-align: right;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+}
+
+@media screen and (min-height: 1081px) and (min-width: 2000px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #detector {
+        /*display: block;*/
+        position: fixed;
+        top: 15vh;
+        left: 20vw;
+        width: 40vw;
+    }
+
+    #air813 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 26vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air814 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 32vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air815 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 38vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air816 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 26vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air817 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 32vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air818 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 38vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #ambient {
+        position: fixed;
+        right: 5vw;
+        top: 20vh;
+        text-align: right;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+}
+
+@media screen and (min-height: 2000px) and (min-width: 3000px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #detector {
+        /*display: block;*/
+        position: fixed;
+        top: 15vh;
+        left: 20vw;
+        width: 40vw;
+    }
+
+    #air813 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 26vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air814 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 32vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air815 {
+        display: block;
+        position: fixed;
+        top: 30vh;
+        left: 38vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air816 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 26vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air817 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 32vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #air818 {
+        display: block;
+        position: fixed;
+        top: 59vh;
+        left: 38vw;
+        background-color: #333333;
+        text-align: center;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+
+    #ambient {
+        position: fixed;
+        right: 5vw;
+        top: 20vh;
+        text-align: right;
+        color: gray;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 2.0vmin;
+    }
+}

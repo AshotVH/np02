@@ -1,0 +1,396 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.table_header,
+.table_text, a{
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: azure;
+}
+.left, .right, .crp4, .floor {
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+}
+.ambient {
+  text-align: right;
+  font-family: "Arial Black", Gadget, sans-serif;
+  border: 1px solid white;
+}
+@media screen and (max-width: 479px) {
+  .tinternal_header {
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+  }
+  .page-title {
+    position: relative;
+  }
+  .timestamp_label {
+    position: relative;
+    top: 0;
+  }
+  .tinternal-detector-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    width: 98%;
+  }
+  .tinternal-detector {
+    width: 280px;
+  }
+  .leftright-wrapper {
+    position: relative;
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+  }
+  .leftright-wrapper td,
+  .leftright-wrapper span {
+    font-size: 10px;
+  }
+
+  .left {
+    margin-left: 6px;
+    font-size: 7px;
+  }
+
+  .right {
+    margin-right: 6px;
+    font-size: 7px;
+  }
+  .crp4-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    padding-top: 10px;
+  }
+  .floor-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    padding: 10px 0 30px 0;
+  }
+  .floor {
+    font-size: 12px;
+    margin-left: 6px;
+  }
+  .floor td,
+  .floor span {
+    font-size: 6px;
+  }
+  .floor th {
+    font-size: 10px;
+  }
+  .crp4 td,
+  .crp4 span {
+    font-size: 7px;
+  }
+  .crp4 th {
+    font-size: 8px;
+  }
+
+  .ambient {
+    margin-right: 6px;
+    padding: 8px;
+  }
+  .ambient,
+  .ambient span {
+    font-size: 8px;
+  }
+}
+/* *********************************************************** */
+/* *********************************************************** */
+/* *********************************************************** */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .tinternal_header {
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+  }
+  .page-title {
+    position: relative;
+  }
+  .timestamp_label {
+    position: relative;
+    top: 0;
+  }
+  .tinternal-detector-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    width: 98%;
+  }
+  .tinternal-detector {
+    width: 435px;
+  }
+  .leftright-wrapper {
+    position: relative;
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+  }
+  .leftright-wrapper td,
+  .leftright-wrapper span {
+    font-size: 15px;
+  }
+
+  .left {
+    margin-left: 6px;
+    font-size: 7px;
+  }
+
+  .right {
+    margin-right: 6px;
+    font-size: 7px;
+  }
+  .crp4-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    padding-top: 10px;
+  }
+  .floor-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    padding: 10px 0 30px 0;
+  }
+  .floor {
+    font-size: 12px;
+    margin-left: 6px;
+  }
+  .floor td,
+  .floor span {
+    font-size: 10px;
+  }
+  .floor th {
+    font-size: 18px;
+  }
+  .crp4 td,
+  .crp4 span {
+    font-size: 11px;
+  }
+  .crp4 th {
+    font-size: 16px;
+  }
+
+  .ambient {
+    margin-right: 6px;
+    padding: 8px;
+  }
+  .ambient,
+  .ambient span {
+    font-size: 12px;
+  }
+}
+/* *********************************************************** */
+/* *********************************************************** */
+/* *********************************************************** */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .tinternal_header {
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+  }
+  .page-title {
+    position: relative;
+    font-size: 24px;
+  }
+  .timestamp_label {
+    position: relative;
+    top: 0;
+    font-size: 22px;
+  }
+  .timestamp_label span {
+    font-size: 22px;
+  }
+  .tinternal-detector-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    width: 98%;
+  }
+  .tinternal-detector {
+    width: 550px;
+  }
+  .leftright-wrapper {
+    position: relative;
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+  }
+  .leftright-wrapper td,
+  .leftright-wrapper span {
+    font-size: 18px;
+  }
+
+  .left {
+    margin-left: 20px;
+    font-size: 7px;
+  }
+
+  .right {
+    margin-right: 20px;
+    font-size: 7px;
+  }
+  .crp4-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    padding-top: 10px;
+  }
+  .floor-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    padding: 10px 0 30px 0;
+  }
+  .floor {
+    font-size: 12px;
+    margin-left: 20px;
+  }
+  .floor td,
+  .floor span {
+    font-size: 15px;
+  }
+  .floor th {
+    font-size: 24px;
+  }
+  .crp4 td,
+  .crp4 span {
+    font-size: 18px;
+  }
+  .crp4 th {
+    font-size: 24px;
+  }
+
+  .ambient {
+    margin-right: 20px;
+    padding: 8px;
+  }
+  .ambient,
+  .ambient span {
+    font-size: 15px;
+  }
+}
+/* *********************************************************** */
+/* *********************************************************** */
+/* *********************************************************** */
+@media screen and (min-width: 1200px) {
+  .tinternal_header {
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+  }
+  .page-title {
+    position: relative;
+    font-size: 24px;
+  }
+  .timestamp_label {
+    position: relative;
+    top: 0;
+    font-size: 22px;
+  }
+  .timestamp_label span {
+    font-size: 22px;
+  }
+  .tinternal-detector-wrapper {
+    position: absolute;
+    left: 553px;
+    padding-top: 25px;
+
+  }
+  .tinternal-detector {
+    width: 550px;
+   
+  }
+  .leftright-wrapper {
+    position: relative;
+    top: -110px;
+    display: flex;
+    width: 1330px;
+    justify-content: space-between;
+  }
+  .leftright-wrapper td {
+    padding: 4px;
+  }
+  
+  .leftright-wrapper td,
+  .leftright-wrapper span {
+    font-size: 16px;
+  }
+
+  .left {
+    margin-left: 20px;
+    font-size: 7px;
+    max-height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    left: 310px;
+
+  }
+
+  .right {
+    font-size: 7px;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  .crp4-wrapper {
+    position: relative;
+    display: inline-block;
+    left: 540px;
+    top: 20px;
+  }
+  .floor-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 780px;
+    left: 335px;
+    padding: 10px 0 30px 0;
+  }
+  .floor {
+    color: gray;
+    font-size: 12px;
+    position: relative;
+    left: 201px;
+    top: -21px;
+  }
+  .floor td,
+  .floor span {
+    font-size: 16px;
+  }
+  .floor th {
+    font-size: 18px;
+  }
+  .crp4 td,
+  .crp4 span {
+    font-size: 16px;
+    padding: 5px;
+  }
+  .crp4 th {
+    font-size: 18px;
+  }
+  .ambient {
+    top: -21px;
+    position: relative;
+    right: -237px;
+    padding: 8px;
+  }
+  .ambient,
+  .ambient span {
+    font-size: 18px;
+  }
+}

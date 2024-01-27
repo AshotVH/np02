@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="css/lems.css">
+<div class="container">
+    <div class="page_title_and_timestamps">
+        <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+        <div id="timestamp_label" class="timestamp_label">Timestamp:<br/><span id="timestamp" class="timestamp">{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span></div>
+    </div>
+    <div class="data_container">
+        <div class="crp">
+            <div class="crp__header header">
+                CRP 2
+            </div>
+            <div class="crp__content">
+                    <div class="board">
+                        <div class="board__header header" ng-click="$ctrl.toggleBoardContent(0)">Board 0 <i class="fa-solid fa-circle-plus board__circle"></i></div>
+                        <div class="board__content" ng-class="{show_board_content:isBoardContentOpen[0]}">
+                            <div class="board__column">
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board0.Name">{{ i }}</div>
+                             </div>
+                            <div class="board__column">
+                              <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_CRP2_board0 track by $index">{{ i }}</div>
+                            </div>
+                            <div class="board__column">
+                                <div class="text value" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board0.Value track by $index">{{ i | number: 1 }} V</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board">
+                        <div class="board__header header" ng-click="$ctrl.toggleBoardContent(1)">Board 1<i class="fa-solid fa-circle-plus board__circle"></i></div>
+                        <div class="board__content" ng-class="{show_board_content:isBoardContentOpen[1]}">
+                            <div class="board__column">
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board1.Name">{{ i }}</div>                         
+                            </div>
+                            <div class="board__column">       
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_CRP2_board1 track by $index">{{ i }}</div>
+                                        
+                            </div>
+                            <div class="board__column">
+                              <div class="text value" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board1.Value track by $index">{{ i | number: 1 }} V</div>
+                                         
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board">
+                        <div class="board__header header" ng-click="$ctrl.toggleBoardContent(2)">Board 2<i class="fa-solid fa-circle-plus board__circle"></i> </div>
+                        <div class="board__content" ng-class="{show_board_content:isBoardContentOpen[2]}">
+                            <div class="board__column">
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board2.Name">{{ i }}</div>
+                            </div>
+                            <div class="board__column">
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_CRP2_board2 track by $index">{{ i }}</div>
+                            </div>
+                            <div class="board__column">
+                                <div class="text value" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board2.Value track by $index">{{ i | number: 1 }} V</div>
+                                               
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="crp">
+            <div class="crp__header header">
+                CRP 1
+            </div>
+            <div class="crp__content">
+                    <div class="board">
+                        <div class="board__header header" ng-click="$ctrl.toggleBoardContent(3)">Board 3 <i class="fa-solid fa-circle-plus board__circle"></i></div>
+                        <div class="board__content" ng-class="{show_board_content:isBoardContentOpen[3]}">
+                            <div class="board__column">   
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board3.Name">{{ i }}</div>
+                         </div>
+                            <div class="board__column">  
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_CRP1_board3 track by $index">{{ i }}</div>
+                        </div>
+                            <div class="board__column">  
+                                <div class="text value" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board3.Value track by $index">{{ i | number: 1 }} V</div>
+                
+                         </div>
+                        </div>
+                    </div>
+                    <div class="board">
+                        <div class="board__header header" ng-click="$ctrl.toggleBoardContent(4)">Board 4 <i class="fa-solid fa-circle-plus board__circle"></i></div>
+                        <div class="board__content" ng-class="{show_board_content:isBoardContentOpen[4]}">
+                            <div class="board__column">   
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board4.Name">{{ i }}</div>
+                    
+                        </div>
+                            <div class="board__column">   
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_CRP1_board4 track by $index">{{ i }}</div>
+                         
+                        </div>
+                            <div class="board__column">  
+                                <div class="text value" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board4.Value track by $index">{{ i | number: 1 }} V</div>
+           
+                        </div>
+                        </div>
+                    </div>
+                    <div class="board">
+                        <div class="board__header header" ng-click="$ctrl.toggleBoardContent(5)">Board 5<i class="fa-solid fa-circle-plus board__circle"></i></div>
+                        <div class="board__content" ng-class="{show_board_content:isBoardContentOpen[5]}">
+                            <div class="board__column">   
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board5.Name">{{ i }}</div>
+                            </div>
+                            <div class="board__column">   
+                                <div class="text" ng-repeat="i in $ctrl.NP02_DCS_01_CRP1_board5 track by $index">{{ i }}</div>
+             
+                            </div>
+                            <div class="board__column">   
+                                <div class="text value" ng-repeat="i in $ctrl.NP02_DCS_01_TE_board5.Value track by $index">{{ i | number: 1 }} V</div>
+                            </div>
+                        </div>
+               </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div id="ambient" class="ambient text"><div class="ambient_content">Humidity:<br/><a target="_blank" href="#!/histogram/47910779640603"><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a><br/>Ambient temperature:<br/><a target="_blank" href="#!/histogram/47910796417819"><span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span></a><br/>Ambient pressure:<br/><a target="_blank" href="#!/histogram/47910813195035"><span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span></a></div></div>
+</div>

@@ -1,0 +1,120 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.page_title_and_timestamps {
+  padding-bottom: 30px;
+}
+.ambient {
+  margin-top: 50px;
+  display: flex;
+  position: relative;
+  right: 4vw;
+  justify-content: flex-end;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+  padding-bottom: 30px;
+}
+.ambient_content {
+  border: 1px solid white;
+  padding: 4px 10px;
+  text-align: right;
+}
+.table_header,
+.table_text {
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: azure;
+}
+.data_cell .value, .table_text.value {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: rgba(0, 255, 0, 0.651);
+  font-weight: bold;
+}
+.table_header {
+  font-size: 18px;
+}
+.table_text {
+  font-size: 12px;
+  margin-left: 2px;
+  text-align: end;
+}
+.status,
+.top,
+.bottom {
+  padding: 20px;
+}
+.top,
+.bottom {
+  display: flex;
+  justify-content: center;
+}
+.status_fieldset,
+.top_fieldset,
+.bottom_fieldset {
+  border: 1px solid white;
+  display: inline-block;
+  padding: 10px;
+  width: auto;
+}
+
+.data_table {
+  width: 100%;
+}
+.data_group {
+  display: flex;
+
+  flex-direction: column;
+  border: 1px solid white;
+  margin: 2px 0;
+}
+.data_cell {
+  padding: 7px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 10%;
+  flex-grow: 1;
+  border: 1px solid white;
+  margin: -1px;
+}
+@media screen and (min-width: 480px) {
+  .table_text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .table_text {
+    font-size: 16px;
+  }
+  .top_bottom_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .table_text {
+    font-size: 16px;
+  }
+  .top_bottom_wrapper {
+    display: block;
+  }
+  .data_group {
+    flex-direction: row;
+  }
+  .data_group .data_cell {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .data_cell .table_text {
+    display: block;
+  }
+  .top_fieldset,
+  .bottom_fieldset {
+    width: 95%;
+  }
+}
+

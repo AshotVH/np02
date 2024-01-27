@@ -1,0 +1,240 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="css/multiplexer.css" />
+<div class="container">
+  <div class="page_title_and_timestamps">
+    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+    <div id="timestamp_label" class="timestamp_label">
+      Timestamp:<br /><span id="timestamp" class="timestamp"
+        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+      >
+    </div>
+  </div>
+  <main class="multiplexer__main_container">
+    <div class="multiplexer__data_table">
+      <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(0)">
+        Card 1 <i class="fa-solid fa-circle-plus fa-lg"></i>
+      </div>
+      <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[0]}">
+        <div class="multiplexer__data_table_left_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card1.Name"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}
+          </div>
+        </div>
+        <div class="multiplexer__data_table_right_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card1.Value track by $index"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}&nbsp;&#8490;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- *** -->
+
+    <div class="multiplexer__data_table">
+      <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(1)">
+        Card 2 <i class="fa-solid fa-circle-plus fa-lg"></i>
+      </div>
+      <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[1]}">
+        <div class="multiplexer__data_table_left_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card2.Name"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}
+          </div>
+        </div>
+        <div class="multiplexer__data_table_right_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card2.Value track by $index"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}&nbsp;&#8490;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- **** -->
+    <div class="multiplexer__data_table">
+      <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(2)">
+        Card 3 <i class="fa-solid fa-circle-plus fa-lg"></i>
+      </div>
+      <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[2]}">
+        <div class="multiplexer__data_table_left_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card3.Name"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}
+          </div>
+        </div>
+        <div class="multiplexer__data_table_right_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card3.Value track by $index"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}&nbsp;&#8490;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- *** -->
+    <div class="multiplexer__data_table">
+      <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(3)">
+        Card 4 <i class="fa-solid fa-circle-plus fa-lg"></i>
+      </div>
+      <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[3]}">
+        <div class="multiplexer__data_table_left_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card4.Name"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}
+          </div>
+        </div>
+        <div class="multiplexer__data_table_right_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card4.Value track by $index"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}&nbsp;&#8490;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- *** -->
+
+    <div class="multiplexer__data_table">
+      <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(4)">
+        Card 5 <i class="fa-solid fa-circle-plus fa-lg"></i>
+      </div>
+      <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[4]}">
+        <div class="multiplexer__data_table_left_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card5.Name"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}
+          </div>
+        </div>
+        <div class="multiplexer__data_table_right_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card5.Value track by $index"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}&nbsp;&#8490;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- *** -->
+
+    <div class="multiplexer__data_table">
+      <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(5)">
+        Card 6 <i class="fa-solid fa-circle-plus fa-lg"></i>
+      </div>
+      <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[5]}">
+        <div class="multiplexer__data_table_left_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card6.Name"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}
+          </div>
+        </div>
+        <div class="multiplexer__data_table_right_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card6.Value track by $index"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}&nbsp;&#8490;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- *** -->
+
+    <div class="multiplexer__data_table">
+      <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(6)">
+        Card 7 <i class="fa-solid fa-circle-plus fa-lg"></i>
+      </div>
+      <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[6]}">
+        <div class="multiplexer__data_table_left_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card7.Name"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}
+          </div>
+        </div>
+        <div class="multiplexer__data_table_right_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card7.Value track by $index"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}&nbsp;&#8490;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- *** -->
+
+    <div class="multiplexer__data_table">
+      <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(7)">
+        Card 8 <i class="fa-solid fa-circle-plus fa-lg"></i>
+      </div>
+      <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[7]}">
+        <div class="multiplexer__data_table_left_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card8.Name"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}
+          </div>
+        </div>
+        <div class="multiplexer__data_table_right_column">
+          <div
+            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card8.Value track by $index"
+            class="multiplexer__data_table_item"
+          >
+            {{i}}&nbsp;&#8490;
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="ambient" class="ambient">
+    <div class="ambient_content">
+      Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"
+        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
+      ><br />Ambient temperature:<br /><a
+        target="_blank"
+        href="#!/histogram/47910796417819"
+        ><span class="value"
+          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
+        ></a
+      ><br />Ambient pressure:<br /><a
+        target="_blank"
+        href="#!/histogram/47910813195035"
+        ><span class="value"
+          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
+        ></a
+      >
+    </div>
+  </div>
+</div>

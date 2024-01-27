@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="css/tinternal2d.css">
+<div class="container">
+    <div id="pageTitle">{{$ctrl.pageTitle}}</div>
+    <img id="detector" src="img/tinternal2d.png" alt="tinternal2d"/>
+    <div id="ambient">Humidity:<br/><a target="_blank" href="#!/histogram/AnalogInput-00007"><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a><br/>Ambient temperature:<br/><a target="_blank" href="#!/histogram/AnalogInput-00008"><span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span></a><br/>Ambient pressure:<br/><a target="_blank" href="#!/histogram/AnalogInput-00009"><span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span></a></div>
+
+    <div id="TE0085">TE0085: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0085"><span class="value">{{ $ctrl.NP02_DCS_01_TE0085_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P1</span></strong></a></div>
+    <div id="TE0086">TE0086: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0086"><span class="value">{{ $ctrl.NP02_DCS_01_TE0086_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P2</span></strong></a></div>
+    <div id="TE0087">TE0087: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0087"><span class="value">{{ $ctrl.NP02_DCS_01_TE0087_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P3</span></strong></a></div>
+    <div id="TE0088">TE0088: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0088"><span class="value">{{ $ctrl.NP02_DCS_01_TE0088_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P4</span></strong></a></div>
+    <div id="TE0089">TE0089: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0089"><span class="value">{{ $ctrl.NP02_DCS_01_TE0089_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P5</span></strong></a></div>
+    <div id="TE0090">TE0090: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0090"><span class="value">{{ $ctrl.NP02_DCS_01_TE0090_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P6</span></strong></a></div>
+    <div id="TE0091">TE0091: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0091"><span class="value">{{ $ctrl.NP02_DCS_01_TE0091_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P7</span></strong></a></div>
+    <div id="TE0092">TE0092: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0092"><span class="value">{{ $ctrl.NP02_DCS_01_TE0092_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P8</span></strong></a></div>
+    <div id="TE0093">TE0093: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0093"><span class="value">{{ $ctrl.NP02_DCS_01_TE0093_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P9</span></strong></a></div>
+    <div id="TE0094">TE0094: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0094"><span class="value">{{ $ctrl.NP02_DCS_01_TE0094_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P10</span></strong></a></div>
+    <div id="TE0095">TE0095: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0095"><span class="value">{{ $ctrl.NP02_DCS_01_TE0095_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P11</span></strong></a></div>
+    <div id="TE0096">TE0096: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0096"><span class="value">{{ $ctrl.NP02_DCS_01_TE0096_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: red;">P12</span></strong></a></div>
+
+    <div id="TE0103">TE0103: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0103"><span class="value">{{ $ctrl.NP02_DCS_01_TE0103_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F1</span></strong></a></div>
+    <div id="TE0104">TE0104: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0104"><span class="value">{{ $ctrl.NP02_DCS_01_TE0104_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F2</span></strong></a></div>
+    <div id="TE0105">TE0105: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0105"><span class="value">{{ $ctrl.NP02_DCS_01_TE0105_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F3</span></strong></a></div>
+    <div id="TE0106">TE0106: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0106"><span class="value">{{ $ctrl.NP02_DCS_01_TE0106_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F4</span></strong></a></div>
+    <div id="TE0107">TE0107: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0107"><span class="value">{{ $ctrl.NP02_DCS_01_TE0107_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F5</span></strong></a></div>
+    <div id="TE0108">TE0108: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0108"><span class="value">{{ $ctrl.NP02_DCS_01_TE0108_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F6</span></strong></a></div>
+    <div id="TE0109">TE0109: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0109"><span class="value">{{ $ctrl.NP02_DCS_01_TE0109_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F7</span></strong></a></div>
+    <div id="TE0110">TE0110: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0110"><span class="value">{{ $ctrl.NP02_DCS_01_TE0110_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F8</span></strong></a></div>
+    <div id="TE0111">TE0111: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0111"><span class="value">{{ $ctrl.NP02_DCS_01_TE0111_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F9</span></strong></a></div>
+    <div id="TE0112">TE0112: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0112"><span class="value">{{ $ctrl.NP02_DCS_01_TE0112_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F10</span></strong></a></div>
+    <div id="TE0113">TE0113: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0113"><span class="value">{{ $ctrl.NP02_DCS_01_TE0113_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F11</span></strong></a></div>
+    <div id="TE0114">TE0114: <a target="_blank" ng-href="#!/histogram/NP02_DCS_01_TE0114"><span class="value">{{ $ctrl.NP02_DCS_01_TE0114_ | number: 1 }} &#8490;</span> <strong><span style="background-color: #333333; color: lime;">F12</span></strong></a></div>
+
+
+</div>

@@ -1,0 +1,81 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media screen and (max-width: 479px) {
+  .links-page-title {
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    text-align: center;
+  }
+  .contacts-table__name {
+    color: white;
+  }
+  .contacts-table__link {
+    color: #7ab57a;
+  }
+
+  a:hover {
+    color: lightgreen;
+  }
+
+  .links-content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+  }
+  td {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+}
+/* *********************************************************** */
+/* *********************************************************** */
+/* *********************************************************** */
+@media screen and (min-width: 480px) {
+  .links-page-title {
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 32px;
+    text-align: center;
+  }
+  .contacts-table__name {
+    color: white;
+  }
+  .contacts-table__link {
+    color: #7ab57a;
+  }
+
+  a:hover {
+    color: lightgreen;
+  }
+
+  .links-content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+  }
+  td {
+    padding: 8px 10px;
+    font-size: 18px;
+  }
+}
+/* *********************************************************** */
+/* *********************************************************** */
+/* *********************************************************** */
+@media screen and (min-width: 768px) {
+  td {
+    padding: 8px 10px;
+    font-size: 20px;
+  }
+}

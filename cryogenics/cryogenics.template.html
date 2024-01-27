@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="css/cryogenics.css" />
+<div class="container">
+  <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+
+  <div id="timestamp_label" class="timestamp_label">
+    Timestamp:<br />
+    <span id="timestamp" class="timestamp"
+      >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+    >
+  </div>
+
+  <div id="cryostat_pressure" class="cryostat_pressure">
+    <div class="cryostat_pressure__item">
+      2PT4910:
+      <a target="_blank" ng-href="#!/histogram/47926298542363"
+        ><span class="value"
+          >{{ $ctrl.NP02_DCS_01_2PT4910 | number: 3 }} bar</span
+        ></a
+      ><br /><span>Cryostat absolute pressure</span>
+    </div>
+    <div class="cryostat_pressure__item">
+      2PDT4915:&nbsp;<a target="_blank" ng-href="#!/histogram/47926332096795"
+        ><span class="value"
+          >{{ $ctrl.NP02_DCS_01_2PDT4915 | number: 1 }} mbar</span
+        ></a
+      ><br /><span>Cryostat gauge pressure</span>
+    </div>
+    <div class="cryostat_pressure__item">
+      O<sub>2</sub>:
+      <a target="_blank" ng-href="#!/histogram/47926348874011"
+        ><span class="value"
+          >{{ $ctrl.NP02_DCS_01_2QT4710 | number: 2}} ppm</span
+        ></a
+      ><br /><span>ERROR reading from sensor</span>
+    </div>
+    <!--                <td>O<sub>2</sub>:&nbsp;<a target="_blank" ng-href="#!/histogram/47926315319579"><span class="value">{{ $ctrl.NP02_DCS_01_2QT4711 | number: 2 }} ppm</span></a></td>-->
+    <div class="cryostat_pressure__item">
+      N<sub>2</sub>:
+      <a target="_blank" ng-href="#!/histogram/47926365651227"
+        ><span class="value"
+          >{{ $ctrl.NP02_DCS_01_2QT4720 | number: 2}} ppm</span
+        ></a
+      >
+    </div>
+
+    <div class="cryostat_pressure__item">
+      H<sub>2</sub>O:
+      <a target="_blank" ng-href="#!/histogram/47926382428443"
+        ><span class="value"
+          >{{ ($ctrl.NP02_DCS_01_2QT4730 < 0 || $ctrl.NP02_DCS_01_2QT4730> 100)
+          ? "Out of range" : ($ctrl.NP02_DCS_01_2QT4730 | number: 2)}} ppm</span
+        ></a
+      >
+    </div>
+    <div class="cryostat_pressure__item">
+      2CV4202:
+      <a target="_blank" ng-href="#!/histogram/47926399205659"
+        ><span class="value"
+          >{{ $ctrl.NP02_DCS_01_2CV4202 | number: 2 }} %</span
+        ></a
+      ><br /><span>Opening of input valve</span>
+    </div>
+    <div class="cryostat_pressure__item">
+      2PDT4500:
+      <a target="_blank" ng-href="#!/histogram/47926415982875"
+        ><span class="value"
+          >{{ $ctrl.NP02_DCS_01_2DPT4500 | number: 2}} bar</span
+        ></a
+      ><br /><span>Liquid recirculation</span>
+    </div>
+    <div class="cryostat_pressure__item">
+      2PT4432:
+      <a target="_blank" ng-href="#!/histogram/47926432760091"
+        ><span class="value"
+          >{{ $ctrl.NP02_DCS_01_2PT4432 | number: 2}} mbar</span
+        ></a
+      ><br /><span>Gas recirculation</span>
+    </div>
+  </div>
+  <div class="ambient_wrapper">
+    <div id="ambient" class="ambient">
+      Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"
+        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
+      ><br />Ambient temperature:<br /><a
+        target="_blank"
+        href="#!/histogram/47910796417819"
+        ><span class="value"
+          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
+        ></a
+      ><br />Ambient pressure:<br /><a
+        target="_blank"
+        href="#!/histogram/47910813195035"
+        ><span class="value"
+          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
+        ></a
+      >
+    </div>
+  </div>
+</div>

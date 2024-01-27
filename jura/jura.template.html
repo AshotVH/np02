@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="css/jura.css" />
+<div class="container">
+  <div class="page_title_and_timestamps">
+    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+    <div id="timestamp_label" class="timestamp_label">
+      Timestamp:<br /><span id="timestamp" class="timestamp"
+        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+      >
+    </div>
+  </div>
+
+  <img class="jura__img" src="img/jura.png" alt="jura" />
+
+  <div class="data_container table_text">
+    <div class="jura__data_table">
+      <div class="data_cell">
+        <span>TC_JS_02_A </span>
+        <a target="_blank" href="#!/histogram/47900797174811"
+          ><span class="value"
+            >{{ $ctrl.TC_JS_02_A | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>TC_JS_02_B </span>
+        <a target="_blank" href="#!/histogram/47900830729243"
+          ><span class="value"
+            >{{ $ctrl.TC_JS_02_B | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>BC_JS_03_A</span>
+        <a target="_blank" href="#!/histogram/47900847506459"
+          ><span class="value"
+            >{{ $ctrl.BC_JS_03_A | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+       <span>BC_JS_03_B</span>
+        <a target="_blank" href="#!/histogram/47900864283675"
+          ><span class="value"
+            >{{ $ctrl.BC_JS_03_B | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>3B_JS_01</span>
+        <a target="_blank" href="#!/histogram/47900881060891"
+          ><span class="value"
+            >{{ $ctrl.B3_JS_01 | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>DS_JS_01</span>
+        <a target="_blank" href="#!/histogram/47900897838107"
+          ><span class="value"
+            >{{ $ctrl.DS_JS_01 | number: 3 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="ambient">
+    <div class="ambient_content table_text">
+      Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"
+        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
+      ><br />Ambient temperature:<br /><a
+        target="_blank"
+        href="#!/histogram/47910796417819"
+        ><span class="value"
+          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
+        ></a
+      ><br />Ambient pressure:<br /><a
+        target="_blank"
+        href="#!/histogram/47910813195035"
+        ><span class="value"
+          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
+        ></a
+      >
+    </div>
+  </div>
+  <!-- <div id="DS_JS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50171.ProcessInput.PosSt"><span class="value">{{ $ctrl.DS_JS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="TC_JS_02"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50166.ProcessInput.PosSt"><span class="value">{{ $ctrl.TC_JS_02 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="B3_JS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50170.ProcessInput.PosSt"><span class="value">{{ $ctrl.B3_JS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="BC_JS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50168.ProcessInput.PosSt"><span class="value">{{ $ctrl.BC_JS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MC_BJS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50172.ProcessInput.PosSt"><span class="value">{{ $ctrl.MC_BJS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MC_BJS_02"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50174.ProcessInput.PosSt"><span class="value">{{ $ctrl.MC_BJS_02 | number: 2 }} &#956;m/m</span></a></div>
+--></div>

@@ -1,0 +1,383 @@
+<link rel="stylesheet" href="css/vdcontrol.css">
+<div class="container">
+        <div class="page_title_and_timestamps">
+           <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+           <div id="timestamp_label" class="timestamp_label">
+                Timestamp:<br />
+                <span id="timestamp" class="timestamp">
+                {{$ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}
+                </span>
+           </div>
+        </div>
+       
+        <div id="status" class="status">
+                <fieldset class="status_fieldset">
+                        <legend class="table_header">&nbsp;Status&nbsp;</legend>
+                        <span class="table_text">POWER:&nbsp;&nbsp;</span>
+                        <span class="value table_text">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Status_On}}</span>
+                </fieldset>
+        </div>
+        <div class="top_bottom_wrapper">
+        <div id="top" class="top">
+                <fieldset class="top_fieldset">
+                        <legend class="table_header">&nbsp;top&nbsp;</legend>
+                        <div class="data_table">
+                                <div class="data_group">
+                                        <div class="data_cell">
+                                                <span class="table_text">Collection: </span>
+                                                <span class="table_text value">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel00_Status_On}}</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Nominal Voltage:</span>
+                                                <span class="table_text value">900.00 V</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Sense Voltage: </span>
+                                                <a target="_blank"
+                                                ng-href="#!/histogramvd/48203105850143">
+                                                <span class="value table_text">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel00_MeasurementTerminalVoltage | number: 4}} V
+                                                </span>
+                                                </a>
+                                        </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Current:</span>
+                                                <a target="_blank" ng-href="#!/histogramvd/48203105850655">
+                                                        <span class="value table_text">{{
+                                                        $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel00_MeasurementCurrent
+                                                        | number: 14 }}
+                                                        A</span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Temperature:</span>
+                                                <a target="_blank"
+                                                ng-href="#!/histogramvd/48203105850911"><span class="value table_text">{{
+                                                        $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel00_MeasurementTemperature
+                                                        | number: 1 }}
+                                                        &#x2103</span>
+                                                </a>
+                                        </div>
+                                </div>
+                                <div class="data_group">
+                                        <div class="data_cell">
+                                                <span class="table_text">Induction 1: </span>
+                                                      <span
+                                                        class="value table_text">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel02_Status_On}}</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Nominal Voltage: </span>
+                                                <span class="value table_text">-360.00 V</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Sense Voltage: </span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203139404575"><span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel02_MeasurementTerminalVoltage
+                                                                | number: 4
+                                                                }} V</span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Current: </span>
+                                                <a target="_blank"
+                                                ng-href="#!/histogramvd/48203139405087"><span class="value table_text">{{
+                                                        $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel02_MeasurementCurrent
+                                                        |
+                                                        number: 14 }} A</span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Temperature: </span>
+                                                <a target="_blank"
+                                                ng-href="#!/histogramvd/48203139405343"><span class="value table_text">{{
+                                                        $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel02_MeasurementTemperature
+                                                        | number: 1 }}
+                                                        &#x2103</span>
+                                                </a>
+                                        </div>
+                                </div>
+                                <div class="data_group">
+                                        <div class="data_cell">
+                                                <span class="table_text">Protection layer:</span>
+                                                <span
+                                                class="value table_text">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel03_Status_On}}</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Nominal Voltage:</span>
+                                                <span class="value table_text">-1260.00 V</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Sense Voltage:</span>
+                                                <a target="_blank"
+                                                ng-href="#!/histogramvd/48203156181791"><span class="value table_text">{{
+                                                        $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel03_MeasurementTerminalVoltage
+                                                        | number: 4
+                                                        }} V</span>
+                                                </a>
+
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Current:</span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203156182303"><span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel03_MeasurementCurrent
+                                                                | number: 14 }}
+                                                                A</span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Temperature:</span>
+                                                <a target="_blank"
+                                                ng-href="#!/histogramvd/48203156182559"><span class="value table_text">{{
+                                                        $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel03_MeasurementTemperature
+                                                        | number: 1 }}
+                                                        &#x2103</span>
+                                                </a>
+                                        </div>
+                                </div>
+                        </div> 
+                        <table>
+                                <tr>
+                                        <!-- <td>
+                                                Collection: 
+                                                <span class="value">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel00_Status_On}}</span>
+                                        </td> -->
+                                        <!-- <td>Nominal Voltage: 
+                                                <span class="value">900.00 V</span>
+                                        </td> -->
+                                        <!-- <td>
+                                                Sense Voltage: 
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203105850143">
+                                                        <span class="value">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel00_MeasurementTerminalVoltage | number: 4}} V</span>
+                                                </a>
+                                        </td> -->
+                                        <!-- <td>Measurment Current: 
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203105850655"><span class="value">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel00_MeasurementCurrent
+                                                                | number: 14 }}
+                                                                A</span></a>
+                                        </td> -->
+                                        <!-- <td>Measurment Temperature: <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203105850911"><span class="value">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel00_MeasurementTemperature
+                                                                | number: 1 }}
+                                                                &#x2103</span>
+                                        </td> -->
+                                </tr>
+                                <tr>
+                                        <!-- <td>Induction 1: <span
+                                                        class="value">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel02_Status_On}}</span>
+                                        </td> -->
+                                        <!-- <td>Nominal Voltage: <span class="value">-360.00 V</span></td> -->
+                                        <!-- <td>Sense Voltage: <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203139404575"><span class="value">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel02_MeasurementTerminalVoltage
+                                                                | number: 4
+                                                                }} V</span></a></td> -->
+                                        <!-- <td>Measurment Current: <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203139405087"><span class="value">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel02_MeasurementCurrent
+                                                                |
+                                                                number: 14 }} A</span>
+                                        </td> -->
+                                        <!-- <td>Measurment Temperature: <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203139405343"><span class="value">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel02_MeasurementTemperature
+                                                                | number: 1 }}
+                                                                &#x2103</span>
+                                        </td> -->
+                                </tr>
+                                <tr>
+                                        <!-- <td>Protection layer: <span
+                                                        class="value">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel03_Status_On}}</span>
+                                        </td> -->
+                                        <!-- <td>Nominal Voltage: <span class="value">-1260.00 V</span></td> -->
+                                        <!-- <td>Sense Voltage: <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203156181791"><span class="value">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel03_MeasurementTerminalVoltage
+                                                                | number: 4
+                                                                }} V</span></a>
+                                        </td> -->
+                                        <!-- <td>Measurment Current: <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203156182303"><span class="value">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel03_MeasurementCurrent
+                                                                | number: 14 }}
+                                                                A</span>
+                                        </td> -->
+                                        <!-- <td>Measurment Temperature: <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203156182559"><span class="value">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board1_Channel03_MeasurementTemperature
+                                                                | number: 1 }}
+                                                                &#x2103</span>
+                                        </td> -->
+                                </tr>
+                        </table>
+                </fieldset>
+        </div>
+
+        <div id="bottom" class="bottom">
+                <fieldset class="bottom_fieldset">
+                        <legend class="table_header">&nbsp;bottom&nbsp;</legend>
+                       <div class="data_table">
+                                <div class="data_group">
+                                        <div class="data_cell">
+                                                <span class="table_text">Collection:</span>
+                                                 <span class="value table_text">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel00_Status_On}}</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Nominal Voltage: </span>
+                                                <span class="value table_text">900.00 V</span></div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Sense Voltage:</span>
+                                                        <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203240067871">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel00_MeasurementTerminalVoltage
+                                                                | number: 4
+                                                                }} V
+                                                        </span>
+                                                        </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Current: </span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203240068383">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel00_MeasurementCurrent
+                                                                | number: 14}} A
+                                                        </span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Temperature:</span>
+                                                 <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203240068639">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel00_MeasurementTemperature
+                                                                | number: 1 }}
+                                                                &#x2103
+                                                        </span>
+                                                </a>
+                                        </div>
+                                </div>
+                                <div class="data_group">
+                                        <div class="data_cell">
+                                                <span class="table_text">Induction 1:</span>
+                                                <span class="value table_text">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel02_Status_On}}</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Nominal Voltage: </span>
+                                                <span class="value table_text">-360.00 V</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Sense Voltage: </span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203273622303">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel02_MeasurementTerminalVoltage
+                                                                | number: 4
+                                                                }} V
+                                                        </span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Current:</span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203273622815">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel02_MeasurementCurrent
+                                                                | number: 14 }}
+                                                                A
+                                                        </span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Temperature: </span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203273623071">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel02_MeasurementTemperature
+                                                                | number: 1 }}
+                                                                &#x2103
+                                                        </span>
+                                                </a>
+                                        </div>
+                                </div>
+                                <div class="data_group">
+                                        <div class="data_cell">
+                                                <span class="table_text">Protection layer: </span>
+                                                <span class="value table_text">{{$ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel03_Status_On}}</span>
+
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Nominal Voltage: </span>
+                                                <span class="value table_text">-1260.00 V</span>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Sense Voltage: </span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203290399519">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel03_MeasurementTerminalVoltage
+                                                                | number: 4
+                                                                }} V
+                                                        </span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Current: </span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203290400031">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel03_MeasurementCurrent
+                                                                | number: 14 }}
+                                                                A
+                                                        </span>
+                                                </a>
+                                        </div>
+                                        <div class="data_cell">
+                                                <span class="table_text">Measurment Temperature: </span>
+                                                <a target="_blank"
+                                                        ng-href="#!/histogramvd/48203290400287">
+                                                        <span class="value table_text">{{
+                                                                $ctrl.NP_VD_Wiener_NP04_PS_CE_02_Board2_Channel03_MeasurementTemperature
+                                                                | number: 1 }}
+                                                                &#x2103</span>
+                                                </a>
+                                        </div>
+                                </div>
+                        </div>
+                </fieldset>
+        </div>
+        </div>
+        <!-- <br /> -->
+        <!-- <div id="days">
+            <button id="1hour" type="button" ng-click="$ctrl.dayChanger(0.125)">1 hour</button>
+            <button id="6hours" type="button" ng-click="$ctrl.dayChanger(0.33)">6 hours</button>
+            <button id="12hours" type="button" ng-click="$ctrl.dayChanger(0.58)">12 hours</button>
+            <button id="1day" type="button" ng-click="$ctrl.dayChanger(1.08)">1 day</button>
+            <button id="3days" type="button" ng-click="$ctrl.dayChanger(3.08)">3 days</button>
+            <button id="7days" type="button" ng-click="$ctrl.dayChanger(7.08)">7 days</button>
+            <button id="10days" type="button" ng-click="$ctrl.dayChanger(10.08)">10 days</button>
+        </div> -->
+        <!-- <div id="container0">Placeholder for chart</div>
+        <div id="container1">Placeholder for chart</div> -->
+        <!-- This is all there is. -->
+        <div id="ambient" class="ambient">
+                <div class="ambient_content table_text">
+                Humidity:<br />
+                <a target="_blank" href="#!/cachedhist/47878785489690">
+                        <span class="value">{{
+                                $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+                        </a><br />Ambient temperature:<br /><a target="_blank" href="#!/histogram/NP02_DCS_V21-CPC_AnalogInput-00008.ProcessInput.PosSt">
+                                <span class="value">{{$ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+                        </a><br />Ambient pressure:<br /><a target="_blank" href="#!/histogram/NP02_DCS_V21-CPC_AnalogInput-00009.ProcessInput.PosSt">
+                                <span class="value">{{$ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+                </a>
+                </div>
+        </div>
+</div>
+</div>

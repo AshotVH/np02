@@ -1,0 +1,107 @@
+"Data Base tag"										Alias			:= "Strain Gauge label"
+
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0001.PosSt" 	:= "BC_BS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50155.ProcessInput.PosSt		"NP02_WE0002.PosSt" := "BC_BS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50156.ProcessInput.PosSt		"NP02_WE0003.PosSt" := "MEM_BS_03";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50157.ProcessInput.PosSt		"NP02_WE0004.PosSt" := "MEM_BS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50158.ProcessInput.PosSt		"NP02_WE0005.PosSt" := "4B_BS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50159.ProcessInput.PosSt		"NP02_WE0006.PosSt" := "3B_BS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50160.ProcessInput.PosSt		"NP02_WE0007.PosSt" := "2B_BS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50161.ProcessInput.PosSt		"NP02_WE0008.PosSt" := "TCO_BS_01";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50162.ProcessInput.PosSt		"NP02_WE0009.PosSt" := "DS_BS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50163.ProcessInput.PosSt		"NP02_WE0010.PosSt" := "MC_BSS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50164.ProcessInput.PosSt		"NP02_WE0011.PosSt" := "MC_BSS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50165.ProcessInput.PosSt		"NP02_WE0012.PosSt" := "MC_BSS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50166.ProcessInput.PosSt		"NP02_WE0013.PosSt" := "TC_JS_02_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50167.ProcessInput.PosSt		"NP02_WE0014.PosSt" := "TC_JS_02_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50168.ProcessInput.PosSt		"NP02_WE0015.PosSt" := "BC_JS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50169.ProcessInput.PosSt		"NP02_WE0016.PosSt" := "BC_JS_03_B";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50170.ProcessInput.PosSt		"NP02_WE0017.PosSt" := "3B_JS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50171.ProcessInput.PosSt		"NP02_WE0018.PosSt" := "DS_JS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50172.ProcessInput.PosSt		"NP02_WE0019.PosSt" := "MC_BJS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50173.ProcessInput.PosSt		"NP02_WE0020.PosSt" := "MC_BJS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50174.ProcessInput.PosSt		"NP02_WE0021.PosSt" := "MC_BJS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50175.ProcessInput.PosSt		"NP02_WE0022.PosSt" := "MC_LJS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50176.ProcessInput.PosSt		"NP02_WE0023.PosSt" := "MC_LJS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50177.ProcessInput.PosSt		"NP02_WE0024.PosSt" := "MC_LJS_02";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50178.ProcessInput.PosSt		"NP02_WE0025.PosSt" := "TC_LC_02_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50179.ProcessInput.PosSt		"NP02_WE0026.PosSt" := "TC_LC_02_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50180.ProcessInput.PosSt		"NP02_WE0027.PosSt" := "BC_LS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50181.ProcessInput.PosSt		"NP02_WE0028.PosSt" := "BC_LS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50182.ProcessInput.PosSt		"NP02_WE0029.PosSt" := "3B_LS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50183.ProcessInput.PosSt		"NP02_WE0030.PosSt" := "MEM_LS_03";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50184.ProcessInput.PosSt		"NP02_WE0031.PosSt" := "MEM_LS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50185.ProcessInput.PosSt		"NP02_WE0032.PosSt" := "DS_LS_01";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50186.ProcessInput.PosSt		"NP02_WE0033.PosSt" := "Temp_Bottom";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50187.ProcessInput.PosSt		"NP02_WE0034.PosSt" := "MC_LSS_04_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50220.ProcessInput.PosSt		"NP02_Spare_39AIR.PosSt" := "MC_LSS_04_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50188.ProcessInput.PosSt		"NP02_WE0035.PosSt" := "MC_LSS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50189.ProcessInput.PosSt		"NP02_WE0036.PosSt" := "MC_LSS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50190.ProcessInput.PosSt		"NP02_WE0037.PosSt" := "MC_LSS_01_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50191.ProcessInput.PosSt		"NP02_WE0038.PosSt" := "MEM_LS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50192.ProcessInput.PosSt		"NP02_WE0039.PosSt" := "MC_LSS_01_B";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50193.ProcessInput.PosSt		"NP02_WE0040.PosSt" := "MC_LSS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50194.ProcessInput.PosSt		"NP02_WE0041.PosSt" := "TC_SS_02_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50195.ProcessInput.PosSt		"NP02_WE0042.PosSt" := "TC_SS_02_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50196.ProcessInput.PosSt		"NP02_WE0043.PosSt" := "TC_SS_01_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50197.ProcessInput.PosSt		"NP02_WE0044.PosSt" := "TC_SS_01_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50198.ProcessInput.PosSt		"NP02_WE0045.PosSt" := "4B_SS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50199.ProcessInput.PosSt		"NP02_WE0046.PosSt" := "3B_SS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50200.ProcessInput.PosSt		"NP02_WE0047.PosSt" := "2B_SS_01";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50201.ProcessInput.PosSt		"NP02_WE0048.PosSt" := "TC_SS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50202.ProcessInput.PosSt		"NP02_WE0049.PosSt" := "TC_SS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50203.ProcessInput.PosSt		"NP02_WE0050.PosSt" := "MEM_SS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50206.ProcessInput.PosSt		"NP02_Spare_25AIR.PosSt" := "DS_SS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50207.ProcessInput.PosSt		"NP02_Spare_26AIR.PosSt" := "dP_NP02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50208.ProcessInput.PosSt		"NP02_Spare_27AIR.PosSt" := "BC_SS_04_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50209.ProcessInput.PosSt		"NP02_Spare_28AIR.PosSt" := "BC_SS_04_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50210.ProcessInput.PosSt		"NP02_Spare_29AIR.PosSt" := "Temp_Ambient_top";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50211.ProcessInput.PosSt		"NP02_Spare_30AIR.PosSt" := "BC_SS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50212.ProcessInput.PosSt		"NP02_Spare_31AIR.PosSt" := "BC_SS_01_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50213.ProcessInput.PosSt		"NP02_Spare_32AIR.PosSt" := "BC_SS_01_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50214.ProcessInput.PosSt		"NP02_Spare_33AIR.PosSt" := "Temp_Ambient_bottom";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50215.ProcessInput.PosSt		"NP02_Spare_34AIR.PosSt" := "Temp_top";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50216.ProcessInput.PosSt		"NP02_Spare_35AIR.PosSt" := "MEM_SS_03";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50217.ProcessInput.PosSt		"NP02_Spare_36AIR.PosSt" := "MEM_SS_01_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50218.ProcessInput.PosSt		"NP02_Spare_37AIR.PosSt" := "MEM_SS_01_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50219.ProcessInput.PosSt		"NP02_Spare_38AIR.PosSt" := "MEM_SS_01_C";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50188.ProcessInput.PosSt		"NP02_WE0035.PosSt" := "MC_LSS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50189.ProcessInput.PosSt		"NP02_WE0036.PosSt" := "MC_LSS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50190.ProcessInput.PosSt		"NP02_WE0037.PosSt" := "MC_LSS_01_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50191.ProcessInput.PosSt		"NP02_WE0038.PosSt" := "MEM_LS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50192.ProcessInput.PosSt		"NP02_WE0039.PosSt" := "MC_LSS_01_B";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50193.ProcessInput.PosSt		"NP02_WE0040.PosSt" := "MC_LSS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0041.PosSt" := "TC_SS_02_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0042.PosSt" := "TC_SS_02_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0043.PosSt" := "TC_SS_01_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0044.PosSt" := "TC_SS_01_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0045.PosSt" := "4B_SS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0046.PosSt" := "3B_SS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0047.PosSt" := "2B_SS_01";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0048.PosSt" := "TC_SS_03_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0049.PosSt" := "TC_SS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_WE0050.PosSt" := "MEM_SS_02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_25AIR.PosSt" := "DS_SS_01";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_26AIR.PosSt" := "dP_NP02";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_27AIR.PosSt" := "BC_SS_04_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_28AIR.PosSt" := "BC_SS_04_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_29AIR.PosSt" := "Temp_Ambient_top";
+//
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_30AIR.PosSt" := "BC_SS_03_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_31AIR.PosSt" := "BC_SS_01_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_32AIR.PosSt" := "BC_SS_01_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_33AIR.PosSt" := "Temp_Ambient_bottom";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_34AIR.PosSt" := "Temp_top";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_35AIR.PosSt" := "MEM_SS_03";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_36AIR.PosSt" := "MEM_SS_01_A";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_37AIR.PosSt" := "MEM_SS_01_B";
+NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50154.ProcessInput.PosSt		"NP02_Spare_38AIR.PosSt" := "MEM_SS_01_C";

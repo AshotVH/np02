@@ -1,0 +1,327 @@
+<link rel="stylesheet" href="css/comissioning.css" />
+<div class="container">
+  <div class="page_title_and_timestamps">
+    <div id="pageTitle" class="page-title">
+      {{$ctrl.pageTitle}}
+      <div id="dqm" class="dqm">
+        <a
+          class="dqm__link"
+          target="_blank"
+          href="http://p3s-content.cern.ch/monitor/puritychart"
+          >Link to NP02 DQM</a
+        >
+      </div>
+    </div>
+    <div id="timestamp_label" class="timestamp_label">
+      Timestamp:<br /><span id="timestamp" class="timestamp"
+        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+      >
+    </div>
+  </div>
+  <main class="table">
+    <div class="table_wrapper">
+      <div class="table__row">
+        <div class="data__cell">
+          2PT4910:
+          <a target="_blank" ng-href="#!/histogram/47926298542363"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_2PT4910 | number: 3 }} bar</span
+            ></a
+          ><br /><span>Cryostat absolute pressure</span>
+        </div>
+        <div class="data__cell">
+          2PDT4915:&nbsp;<a
+            target="_blank"
+            ng-href="#!/histogram/47926332096795"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_2PDT4915 | number: 1 }} mbar</span
+            ></a
+          ><br /><span>Cryostat gauge pressure</span>
+        </div>
+        <div class="data__cell">
+          O<sub>2</sub>:
+          <a target="_blank" ng-href="#!/histogram/47926348874011"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_2QT4710 | number: 2}} ppm</span
+            ></a
+          ><br /><span>ERROR reading from sensor</span>
+        </div>
+        <div class="data__cell">
+          N<sub>2</sub>:
+          <a target="_blank" ng-href="#!/histogram/47926365651227"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_2QT4720 | number: 2}} ppm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          H<sub>2</sub>O:
+          <a target="_blank" ng-href="#!/histogram/47926382428443"
+            ><span class="value"
+              >{{ ($ctrl.NP02_DCS_01_2QT4730 < 0 || $ctrl.NP02_DCS_01_2QT4730>
+              100) ? "Out of range" : ($ctrl.NP02_DCS_01_2QT4730 | number: 2) }}
+              ppm</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="table__row">
+        <div class="data__cell">
+          Voltage:
+          <a target="_blank" ng-href="#!/histogram/47363691381019"
+            ><span class="value"
+              >{{ $ctrl.NP04_DCS_01_Heinz_V_Raw | number: 5 }} V</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          Current:
+          <a target="_blank" ng-href="#!/histogram/47363557163291"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_Heinz_I | number: 2 }} &micro;A</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LAr level LE301FK:
+          <a target="_blank" ng-href="#!/histogram/47911366843163"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0301FK | number: 2 }} %</span
+            ></a
+          ><span class="value">
+            {{ (4 / ((117 / ($ctrl.NP02_DCS_01_LE0301FK + 8.5)) - 0.5)) |
+            number: 2}} m</span
+          >
+        </div>
+        <div class="data__cell">
+          LAr level LE302FK:
+          <a target="_blank" ng-href="#!/histogram/47911383620379"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0302FK | number: 2 }} %</span
+            ></a
+          ><span class="value">
+            {{ (4 / ((117 / ($ctrl.NP02_DCS_01_LE0302FK + 8.5)) - 0.5)) |
+            number: 2}} m</span
+          >
+        </div>
+      </div>
+      <div class="table__row">
+        <div class="data__cell">
+          LE0101:
+          <a target="_blank" ng-href="#!/histogram/47960339513627"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0101 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960691835419"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_1_1_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0102:
+          <a target="_blank" ng-href="#!/histogram/47960373068059"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0102 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960775721499"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_1_2_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0103:
+          <a target="_blank" ng-href="#!/histogram/47960389845275"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0103 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960792498715"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_1_3_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0104:
+          <a target="_blank" ng-href="#!/histogram/47960406622491"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0104 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960809275931"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_1_4_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0201:
+          <a target="_blank" ng-href="#!/histogram/47960423399707"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0201 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960708612635"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_2_1_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0202:
+          <a target="_blank" ng-href="#!/histogram/47960440176923"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0202 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960826053147"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_2_2_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0203:
+          <a target="_blank" ng-href="#!/histogram/47960456954139"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0203 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960842830363"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_2_3_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0204:
+          <a target="_blank" ng-href="#!/histogram/47960473731355"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0204 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960859607579"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_2_4_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="table__row">
+        <div class="data__cell">
+          LE0301:
+          <a target="_blank" ng-href="#!/histogram/47960490508571"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0301 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960725389851"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_3_1_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0302:
+          <a target="_blank" ng-href="#!/histogram/47960507285787"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0302 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960876384795"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_3_2_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0303:
+          <a target="_blank" ng-href="#!/histogram/47960524063003"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0303 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960893162011"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_3_3_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0304:
+          <a target="_blank" ng-href="#!/histogram/47960540840219"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0304 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960909939227"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_3_4_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0401:
+          <a target="_blank" ng-href="#!/histogram/47960557617435"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0401 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960742167067"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_4_1_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0402:
+          <a target="_blank" ng-href="#!/histogram/47960574394651"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0402 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960926716443"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_4_2_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0403:
+          <a target="_blank" ng-href="#!/histogram/47960591171867"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0403 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960943493659"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_4_3_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+        <div class="data__cell">
+          LE0404:
+          <a target="_blank" ng-href="#!/histogram/47960607949083"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_LE0404 | number: 2 }} %</span
+            ></a
+          ><br /><a target="_blank" ng-href="#!/histogram/47960960270875"
+            ><span class="value"
+              >{{ $ctrl.NP02_DCS_01_CRP_4_4_POS | number: 1 }} mm</span
+            ></a
+          >
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="ambient" class="ambient">
+    <div class="ambient_content">
+      Humidity:<br />
+      <a target="_blank" href="#!/histogram/47910779640603"
+        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
+      ><br />Ambient temperature:<br /><a
+        target="_blank"
+        href="#!/histogram/47910796417819"
+        ><span class="value"
+          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
+        ></a
+      ><br />Ambient pressure:<br /><a
+        target="_blank"
+        href="#!/histogram/47910813195035"
+        ><span class="value"
+          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
+        ></a
+      >
+    </div>
+  </div>
+</div>

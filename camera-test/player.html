@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>NP02 Cameras</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="../css/camera-test.css"/>
+    <!--script type="text/javascript" src="../paella/player/javascript/swfobject.js"></script-->
+    <script type="text/javascript" src="javascript/base.js"></script>
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/lunr.min.js"></script>
+    <script type="text/javascript" src="javascript/require.js"></script>
+    <script type="text/javascript" src="javascript/paella_player_es2015.js"></script>
+    <!--script type="text/javascript" src="../paella/player/javascript/hls.min.js"></script-->
+    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("menu").style.width = "30vw";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("menu").style.width = "0";
+        }
+        // onload="paella.load('videoContainer',{autoplay: true});"
+    </script>
+</head>
+
+<body>
+
+<img src="../img/menu_icon.png" onclick="openNav()" style="position: absolute; left: 1vw; top: 1vh; background-color: floralwhite; width: 50px;"/>
+<div id="menu" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/">Home</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/cryostat">NP02 Cryostat</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/straingaugeshist">NP02 Gauges</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/inside">NP02 T-Insulation</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/tinternal">NP02 T-Internal</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/crptemps">NP02 CRP Temperatures</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/multiplexer">NP02 T-multiplexer</a>
+    <!--    <a href="#!/purity">NP02 Purity Monitors</a>-->
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/camera-test/index.html">NP02 Cameras</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/zmonitor">NP02 Z-monitor</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/comissioning">NP02 Comissioning</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/cryogenics">NP02 Cryogenics</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/groundplanes">NP02 High Voltage</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/lems">NP02 LEMs</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/pds">NP02 PDS</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#">Charge monitoring (in progress)</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/underfloor">NP02 Under floor</a>
+    <a href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/#!/links">Useful links</a>
+    <a href="mailto:cernbox-project-np02-slow-control-admins@cern.ch">Contact web admins</a>
+
+</div>
+
+<!– player container –>
+
+<div id="videoContainer" class="" style="position: absolute; left: 5vw; top: 5vh; width: 72vw; height: 40.5vw;"></div>
+<div id="camChooser" style="position: absolute; right: 3vw; top: 10vh;">
+    <input type="button" value="CAM000 Argon sprayer" onclick="window.location.href='player.html?id=cam000'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM008 Bottom HV extender" onclick="window.location.href='player.html?id=cam008'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM010 PMT" onclick="window.location.href='player.html?id=cam010'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <br/>
+    <input type="button" value="CAM000&CAM009" onclick="window.location.href='player.html?id=cam000-009'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM003&CAM005" onclick="window.location.href='player.html?id=cam003-005'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM005&CAM006" onclick="window.location.href='player.html?id=cam005-006'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <br/>
+    <input type="button" value="CAM001 CRP1&CRP2" onclick="window.location.href='player.html?id=cam001'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <!--    <input type="button" value="CAM002 Bottom HV extender" onclick="window.location.href='cam002.html'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.0vmin;"/><br/>-->
+    <input type="button" value="CAM003 CRP2&CRP3" onclick="window.location.href='player.html?id=cam003'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM004 CRP3&CRP4" onclick="window.location.href='player.html?id=cam004'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM011 CRP4&CRP1" onclick="window.location.href='player.html?id=cam011'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <br/>
+    <input type="button" value="CAM005 Membrane level meter" onclick="window.location.href='player.html?id=cam005'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM006 Top HV extender" onclick="window.location.href='player.html?id=cam006'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM007 Cathode" onclick="window.location.href='player.html?id=cam007'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM009 TPC corner" onclick="window.location.href='player.html?id=cam009'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM012" onclick="window.location.href='player.html?id=cam012'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+    <input type="button" value="CAM013" onclick="window.location.href='player.html?id=cam013'" style="font-family: 'Arial Black', Gadget, sans-serif; font-size: 2.2vmin;"/><br/>
+</div>
+<div id="time" style="position: absolute; left: 30vw; bottom: 5vh; color: #dddddd; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;"></div>
+<script type="text/javascript">
+
+    paella.load('videoContainer', {autoplay: true});
+    document.getElementById("videoContainer").autoplay = true;
+    /*var cam203var = new THEOplayer.Player(cam203el, {
+        libraryLocation : 'https://cdn.theoplayer.com/dash/7cff09f1-2b5a-4bb1-ad38-bec2080af846/'
+    });
+
+    cam203var.autoplay = true;
+
+    cam203var.source = {
+        sources : [{
+            src : 'https://wowza03.cern.ch/np02detector/np02-cam-203.stream/playlist.m3u8',
+            type : 'application/x-mpegurl',
+            ui : {fluid: true}
+        }]
+    };*/
+
+    function updateDate() {
+        var options = { day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
+        d = new Date();
+        document.getElementById("time").innerHTML = d.toLocaleDateString('it-CH', options);
+    }
+
+
+    setInterval(updateDate, 1000);
+
+</script>
+
+
+
+</body>
+
+</html>

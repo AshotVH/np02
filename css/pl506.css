@@ -1,0 +1,78 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.page_title_and_timestamps {
+  padding-bottom: 30px;
+}
+.ambient {
+  margin-top: 50px;
+  display: flex;
+  position: relative;
+  right: 4vw;
+  justify-content: flex-end;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+  padding-bottom: 30px;
+}
+.ambient_content {
+  border: 1px solid white;
+  padding: 4px 10px;
+  text-align: right;
+}
+.table_header,
+.table_text {
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: azure;
+}
+.data_cell .value,
+.table_text.value {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: rgba(0, 255, 0, 0.651);
+  font-weight: bold;
+}
+.table_header {
+  font-size: 18px;
+}
+.table_text {
+  font-size: 12px;
+  margin-left: 2px;
+  text-align: end;
+}
+.status_fieldset,
+.channel0_fieldset,
+.channel1_fieldset,
+.channel2_fieldset {
+  border: 1px solid white;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+.channels_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+  align-items: center;
+}
+@media screen and (min-width: 480px) {
+  .table_text {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .channels_wrapper {
+    flex-direction: row;
+  }
+  .table_header {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .table_text {
+    font-size: 18px;
+  }
+}

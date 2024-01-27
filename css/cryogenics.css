@@ -1,0 +1,146 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media screen and (max-width: 479px) {
+  .page-title {
+    position: relative;
+    display: inline-block;
+  }
+  .timestamp_label {
+    display: inline-block;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+  }
+  .cryostat_pressure {
+    margin: 20px 10px;
+    color: white;
+  }
+  .cryostat_pressure,
+  .cryostat_pressure a span {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 12px;
+  }
+  .cryostat_pressure__item {
+    border: 1px solid white;
+    padding: 12px 15px;
+    margin: 4px 2px;
+  }
+  .ambient_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 10px;
+  }
+  .ambient {
+    text-align: right;
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+    border: 1px solid white;
+    padding: 8px;
+  }
+  .ambient,
+  .ambient span a {
+    font-size: 12px;
+  }
+}
+/* *********************************************************** */
+/* *********************************************************** */
+/* *********************************************************** */
+@media screen and (min-width: 480px) {
+  .page-title {
+    position: relative;
+    display: inline-block;
+  }
+  .timestamp_label {
+    display: inline-block;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  #detector {
+    display: block;
+    position: fixed;
+    top: 30vh;
+    left: 20vw;
+    width: 60vmin;
+  }
+
+  .cryostat_pressure {
+    margin: 50px 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 8px;
+    line-height: 150%;
+  }
+  .cryostat_pressure,
+  .cryostat_pressure a span {
+ 
+    font-size: 16px;
+  }
+  .cryostat_pressure__item {
+    border: 1px solid white;
+    padding: 10px 5px 2px 10px;
+    margin: 2px;
+    flex-grow: 1;
+    flex-basis: 45%;
+    min-height: 60px;
+    display: inline-block;
+  }
+  .ambient_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 10px;
+  }
+  .ambient {
+    text-align: right;
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+    border: 1px solid white;
+    padding: 10px 8px 8px 18px;
+  }
+  .ambient,
+  .ambient span a {
+    font-size: 16px;
+  }
+}
+/* *********************************************************** */
+/* *********************************************************** */
+/* *********************************************************** */
+@media screen and (min-width: 768px) {
+  .cryostat_pressure {
+    margin: 50px 30px;
+  }
+  .cryostat_pressure__item {
+    flex-grow: 1;
+    flex-basis: 19%;
+  }
+  .cryostat_pressure,
+  .cryostat_pressure a span {
+     font-size: 18px;
+  }
+  .ambient_wrapper {
+    margin-right: 30px;
+  }
+  .ambient,
+  .ambient span a {
+    font-size: 18px;
+  }
+}

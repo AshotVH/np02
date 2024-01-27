@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="css/vdcam.css">
+<div class="container">
+        <div class="vdcam__header">
+                <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+                <div id="timestamp_label" class="timestamp_label" >Timestamp:<br />
+                        <span id="timestamp" class="timestamp">{{
+                        $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span></div>
+        </div>
+    <main class="vdcam_main_container">
+        <div class="vdcam_data_table">
+        <div class="vdcam_data_table__header">
+                CAMERA Control
+        </div>
+        <div class="vdcam_data_table_rows">
+                <div class="vdcam_data_table_row">
+                        <p>Cam1 T</p>
+                        <p> 
+                                <a target="_blank" ng-href="#!/histogramvd/48206696153631"><span class="value">{{$ctrl.NP_VD_CamT1 | number: 2}}212.90 K</span></a>
+                        </p>
+               </div>
+               <div class="vdcam_data_table_row">
+                <p>Cam2 T</p>
+                       <p> 
+                        <a target="_blank" ng-href="#!/histogramvd/48206712930847"><span class="value">{{$ctrl.NP_VD_CamT2 | number: 2 }} 212.90  K</span></a>
+                      </p>
+                </div>
+                <div class="vdcam_data_table_row">
+                        <p>Cam3 T</p>
+                        <p> 
+                                <a target="_blank" ng-href="#!/histogramvd/48206729708063"><span class="value">{{$ctrl.NP_VD_CamT3 | number: 2 }} 212.90  K</span></a>                                
+                        </p>
+                </div>
+        </div>
+    </div>
+           <div class="ambient">
+                <div id="ambient-content" class="ambient_content">Humidity:<br /><a target="_blank" href="#!/cachedhist/47878785489690"><span class="value">{{
+                        $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a><br />Ambient temperature:<br /><a
+                target="_blank" href="#!/histogram/NP02_DCS_V21-CPC_AnalogInput-00008.ProcessInput.PosSt"><span
+                        class="value">{{
+                        $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span></a><br />Ambient pressure:<br /><a
+                target="_blank" href="#!/histogram/NP02_DCS_V21-CPC_AnalogInput-00009.ProcessInput.PosSt"><span
+                        class="value">{{
+                        $ctrl.NP02_PT0106AI | number: 1 }} mbar</span></a></div>
+        </div>
+</main>
+      
+</div>
+</div>

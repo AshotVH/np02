@@ -1,0 +1,227 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.container {
+  padding-bottom: 30px;
+}
+.page_title_and_timestamps {
+  padding-bottom: 30px;
+}
+.para_datas {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+.coldbox_image_wrapper {
+  position: relative;
+  width: 97%;
+  padding-top: 8px;
+}
+.coldbox_image {
+  width: 98%;
+}
+.upper_sensors_wrapper,
+.lower_sensors_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.data_cell,
+.ls_data_cell {
+  color: white;
+  font-size: 10px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  padding: 5px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hv,
+.v_mon,
+.i_mon,
+.pds {
+  flex-basis: 24%;
+}
+.cs,
+.sgft {
+  flex-basis: 48%;
+}
+.lower_sensors_wrapper {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.ls_data_cell {
+  min-width: 50px;
+}
+.crp_temp_1_on_image,
+.crp_temp_2_on_image,
+.crp_temp_3_on_image,
+.crp_temp_4_on_image,
+.level_meter_on_image {
+  position: absolute;
+  width: 7.5%;
+  height: 4.8%;
+  /* background-color: orange; */
+  visibility: hidden;
+}
+.crp_temp_1_on_image {
+  top: 36%;
+  left: 29.7%;
+}
+.crp_temp_2_on_image {
+  top: 36%;
+  left: 39.3%;
+}
+.crp_temp_3_on_image {
+  top: 36%;
+  left: 49%;
+}
+.crp_temp_4_on_image {
+  top: 36%;
+  left: 58.6%;
+}
+.level_meter_on_image {
+  top: 82%;
+  left: 87%;
+}
+.table_text {
+  font-size: 10px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: azure;
+}
+.ambient {
+  position: relative;
+  top: -75px;
+  right: 2vw;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.2s;
+}
+.ambient_content {
+  border: 1px solid white;
+  padding: 5px 6px;
+  text-align: right;
+}
+.temperature_gradient {
+  display: flex;
+  flex-direction: column;
+}
+.temperature_gradient .data_cell {
+  width: 120px;
+  gap: 5px;
+  align-items: baseline;
+  margin-left: 2vw;
+}
+@media screen and (min-width: 480px) {
+  .temperature_gradient {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .temperature_gradient .data_cell {
+    margin: 1px;
+    width: auto;
+    min-width: 120px;
+  }
+  .ambient {
+    top: 20px;
+  }
+  .coldbox_image_wrapper {
+    width: 100% ;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hv,
+  .v_mon,
+  .i_mon,
+  .pds,
+  .cs,
+  .sgft {
+    flex-basis: 32%;
+  }
+  .table_text {
+    font-size: 12px;
+  }
+  .temperature_gradient .data_cell {
+    flex-basis: 20%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hv,
+  .v_mon,
+  .i_mon,
+  .pds,
+  .cs,
+  .sgft {
+    flex-basis: 15%;
+  }
+  .table_text {
+    font-size: 14px;
+  }
+  .coldbox_image {
+    width: 988px;
+  }
+
+  .temperature_gradient .data_cell {
+    margin: 1px;
+    width: auto;
+    align-items: center;
+    flex-basis: 20%;
+  }
+  .temperature_gradient {
+    flex-basis: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ambient {
+    position: static;
+  }
+  .bottom_wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .crp_temp_1_on_image,
+  .crp_temp_2_on_image,
+  .crp_temp_3_on_image,
+  .crp_temp_4_on_image,
+  .level_meter_on_image {
+    visibility: visible;
+    top: 36%;
+    width: 77px;
+    height: 27px;
+  }
+  .crp_temp_1_on_image {
+    left: calc(50% - 205px);
+  }
+  .crp_temp_2_on_image {
+    left: calc(50% - 109px);
+  }
+  .crp_temp_3_on_image {
+    left: calc(50% - 10px);
+  }
+  .crp_temp_4_on_image {
+    left: calc(50% + 85px);
+  }
+  .level_meter_on_image {
+    top: 81%;
+    left: calc(50% + 308px);
+  }
+  .lower_sensors_wrapper .ls_data_cell {
+    display: none;
+  }
+  .coldbox_image_wrapper .ls_data_cell {
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="css/lausanne.css" />
+<div class="container">
+  <div class="page_title_and_timestamps">
+    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+    <div id="timestamp_label" class="timestamp_label">
+      Timestamp:<br /><span id="timestamp" class="timestamp"
+        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+      >
+    </div>
+  </div>
+  <img
+    id="detector"
+    class="lausanne__img"
+    src="img/lausanne.png"
+    alt="lausanne"
+  />
+
+  <div class="data_container table_text">
+    <div class="lausanne__data_table">
+      <div class="data_cell">
+        <span>MC_LJS_02</span>
+        <a target="_blank" href="#!/histogram/47900964946971"
+          ><span class="value"
+            >{{ $ctrl.MC_LJS_02 | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>MC_LJS_03_A</span>
+        <a target="_blank" href="#!/histogram/47900981724187"
+          ><span class="value"
+            >{{ $ctrl.MC_LJS_03_A | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>MC_LJS_03_B</span>
+        <a target="_blank" href="#!/histogram/47900998501403"
+          ><span class="value"
+            >{{ $ctrl.MC_LJS_03_B | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>TC_LS_02_A</span>
+        <a target="_blank" href="#!/histogram/47901619258395"
+          ><span class="value"
+            >{{ $ctrl.TC_LS_02_A | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>TC_LS_02_B</span>
+        <a target="_blank" href="#!/histogram/47901636035611"
+          ><span class="value"
+            >{{ $ctrl.TC_LS_02_B | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>BC_LS_03_A</span>
+        <a target="_blank" href="#!/histogram/47901652812827"
+          ><span class="value"
+            >{{ $ctrl.BC_LS_03_A | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>BC_LS_03_B</span>
+        <a target="_blank" href="#!/histogram/47901669590043"
+          ><span class="value"
+            >{{ $ctrl.BC_LS_03_B | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>3B_LS_01</span>
+        <a target="_blank" href="#!/histogram/47901686367259"
+          ><span class="value"
+            >{{ $ctrl.B3_LS_01 | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>MEM_LS_03</span>
+        <a target="_blank" href="#!/histogram/47901703144475"
+          ><span class="value"
+            >{{ $ctrl.MEM_LS_03 | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+      <div class="data_cell">
+        <span>MEM_LS_02</span>
+        <a target="_blank" href="#!/histogram/47901719921691"
+          ><span class="value"
+            >{{ $ctrl.MEM_LS_02 | number: 2 }} &#956;m/m</span
+          ></a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="ambient">
+    <div class="ambient_content table_text">
+      Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"
+        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
+      ><br />Ambient temperature:<br /><a
+        target="_blank"
+        href="#!/histogram/47910796417819"
+        ><span class="value"
+          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
+        ></a
+      ><br />Ambient pressure:<br /><a
+        target="_blank"
+        href="#!/histogram/47910813195035"
+        ><span class="value"
+          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
+        ></a
+      >
+    </div>
+  </div>
+  <!--<div id="DS_LS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50185.ProcessInput.PosSt"><span class="value">{{ $ctrl.DS_LS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="TC_LS_02"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50178.ProcessInput.PosSt"><span class="value">{{ $ctrl.TC_LS_02 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="B3_LS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50182.ProcessInput.PosSt"><span class="value">{{ $ctrl.B3_LS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="BC_LS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50180.ProcessInput.PosSt"><span class="value">{{ $ctrl.BC_LS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MEM_LS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50183.ProcessInput.PosSt"><span class="value">{{ $ctrl.MEM_LS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MEM_LS_02"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50184.ProcessInput.PosSt"><span class="value">{{ $ctrl.MEM_LS_02 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MC_LJS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50175.ProcessInput.PosSt"><span class="value">{{ $ctrl.MC_LJS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MC_LJS_02"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50177.ProcessInput.PosSt"><span class="value">{{ $ctrl.MC_LJS_02 | number: 2 }} &#956;m/m</span></a></div>
+--></div>

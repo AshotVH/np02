@@ -1,0 +1,186 @@
+body {
+    background-color: #333333;
+}
+
+a {
+    color: lime;
+    text-decoration: none;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #222; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.7vmin;
+    color: #818181;
+    font-family: "Arial Black", Gadget, sans-serif;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 3.0vmin;
+    margin-left: 50px;
+}
+
+#submenu {
+    display: none;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+}
+
+#detector {
+    display: block;
+    position: fixed;
+    left: 15vw;
+    top: 10vh;
+    width: 35vw;
+}
+
+#cam000 {
+    position: absolute;
+    left: 13vw;
+    top: 35vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam001 {
+    position: absolute;
+    left: 20vw;
+    top: 43vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam002 {
+    position: absolute;
+    left: 27vw;
+    top: 73vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam003 {
+    position: absolute;
+    left: 40vw;
+    top: 43vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam003-007-003 {
+    position: absolute;
+    left: 40vw;
+    top: 43vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam003-007-007 {
+    position: absolute;
+    left: 40vw;
+    top: 43vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam004 {
+    position: absolute;
+    left: 39vw;
+    top: 24vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam005 {
+    position: absolute;
+    left: 45vw;
+    top: 38vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam006 {
+    position: absolute;
+    left: 31vw;
+    top: 23vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam007 {
+    position: absolute;
+    left: 30vw;
+    top: 56vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam008 {
+    position: absolute;
+    left: 23vw;
+    top: 57vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam009 {
+    position: absolute;
+    left: 48vw;
+    top: 63vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam010 {
+    position: absolute;
+    left: 45vw;
+    top: 67vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}
+
+#cam011 {
+    position: absolute;
+    left: 20vw;
+    top: 23vh;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 1.8vmin;
+}

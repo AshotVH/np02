@@ -1,0 +1,125 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.container {
+  position: relative;
+  padding-bottom: 20px;
+}
+.ambient {
+  margin-top: 50px;
+  display: flex;
+  position: relative;
+  right: 4vw;
+  justify-content: flex-end;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+.ambient_content {
+  border: 1px solid white;
+  padding: 4px 10px;
+  text-align: right;
+}
+.data_container {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  font-size: 16px;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+.text {
+  font-size: 12px;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+.crp__header{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.board__header {
+  text-align: center;
+  padding: 6px 0;
+}
+.crp {
+  border: 1px solid white;
+  color: aliceblue;
+  margin: 2px;
+  min-width: 300px;
+}
+.crp__content {
+  display: flex;
+}
+.board__content {
+  display: none;
+}
+.crp__content {
+  flex-direction: column;
+}
+.board__column {
+  border: 1px solid white;
+  margin: -1px;
+  flex-grow: 1;
+}
+.text {
+  padding: 4px;
+  text-align: center;
+}
+.board__header {
+  border: 1px solid white;
+  text-align: center;
+  margin: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.board__circle {
+  padding-left: 7px;
+}
+.board__content.show_board_content {
+  display: flex;
+}
+@media screen and (min-width: 480px) {
+  .header {
+    font-size: 18px;
+  }
+  .text {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .data_container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .text {
+    padding: 8px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .board__header {
+    cursor: auto;
+  }
+  .board__circle{
+    display: none;
+  }
+  .board__content {
+    display: flex;
+  }
+  .crp__content {
+    flex-direction: row;
+  }
+  .board {
+    min-width: 250px;
+  }
+}

@@ -1,0 +1,333 @@
+<link rel="stylesheet" href="css/saleve.css" />
+<div class="container">
+  <div class="page_title_and_timestamps">
+    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+    <div id="timestamp_label" class="timestamp_label">
+      Timestamp:<br /><span id="timestamp" class="timestamp"
+        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+      >
+    </div>
+  </div>
+  <img id="detector" class="saleve__img" src="img/saleve.png" alt="saleve" />
+
+  <div class="data_container table_text">
+    <div class="saleve__data_table">
+      <div class="data_cell">
+        <div>
+          <span>3M_SS_VER_04</span>
+          <a target="_blank" href="#!/histogram/47901015278619"
+            ><span class="value"
+              >{{ $ctrl.M3_SS_VER_04 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>4M_SS_VER_04</span>
+          <a target="_blank" href="#!/histogram/47901032055835"
+            ><span class="value"
+              >{{ $ctrl.M4_SS_VER_04 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>3M_SS_VER_03</span>
+          <a target="_blank" href="#!/histogram/47901048833051"
+            ><span class="value"
+              >{{ $ctrl.M3_SS_VER_03 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>4M_SS_VER_03</span>
+          <a target="_blank" href="#!/histogram/47901065610267"
+            ><span class="value"
+              >{{ $ctrl.M4_SS_VER_03 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>4B_SS_HOR_01</span>
+          <a target="_blank" href="#!/histogram/47901082387483"
+            ><span class="value"
+              >{{ $ctrl.B4_SS_HOR_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+          <span>DS_SS_01</span>
+          <a target="_blank" href="#!/histogram/47901099164699"
+            ><span class="value"
+              >{{ $ctrl.DS_SS_01 | number: 3 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>3B_SS_HOR_01</span>
+          <a target="_blank" href="#!/histogram/47901115941915"
+            ><span class="value"
+              >{{ $ctrl.B3_SS_HOR_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>3B_SS_HOR_02</span>
+          <a target="_blank" href="#!/histogram/47901132719131"
+            ><span class="value"
+              >{{ $ctrl.B3_SS_HOR_02 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>3B_SS_HOR_03</span>
+          <a target="_blank" href="#!/histogram/47901149496347"
+            ><span class="value"
+              >{{ $ctrl.B3_SS_HOR_03 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>1MEM_SS_VER_01</span>
+          <a target="_blank" href="#!/histogram/47901166273563"
+            ><span class="value"
+              >{{ $ctrl.MEM1_SS_VER_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+          <span>1MEM_SS_HOR_02</span>
+          <a target="_blank" href="#!/histogram/47901183050779"
+            ><span class="value"
+              >{{ $ctrl.MEM1_SS_HOR_02 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>FRM_SS_VER_02</span>
+          <a target="_blank" href="#!/histogram/47901199827995"
+            ><span class="value"
+              >{{ $ctrl.FRM_SS_VER_02 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>1MEM_SS_HOR_04</span>
+          <a target="_blank" href="#!/histogram/47901216605211"
+            ><span class="value"
+              >{{ $ctrl.MEM1_SS_HOR_04 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>1MEM_SS_3AX_05_HOR</span>
+          <a target="_blank" href="#!/histogram/47901233382427"
+            ><span class="value"
+              >{{ $ctrl.MEM1_SS_3AX_05_HOR | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>1MEM_SS_VER_03</span>
+          <a target="_blank" href="#!/histogram/47901250159643"
+            ><span class="value"
+              >{{ $ctrl.MEM1_SS_VER_03 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+          <span>3M_SS_VER_02</span>
+          <a target="_blank" href="#!/histogram/47901266936859"
+            ><span class="value"
+              >{{ $ctrl.M3_SS_VER_02 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>FRM_SS_HOR_01</span>
+          <a target="_blank" href="#!/histogram/47901283714075"
+            ><span class="value"
+              >{{ $ctrl.FRM_SS_HOR_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>FRM_SS_HOR_03</span>
+          <a target="_blank" href="#!/histogram/47901300491291"
+            ><span class="value"
+              >{{ $ctrl.FRM_SS_HOR_03 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>4M_SS_VER_02</span>
+          <a target="_blank" href="#!/histogram/47901317268507"
+            ><span class="value"
+              >{{ $ctrl.M4_SS_VER_02 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>2B_SS_HOR_01</span>
+          <a target="_blank" href="#!/histogram/47901334045723"
+            ><span class="value"
+              >{{ $ctrl.B2_SS_HOR_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+          <span>3M_SS_VER_01</span>
+          <a target="_blank" href="#!/histogram/47901350822939"
+            ><span class="value"
+              >{{ $ctrl.M3_SS_VER_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>4M_SS_VER_01</span>
+          <a target="_blank" href="#!/histogram/47901367600155"
+            ><span class="value"
+              >{{ $ctrl.M4_SS_VER_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>TT_CONTACT_BOTTOM</span>
+          <a target="_blank" href="#!/histogram/47901384377371"
+            ><span class="value"
+              >{{ $ctrl.TT_CONTACT_BOTTOM | number: 2 }} &#8451;</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>TT_AMBIANCE_BOTTOM</span>
+          <a target="_blank" href="#!/histogram/47901401154587"
+            ><span class="value"
+              >{{ $ctrl.TT_AMBIANCE_BORROM | number: 2 }} &#8451;</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>MC_SLS_HOR_4B</span>
+          <a target="_blank" href="#!/histogram/47901736698907"
+            ><span class="value"
+              >{{ $ctrl.MC_SLS_HOR_4B | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+          <span>MC_SLS_HOR_3B</span>
+          <a target="_blank" href="#!/histogram/47901753476123"
+            ><span class="value"
+              >{{ $ctrl.MC_SLS_HOR_3B | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>MC_SLS_HOR_2B</span>
+          <a target="_blank" href="#!/histogram/47901770253339"
+            ><span class="value"
+              >{{ $ctrl.MC_SLS_HOR_2B | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>3M_SS_VER_05</span>
+          <a target="_blank" href="#!/histogram/47901787030555"
+            ><span class="value"
+              >{{ $ctrl.M3_SS_VER_05 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>4M_SS_VER_05</span>
+          <a target="_blank" href="#!/histogram/47901803807771"
+            ><span class="value"
+              >{{ $ctrl.M4_SS_VER_05 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>1MEM_SS_3AX_05_VER</span>
+          <a target="_blank" href="#!/histogram/47901820584987"
+            ><span class="value"
+              >{{ $ctrl.MEM1_SS_3AX_05_VER | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+          <span>1MEM_SS_3AX_05_45</span>
+          <a target="_blank" href="#!/histogram/47901837362203"
+            ><span class="value"
+              >{{ $ctrl.MEM1_SS_3AX_05_45 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>TT_CONTACT_TOP</span>
+          <a target="_blank" href="#!/histogram/47901854139419"
+            ><span class="value"
+              >{{ $ctrl.TT_CONTACT_TOP | number: 2 }} &#8451;</span
+            ></a
+          >
+        </div>
+        <div>
+          <span>TT_AMBIENCE_TOP</span>
+          <a target="_blank" href="#!/histogram/47901870916635"
+            ><span class="value"
+              >{{ $ctrl.TT_AMBIENCE_TOP | number: 2 }} &#8451;</span
+            ></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ambient" class="ambient">
+    <div class="ambient_content table_text">
+      Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"
+        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
+      ><br />Ambient temperature:<br /><a
+        target="_blank"
+        href="#!/histogram/47910796417819"
+        ><span class="value"
+          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
+        ></a
+      ><br />Ambient pressure:<br /><a
+        target="_blank"
+        href="#!/histogram/47910813195035"
+        ><span class="value"
+          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
+        ></a
+      >
+    </div>
+  </div>
+
+  <!--<div id="B4_SS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50198.ProcessInput.PosSt"><span class="value">{{ $ctrl.B4_SS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="DS_SS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50206.ProcessInput.PosSt"><span class="value">{{ $ctrl.DS_SS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="TC_SS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50196.ProcessInput.PosSt"><span class="value">{{ $ctrl.TC_SS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="TC_SS_02"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50194.ProcessInput.PosSt"><span class="value">{{ $ctrl.TC_SS_02 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="TC_SS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50201.ProcessInput.PosSt"><span class="value">{{ $ctrl.TC_SS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="B3_SS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50199.ProcessInput.PosSt"><span class="value">{{ $ctrl.B3_SS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="B2_SS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50200.ProcessInput.PosSt"><span class="value">{{ $ctrl.B2_SS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="BC_SS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50212.ProcessInput.PosSt"><span class="value">{{ $ctrl.BC_SS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="BC_SS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50211.ProcessInput.PosSt"><span class="value">{{ $ctrl.BC_SS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="BC_SS_04"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50208.ProcessInput.PosSt"><span class="value">{{ $ctrl.BC_SS_04 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MEM_SS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50216.ProcessInput.PosSt"><span class="value">{{ $ctrl.MEM_SS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MEM_SS_02"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50203.ProcessInput.PosSt"><span class="value">{{ $ctrl.MEM_SS_02 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MEM_SS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50217.ProcessInput.PosSt"><span class="value">{{ $ctrl.MEM_SS_01 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MC_LSS_04"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50187.ProcessInput.PosSt"><span class="value">{{ $ctrl.MC_LSS_04 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MC_LSS_03"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50188.ProcessInput.PosSt"><span class="value">{{ $ctrl.MC_LSS_03 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MC_LSS_02"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50193.ProcessInput.PosSt"><span class="value">{{ $ctrl.MC_LSS_02 | number: 2 }} &#956;m/m</span></a></div>
+    <div id="MC_LSS_01"><a ng-href="#!/histogram/NP02_DCS_01:un-PLC_DCS_01-NP02_DCS_V21-CPC_AnalogInput-50190.ProcessInput.PosSt"><span class="value">{{ $ctrl.MC_LSS_01 | number: 2 }} &#956;m/m</span></a></div>-->
+</div>

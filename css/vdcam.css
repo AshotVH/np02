@@ -1,0 +1,79 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.vdcam_main_container {
+  position: relative;
+  padding: 50px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 4vw;
+}
+.vdcam__header {
+  position: relative;
+  padding-top: 20px;
+  margin: 0 4vw;
+  display: flex;
+  justify-content: space-between;
+
+}
+.page-title {
+  position: relative;
+  left: 0;
+}
+.timestamp_label {
+  position: relative;
+  right: 0;
+}
+.value {
+  font-size: 16px;
+}
+.ambient {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+  margin-top: 40px;
+
+}
+.ambient_content {
+  border: 1px solid white;
+  padding: 6px 10px;
+  text-align: right;
+}
+.vdcam_data_table {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+.vdcam_data_table__header {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.vdcam_data_table_row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 20px;
+  border: 1px solid white;
+
+}
+
+@media screen and (min-width: 480px) {
+  .vdcam_main_container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .ambient {
+    margin: 0;
+    align-self: flex-start;
+  }
+}

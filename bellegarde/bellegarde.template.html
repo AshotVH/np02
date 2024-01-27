@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="css/bellegarde.css" />
+<div class="container">
+  <div class="page_title_and_timestamps">
+    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+    <div id="timestamp_label" class="timestamp_label">
+      Timestamp:<br /><span id="timestamp" class="timestamp"
+        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+      >
+    </div>
+  </div>
+  <img class="bellegarde__img" src="img/bellegarde.png" alt="bellegarde" />
+  
+  <div class="data_container table_text">
+    <div class="bellegarde__data_table">
+      <div class="data_cell">
+        <div>
+          <span>MC_BJS_02</span>
+          <a target="_blank" href="#!/histogram/47900914615323"
+            ><span class="value"
+              >{{ $ctrl.MC_BJS_02 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>MC_BJS_03_A</span>
+          <a target="_blank" href="#!/histogram/47900931392539"
+            ><span class="value"
+              >{{ $ctrl.MC_BJS_03_A | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>MC_BJS_03_B</span>
+          <a target="_blank" href="#!/histogram/47900948169755"
+            ><span class="value"
+              >{{ $ctrl.MC_BJS_03_B | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+            <span>MC_BSS_HOR_4B</span>
+          <a target="_blank" href="#!/histogram/47901417931803"
+            ><span class="value"
+              >{{ $ctrl.MC_BSS_HOR_4B | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>MC_BSS_HOR_3B</span>
+          <a target="_blank" href="#!/histogram/47901434709019"
+            ><span class="value"
+              >{{ $ctrl.MC_BSS_HOR_3B | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>MC_BSS_HOR_2B</span>
+          <a target="_blank" href="#!/histogram/47901451486235"
+            ><span class="value"
+              >{{ $ctrl.MC_BSS_HOR_2B | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+            <span>4M_BS_VER_05</span>
+          <a target="_blank" href="#!/histogram/47901468263451"
+            ><span class="value"
+              >{{ $ctrl.M4_BS_VER_05 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>4M_BS_VER_04</span>
+          <a target="_blank" href="#!/histogram/47901485040667"
+            ><span class="value"
+              >{{ $ctrl.M4_BS_VER_04 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>4M_BS_VER_03</span>
+          <a target="_blank" href="#!/histogram/47901501817883"
+            ><span class="value"
+              >{{ $ctrl.M4_BS_VER_03 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+            <span>3B_BS_HOR_01</span>
+          <a target="_blank" href="#!/histogram/47901518595099"
+            ><span class="value"
+              >{{ $ctrl.B3_BS_HOR_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>3B_BS_HOR_02</span>
+          <a target="_blank" href="#!/histogram/47901535372315"
+            ><span class="value"
+              >{{ $ctrl.B3_BS_HOR_02 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>3B_BS_HOR_03</span>
+          <a target="_blank" href="#!/histogram/47901552149531"
+            ><span class="value"
+              >{{ $ctrl.B3_BS_HOR_03 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="data_cell">
+        <div>
+            <span>4B_BS_VER_02</span>
+          <a target="_blank" href="#!/histogram/47901568926747"
+            ><span class="value"
+              >{{ $ctrl.B4_BS_VER_02 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>2B_BS_HOR_01</span>
+          <a target="_blank" href="#!/histogram/47901585703963"
+            ><span class="value"
+              >{{ $ctrl.B2_BS_HOR_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+        <div>
+            <span>4M_BS_VER_01</span>
+          <a target="_blank" href="#!/histogram/47901602481179"
+            ><span class="value"
+              >{{ $ctrl.M4_BS_VER_01 | number: 2 }} &#956;m/m</span
+            ></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ambient">
+    <div class="ambient_content table_text">
+      Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"
+        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
+      ><br />Ambient temperature:<br /><a
+        target="_blank"
+        href="#!/histogram/47910796417819"
+        ><span class="value"
+          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
+        ></a
+      ><br />Ambient pressure:<br /><a
+        target="_blank"
+        href="#!/histogram/47910813195035"
+        ><span class="value"
+          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
+        ></a
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,153 @@
+<link rel="stylesheet" href="./css/coldbox.css">
+<div class="container">
+    <div class="page_title_and_timestamps">
+        <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
+        <div id="timestamp_label" class="timestamp_label">Timestamp:<br /><span id="timestamp" class="timestamp"
+            >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span></div>
+    </div>
+    <!-- <img id="cb" src={{$ctrl.imgPath}} /> -->
+
+    <div class="para_datas">
+        <div class="upper_sensors_wrapper">
+            <div id="HV" class="data_cell hv table_text">HV Bertan</div>
+            <div id="V_mon" class="data_cell v_mon table_text">V_mon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank"
+                    ng-href="#!/histogramvd/48205186203935"><span class="value table_text">{{ $ctrl.NP_VD_HV_Vmon | number:1
+                        }}</span></a></div>
+            <div id="I_mon" class="data_cell i_mon table_text">I_mon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank"
+                            ng-href="#!/histogramvd/48205202981151"><span class="value table_text">{{ $ctrl.NP_VD_HV_Imon | number:1
+                                }}</span></a></div>
+            <div id="pds" class="data_cell pds table_text">PDS system</div>
+            <div id="CS" class="data_cell cs table_text">CryoSub Press.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank"
+                            ng-href="#!/histogramvd/48206494826783"><span class="value table_text">{{ $ctrl.NP_VD_crpressure |
+                                number:1 }} mbar</span></a></div>
+            <div id="SGFT" class="data_cell sgft table_text">SGFT Pressure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank"
+                            ng-href="#!/histogramvd/48206645821727"><span class="value table_text">{{ $ctrl.NP_VD_SGFT |
+                                number:1 }} mbar</span></a></div>
+        </div>
+        <div class="coldbox_image_wrapper">
+            <img class="coldbox_image" src="img/coldbox.png" alt="coldbox image">
+            <div class="crp_temp_1_on_image">
+                <div class="ls_data_cell table_text"><a target="_blank" ng-href="#!/histogramvd/48202552181279"><span class="value table_text">{{
+                    $ctrl.NP_VD_3T1001 | number:1 }}K</span></a></div>
+            </div>
+            <div class="crp_temp_2_on_image">
+                <div class="ls_data_cell table_text"><a target="_blank" ng-href="#!/histogramvd/48202568958495"><span class="value table_text">{{
+                    $ctrl.NP_VD_3T1002 | number:1 }}K</span></a></div>
+            </div>
+            <div class="crp_temp_3_on_image">
+                <div class="ls_data_cell table_text"><a target="_blank" ng-href="#!/histogramvd/48202602512927"><span class="value table_text">{{
+                    $ctrl.NP_VD_3T1003 | number:1 }}K</span></a></div>
+            </div>
+            <div class="crp_temp_4_on_image">
+                <div class="ls_data_cell table_text"><a target="_blank" ng-href="#!/histogramvd/48202636067359"><span class="value table_text">{{
+                    $ctrl.NP_VD_3T1004 | number:1 }}K</span></a></div>
+            </div>
+            <div class="level_meter_on_image">
+                <div class="ls_data_cell table_text">
+                    <a target="_blank" href="#!/histogramvd/48201478439455"><span class="value table_text">{{ $ctrl.NP_VD_levelmeter |
+                    number:1 }} %</span></a></div>
+            </div>
+        </div>
+       
+        <div class="lower_sensors_wrapper">
+        <div id="CRP_temp_1" class="ls_data_cell table_text"><a target="_blank" ng-href="#!/histogramvd/48202552181279"><span class="value table_text">{{
+            $ctrl.NP_VD_3T1001 | number:1 }}K</span></a></div>
+        <div id="CRP_temp_2" class="ls_data_cell table_text"><a target="_blank" ng-href="#!/histogramvd/48202568958495"><span class="value table_text">{{
+            $ctrl.NP_VD_3T1002 | number:1 }}K</span></a></div>
+        <div id="CRP_temp_3" class="ls_data_cell table_text"><a target="_blank" ng-href="#!/histogramvd/48202602512927"><span class="value table_text">{{
+            $ctrl.NP_VD_3T1003 | number:1 }}K</span></a></div>
+        <div id="CRP_temp_4" class="ls_data_cell table_text"><a target="_blank" ng-href="#!/histogramvd/48202636067359"><span class="value table_text">{{
+            $ctrl.NP_VD_3T1004 | number:1 }}K</span></a></div>
+        <div id="level_meter" class="ls_data_cell table_text">
+            <a target="_blank" href="#!/histogramvd/48201478439455"><span class="value table_text">{{ $ctrl.NP_VD_levelmeter |
+            number:1 }} %</span></a></div>
+    </div>
+    </div>
+    <div class="bottom_wrapper">
+        <div class="temperature_gradient">
+            <div class="data_cell table_text">
+                <span>B6: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48202535404063"><span class="value">{{
+                    $ctrl.NP_VD_3T0012 | number: 5}} 212.3 K</span></a> 
+                <span>65 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>B5: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48202518626847"><span class="value">{{
+                    $ctrl.NP_VD_3T0011 | number: 5}} 212.3 K</span></a> 
+                <span>60 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>B4: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48202501849631"><span class="value">{{
+                    $ctrl.NP_VD_3T0010 | number: 5}} 212.3 K</span></a>
+                <span>55 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>B3: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48202485072415"><span class="value">{{
+                    $ctrl.NP_VD_3T0009 | number: 5}} 212.3 K</span></a>
+                <span>50 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>B2: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48202468295199"><span class="value">{{
+                    $ctrl.NP_VD_3T0008 | number: 5}} 212.3 K</span></a>
+                <span>40 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>B1: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48201461662239"><span class="value">{{
+                    $ctrl.NP_VD_3T0007 | number: 5}} 212.3 K</span></a> 
+                <span>30 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>A6: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48201444885023"><span class="value">{{
+                    $ctrl.NP_VD_3T0006 | number: 5}} 212.3 K</span></a>
+                <span>20 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>A5: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48201428107807"><span class="value">{{
+                    $ctrl.NP_VD_3T0005 | number: 5}}  212.3 K</span></a>
+                <span>15 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>A4: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48201411330591"><span class="value">{{
+                    $ctrl.NP_VD_3T0004 | number: 5}} 212.3 K</span></a>
+                <span>10 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>A3: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48201394553375"><span class="value">{{
+                    $ctrl.NP_VD_3T0003 | number: 5}} 212.3  K</span></a>
+                <span>5 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>A2: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48201377776159"><span class="value">{{
+                    $ctrl.NP_VD_3T0002 | number: 5}}  212.3 K</span></a>
+                <span>2 cm</span>
+            </div>
+            <div class="data_cell table_text">
+                <span>A1: </span>
+                <a target="_blank" ng-href="#!/histogramvd/48201360998943"><span class="value">{{
+                    $ctrl.NP_VD_3T0001 | number: 5}}  212.3 K</span></a> 
+                <span>0 cm</span>
+            </div>
+        </div>
+      
+        <div id="ambient" class="ambient">
+            <div class="ambient_content table_text">
+            Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"><span class="value">{{
+            $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a><br />Ambient temperature:<br /><a target="_blank"
+        href="#!/histogram/47910796417819"><span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }}
+            &#8451;</span></a><br />Ambient pressure:<br /><a target="_blank"
+        href="#!/histogram/47910813195035"><span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span></a>
+            </div>
+    </div>
+
+</div>
+</div>
