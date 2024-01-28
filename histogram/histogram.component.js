@@ -28,7 +28,7 @@ angular.module("histogram", []).component("histogram", {
       this.natalie = 1;
       this.width = 90;
       this.respdata = [];
-      var self = this;
+      const self = this;
       var fundays = this.days;
       var dd = 0;
       var start;

@@ -17,7 +17,7 @@ angular.module("straingaugeshist", []).component("straingaugeshist", {
       this.pageTitle = this.elemId;
       this.natalie = 1;
       this.width = 90;
-      var self = this;
+      const self = this;
       if ($routeParams.days != null) {
         console.log(self.day);
         self.day = $routeParams.days;
