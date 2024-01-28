@@ -5,7 +5,7 @@ angular.module("cryostat", []).component("cryostat", {
         this.pageTitle = "NP02 Cryostat";
         this.natalie = 1;
         var self = this;
-        self.kelvinsign = " &#8490;";
+        self.kelvinSign = " &#8490;";
         this.reload = function () {
             self.timestamp = new Date();
             $http
