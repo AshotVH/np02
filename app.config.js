@@ -3,7 +3,6 @@ module('ng02SlowControlApp').
 config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
-
         $routeProvider.
         when('/', {
             template: '<home></home>'
