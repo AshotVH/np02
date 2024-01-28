@@ -38,7 +38,7 @@
             ><span class="value"
               >{{ ($ctrl.NP02_DCS_01_TSS_001_AA_BA < 80 ||
               $ctrl.NP02_DCS_01_TSS_001_AA_BA > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_001_AA_BA | number: 1) }} </span
+              ($ctrl.NP02_DCS_01_TSS_001_AA_BA | number: 1) $ctrl.kelvinSign }} </span
             ></a
           ><br />
           TSS-001 AA/BB <span>(Type 1)</span>:
