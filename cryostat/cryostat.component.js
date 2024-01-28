@@ -4,8 +4,8 @@ angular.module("cryostat", []).component("cryostat", {
     controller: function cryostatController($scope, $http, $interval) {
         this.pageTitle = "NP02 Cryostat";
         this.natalie = 1;
-        var self = this;
-        self.kelvinSign = " &#8490;";
+        const self = this;
+
         this.reload = function () {
             self.timestamp = new Date();
             $http
