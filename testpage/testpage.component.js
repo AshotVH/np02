@@ -66,10 +66,7 @@ angular.module("testpage", []).component("testpage", {
 
             };
 
-            this.average = function () {
-                $window.location.href =
-                    "#!/histogramaverage/" + this.elemId + "/" + fundays;
-            };
+
             function drawChart(containerId, chartData){
                 Highcharts.chart(containerId, {
                     chart: {
@@ -140,10 +137,12 @@ angular.module("testpage", []).component("testpage", {
                             const highchartsData = Object.entries(response.data).map(([key, value]) => {
                                 return [parseInt(key), value];
                             });
-                            console.log(response.data);
+                            // console.log(response.data);
                             // ----------------------------
                             drawChart("container", highchartsData);
                             // ------------------------------------
+                            $routeParams.timeRange = dateInterval;
+                            console.log($routeParams);
                         });
                 }
                 else {
