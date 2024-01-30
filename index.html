@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html
-  lang="en"
-  ng-app="ng02SlowControlApp"
-  xmlns:style="http://www.w3.org/1999/xhtml"
+        lang="en"
+        ng-app="ng02SlowControlApp"
+        xmlns:style="http://www.w3.org/1999/xhtml"
 >
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache, must-revalidate">
     <meta
-      name="viewport"
-      content="width=device-width,height=device-height, initial-scale=1"
+            name="viewport"
+            content="width=device-width,height=device-height, initial-scale=1"
     />
     <title>NP02 Slow Control Web Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+    <link rel="manifest" href="site.webmanifest"/>
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="theme-color" content="#ffffff"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -114,58 +116,58 @@
     <script src="testpage/testpage.component.js"></script>
 
     <script>
-      function closeNav(event) {
-        event.stopPropagation();
-        document.getElementById("menu").classList.remove("sidenav--opened");
-      }
+        function closeNav(event) {
+            event.stopPropagation();
+            document.getElementById("menu").classList.remove("sidenav--opened");
+        }
 
-      function toggleNav() {
-        document.getElementById("menu").classList.toggle("sidenav--opened");
-      }
+        function toggleNav() {
+            document.getElementById("menu").classList.toggle("sidenav--opened");
+        }
     </script>
-  </head>
+</head>
 
-  <body>
-    <img
-      class="openbtn"
-      onclick="toggleNav()"
-      id="knopka"
-      src="img/menu_icon.png"
-    />
-    <div id="menu" class="sidenav" onclick="toggleNav()">
-      <div class="closebtn" onclick="closeNav()">
-        <img class="closebtn_img" src="img/menu_exit.png" alt="close menu" />
-      </div>
-      <a href="#!/">Home</a>
-      <a href="#!/cryostat">NP02 Cryostat</a>
-      <a href="#!/straingaugeshist">NP02 Gauges</a>
-      <a href="#!/inside">NP02 T-Insulation</a>
-      <a href="#!/tinternal">NP02 T-Internal</a>
-      <a href="#!/crptemps">NP02 CRP Temperatures</a>
-      <a href="#!/multiplexer">NP02 T-multiplexer</a>
-      <!--    <a href="#!/purity">NP02 Purity Monitors</a>-->
-      <a
-        href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/camera-test/index.html"
-        >NP02 Cameras</a
-      >
-      <a href="#!/zmonitor">NP02 Z-monitor</a>
-      <a href="#!/comissioning">NP02 Commissioning</a>
-      <a href="#!/cryogenics">NP02 Cryogenics</a>
-      <a href="#!/groundplanes">NP02 High Voltage</a>
-      <a href="#!/lems">NP02 LEMs</a>
-      <a href="#!/pds">NP02 PDS</a>
-      <a href="#!/coldbox">NP02 Coldbox</a>
-      <a href="#!/vdcontrol">NP02 VD HV CRP Control</a>
-      <a href="#!/pl506">NP02 VD PL506 Control</a>
-      <a href="#!/vdcam">NP02 VD Camera Control</a>
-      <a href="#">Charge monitoring (in progress)</a>
-      <a href="#!/underfloor">NP02 Under floor</a>
-      <a href="#!/links">Useful links</a>
-      <a href="#!/testpage">Test Page</a>
-      <a href="mailto:cernbox-project-np02-slow-control-admins@cern.ch"
-        >Contact web admins</a
-      >
+<body>
+<img
+        class="openbtn"
+        onclick="toggleNav()"
+        id="knopka"
+        src="img/menu_icon.png"
+/>
+<div id="menu" class="sidenav" onclick="toggleNav()">
+    <div class="closebtn" onclick="closeNav()">
+        <img class="closebtn_img" src="img/menu_exit.png" alt="close menu"/>
     </div>
-    <div ng-view></div>
-  </body>
+    <a href="#!/">Home</a>
+    <a href="#!/cryostat">NP02 Cryostat</a>
+    <a href="#!/straingaugeshist">NP02 Gauges</a>
+    <a href="#!/inside">NP02 T-Insulation</a>
+    <a href="#!/tinternal">NP02 T-Internal</a>
+    <a href="#!/crptemps">NP02 CRP Temperatures</a>
+    <a href="#!/multiplexer">NP02 T-multiplexer</a>
+    <!--    <a href="#!/purity">NP02 Purity Monitors</a>-->
+    <a
+            href="https://np02-slow-control.web.cern.ch/np02-slow-control/app/camera-test/index.html"
+    >NP02 Cameras</a
+    >
+    <a href="#!/zmonitor">NP02 Z-monitor</a>
+    <a href="#!/comissioning">NP02 Commissioning</a>
+    <a href="#!/cryogenics">NP02 Cryogenics</a>
+    <a href="#!/groundplanes">NP02 High Voltage</a>
+    <a href="#!/lems">NP02 LEMs</a>
+    <a href="#!/pds">NP02 PDS</a>
+    <a href="#!/coldbox">NP02 Coldbox</a>
+    <a href="#!/vdcontrol">NP02 VD HV CRP Control</a>
+    <a href="#!/pl506">NP02 VD PL506 Control</a>
+    <a href="#!/vdcam">NP02 VD Camera Control</a>
+    <a href="#">Charge monitoring (in progress)</a>
+    <a href="#!/underfloor">NP02 Under floor</a>
+    <a href="#!/links">Useful links</a>
+    <a href="#!/testpage">Test Page</a>
+    <a href="mailto:cernbox-project-np02-slow-control-admins@cern.ch"
+    >Contact web admins</a
+    >
+</div>
+<div ng-view></div>
+</body>
 </html>

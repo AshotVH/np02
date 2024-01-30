@@ -92,6 +92,12 @@ angular.module("testpage", []).component("testpage", {
                 });
             }
             this.range = function (start, end) {
+                if (!start || !end) {
+                    console.log("no start or end");
+                    return false;
+                }
+                console.log(start);
+                console.log(end);
                 const startDate = new Date(start);
                 const endDate = new Date(end);
                 const startDateStr = startDate.toISOString().slice(0, 19);
