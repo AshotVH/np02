@@ -96,8 +96,6 @@ angular.module("testpage", []).component("testpage", {
                 const endDate = new Date(end);
                 const startDateStr = startDate.toISOString().slice(0, 19);
                 const endDateStr = endDate.toISOString().slice(0, 19);
-                console.log(startDateStr);
-                console.log(endDateStr);
                 $interval.cancel;
                 $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&startdate=" + startDateStr + "&enddate=" + endDateStr)
                     .then(function onSuccess(response) {
