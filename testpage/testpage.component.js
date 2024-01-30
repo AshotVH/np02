@@ -135,7 +135,7 @@ angular.module("testpage", []).component("testpage", {
                         // ----------------------------
                         drawChart("container", highchartsData);
                         // ------------------------------------
-                        $routeParams.timeRange = dateInterval;
+
                         // console.log($routeParams);
                     });
             };
