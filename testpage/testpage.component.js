@@ -105,10 +105,9 @@ angular.module("testpage", []).component("testpage", {
                             return [parseInt(key), value];
                         });
                         console.log(response.data);
-
+                        console.log(chartData);
+                        return chartData;
                     });
-                console.log(chartData);
-                return chartData;
             };
             this.range = function (start, end) {
                 const startDate = new Date(start);
