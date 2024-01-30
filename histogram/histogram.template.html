@@ -3,13 +3,13 @@
   <div class="navbar__text">History For</div>
   <div class="navbar__buttons">
     <ul>
-      <li><span ng-click="$ctrl.dayChanger(0.125)">1 hour</span></li>
-      <li><span ng-click="$ctrl.dayChanger(0.33)">6 hours</span></li>
-      <li><span ng-click="$ctrl.dayChanger(0.58)">12 hours</span></li>
-      <li><span ng-click="$ctrl.dayChanger(1.08)">1 day</span></li>
-      <li><span ng-click="$ctrl.dayChanger(3.08)">3 days</span></li>
-      <li><span ng-click="$ctrl.dayChanger(7.08)">7 days</span></li>
-      <li><span ng-click="$ctrl.dayChanger(10.08)">10 days</span></li>
+      <li><span ng-click="$ctrl.dayChanger('0-1')">1 hour</span></li>
+      <li><span ng-click="$ctrl.dayChanger('0-6')">6 hours</span></li>
+      <li><span ng-click="$ctrl.dayChanger('0-12')">12 hours</span></li>
+      <li><span ng-click="$ctrl.dayChanger('1-0')">1 day</span></li>
+      <li><span ng-click="$ctrl.dayChanger('3-0')">3 days</span></li>
+      <li><span ng-click="$ctrl.dayChanger('7-0')">7 days</span></li>
+      <li><span ng-click="$ctrl.dayChanger('10-0')">10 days</span></li>
     </ul>
   </div>
   <button
@@ -27,7 +27,7 @@
         <button
         type="submit"
           class="button-12 button-12--small"
-          ng-click="$ctrl.dayChanger($ctrl.dd)"
+          ng-click="$ctrl.setDays()"
         >
           Go
         </button>
