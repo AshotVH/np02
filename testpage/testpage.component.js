@@ -19,9 +19,6 @@ angular.module("testpage", []).component("testpage", {
             this.pageTitle = "Histogram";
             this.elemId = $routeParams.elemId;
             this.daysAndHours = '0-6';
-            // this.dd = function (){
-            //     console.log($scope.dd);
-            // };
             this.daysAndHoursToUTCDateRange = function (daysAndHours) {
                 const [days, hours] = [parseInt(daysAndHours.split('-')[0]), parseInt(daysAndHours.split('-')[1])];
                 const endDate = new Date();
@@ -37,8 +34,6 @@ angular.module("testpage", []).component("testpage", {
                 )[0];
                 highchartsDataTable.classList.toggle("hidden");
             };
-
-
             this.drawChart = function (containerId, chartData) {
                 Highcharts.chart(containerId, {
                     chart: {
@@ -96,8 +91,6 @@ angular.module("testpage", []).component("testpage", {
                     ],
                 });
             }
-
-
             this.range = function (start, end) {
                 const startDate = new Date(start);
                 const endDate = new Date(end);
@@ -115,7 +108,6 @@ angular.module("testpage", []).component("testpage", {
                     });
                 return false;
             };
-
             this.reload = function () {
                 $interval.cancel;
                 const [startDateStr, endDateStr] = self.daysAndHoursToUTCDateRange(self.daysAndHours);
@@ -131,22 +123,20 @@ angular.module("testpage", []).component("testpage", {
                 self.daysAndHours = daysAndHours;
                 self.reload();
             };
-
-
+            this.setDays = function () {
+                self.daysAndHours = self.dd + '-' + '0';
+                self.reload();
+            };
             this.promise;
-
             this.reload();
-
             $scope.start = function () {
                 $scope.stop();
                 self.promise = $interval(self.reload, 300000);
             };
-
             $scope.stop = function () {
                 $interval.cancel(self.promise);
             };
             $scope.start();
-
             $scope.$on("$destroy", function () {
                 $scope.stop();
             });
