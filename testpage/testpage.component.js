@@ -105,7 +105,9 @@ angular.module("testpage", []).component("testpage", {
                             return [parseInt(key), value];
                         });
                         console.log(response.data);
-                        console.log(typeof chartData);
+                        for (let i = 0; i < chartData.length; i++){
+                            console.log(chartData[i]);
+                        }
                         return chartData;
                     });
             };
