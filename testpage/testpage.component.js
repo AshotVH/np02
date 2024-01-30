@@ -104,7 +104,7 @@ angular.module("testpage", []).component("testpage", {
                         chartData = Object.entries(response.data).map(([key, value]) => {
                             return [parseInt(key), value];
                         });
-                        // console.log(response.data);
+                        console.log(response.data);
 
                     });
                 console.log(chartData);
