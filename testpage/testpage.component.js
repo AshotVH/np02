@@ -126,6 +126,7 @@ angular.module("testpage", []).component("testpage", {
                 $interval.cancel;
                 const dateRange = self.daysAndHoursToDateRange(self.daysAndHours);
                 const [dateStartStr, dateEndStr] = [dateRange.split('__')[0], dateRange.split('__')[1]];
+                console.log('reload happened');
                 $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&datestart=" + dateStartStr + "&dateend=" + dateEndStr)
                     .then(function onSuccess(response) {
                         const highchartsData = Object.entries(response.data).map(([key, value]) => {
