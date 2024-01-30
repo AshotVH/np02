@@ -97,17 +97,7 @@ angular.module("testpage", []).component("testpage", {
                 });
             }
 
-            this.getData = function (startDateStr, endDateStr) {
-                let chartData;
-                $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&startdate=" + startDateStr + "&enddate=" + endDateStr)
-                    .then(function onSuccess(response) {
-                        chartData = Object.entries(response.data).map(([key, value]) => {
-                            return [parseInt(key), value];
-                        });
 
-                        return chartData;
-                    });
-            };
             this.range = function (start, end) {
                 const startDate = new Date(start);
                 const endDate = new Date(end);
@@ -116,18 +106,26 @@ angular.module("testpage", []).component("testpage", {
                 console.log(startDateStr);
                 console.log(endDateStr);
                 $interval.cancel;
-                self.drawChart("container", self.getData(startDateStr, endDateStr));
+                $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&startdate=" + startDateStr + "&enddate=" + endDateStr)
+                    .then(function onSuccess(response) {
+                        const chartData = Object.entries(response.data).map(([key, value]) => {
+                            return [parseInt(key), value];
+                        });
+                        self.drawChart("container", chartData);
+                    });
                 return false;
             };
 
             this.reload = function () {
                 $interval.cancel;
                 const [startDateStr, endDateStr] = self.daysAndHoursToUTCDateRange(self.daysAndHours);
-                console.log(startDateStr);
-                console.log(endDateStr);
-                const chartData = self.getData(startDateStr, endDateStr);
-                console.log(chartData);
-                self.drawChart("container", chartData);
+                $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&startdate=" + startDateStr + "&enddate=" + endDateStr)
+                    .then(function onSuccess(response) {
+                        const chartData = Object.entries(response.data).map(([key, value]) => {
+                            return [parseInt(key), value];
+                        });
+                        self.drawChart("container", chartData);
+                    });
             };
             this.dayChanger = function (daysAndHours) {
                 self.daysAndHours = daysAndHours;
