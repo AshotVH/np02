@@ -18,7 +18,7 @@ angular.module("testpage", []).component("testpage", {
             this.natalie = 1;
             this.pageTitle = "Histogram";
             this.elemId = $routeParams.elemId;
-            const defaultDaysAndHours = '0-6';
+            this.daysAndHours = '0-6';
             this.utcToLocalDate = function (date) {
                 date.setTime(date.getTime() - date.getTimezoneOffset() * 60000);
                 return date;
@@ -38,14 +38,14 @@ angular.module("testpage", []).component("testpage", {
                 return dateStartStr + '__' + dateEndStr;
             }
             this.dayChanger = function (daysAndHours) {
+                self.daysAndHours = daysAndHours;
                 const dateRangeStr = self.daysAndHoursToDateRange(daysAndHours);
                 $window.location.href = "#!/testpage/" + self.elemId + "/" + dateRangeStr;
             };
             if (!$routeParams.dateRange) {
-                self.dayChanger(defaultDaysAndHours);
+                self.dayChanger(self.daysAndHours);
             }
             this.dateRange = $routeParams.dateRange;
-
             this.toggleDataTable = function () {
                 const highchartsDataTable = document.getElementsByClassName(
                     "highcharts-data-table"
@@ -124,8 +124,8 @@ angular.module("testpage", []).component("testpage", {
 
             this.reload = function () {
                 $interval.cancel;
-
-                const [dateStartStr, dateEndStr] = [self.dateRange.split('__')[0], self.dateRange.split('__')[1]];
+                const dateRange = self.daysAndHoursToDateRange(self.daysAndHours);
+                const [dateStartStr, dateEndStr] = [dateRange.split('__')[0], dateRange.split('__')[1]];
                 $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&datestart=" + dateStartStr + "&dateend=" + dateEndStr)
                     .then(function onSuccess(response) {
                         const highchartsData = Object.entries(response.data).map(([key, value]) => {
