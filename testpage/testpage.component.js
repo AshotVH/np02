@@ -107,7 +107,7 @@ angular.module("testpage", []).component("testpage", {
                         console.log(response.data);
 
                     });
-
+                console.log(chartData);
                 return chartData;
             };
             this.range = function (start, end) {
