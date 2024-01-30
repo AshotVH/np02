@@ -65,7 +65,7 @@ angular.module("histogram", []).component("histogram", {
             enabled: false
           },
           exporting: {
-            showTable: true,
+            // showTable: true,
             csv: {
               columnHeaderFormatter: function (item, key) {
                 if (!item || item instanceof Highcharts.Axis) {
