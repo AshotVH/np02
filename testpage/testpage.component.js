@@ -124,6 +124,7 @@ angular.module("testpage", []).component("testpage", {
                 self.reload();
             };
             this.setDays = function () {
+                if (this.dd < 1) return false;
                 self.daysAndHours = self.dd + '-' + '0';
                 self.reload();
             };
