@@ -19,9 +19,9 @@ angular.module("testpage", []).component("testpage", {
             this.pageTitle = "Histogram";
             this.elemId = $routeParams.elemId;
             this.daysAndHours = '0-6';
-            this.dd = function (){
-                console.log($scope.dd);
-            };
+            // this.dd = function (){
+            //     console.log($scope.dd);
+            // };
             this.daysAndHoursToUTCDateRange = function (daysAndHours) {
                 const [days, hours] = [parseInt(daysAndHours.split('-')[0]), parseInt(daysAndHours.split('-')[1])];
                 const endDate = new Date();
