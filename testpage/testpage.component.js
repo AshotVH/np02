@@ -126,7 +126,7 @@ angular.module("testpage", []).component("testpage", {
                 const [startDateStr, endDateStr] = self.daysAndHoursToUTCDateRange(self.daysAndHours);
                 console.log(startDateStr);
                 console.log(endDateStr);
-                const chartData = self.getData();
+                const chartData = self.getData(startDateStr, endDateStr);
                 self.drawChart("container", chartData);
             };
             this.dayChanger = function (daysAndHours) {
