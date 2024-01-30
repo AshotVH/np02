@@ -17,57 +17,54 @@ angular.module("testpage", []).component("testpage", {
             const self = this;
             this.natalie = 1;
             this.pageTitle = "Histogram";
-
-            console.log($routeParams);
-            console.log($routeParams.timeRange);
             this.elemId = $routeParams.elemId;
-            // if (!$routeParams.timeRange){
-            //     $routeParams.timeRange = "booo";
-            //
-            // }
-            this.timeRange = $routeParams.timeRange;
+            const defaultDaysAndHours = '0-6';
+            this.utcToLocalDate = function (date) {
+                date.setTime(date.getTime() - date.getTimezoneOffset() * 60000);
+                return date;
+            };
+            this.localDateToUtc = function (date) {
+                date.setTime(date.getTime() + date.getTimezoneOffset() * 60000);
+                return date;
+            };
+
+            this.daysAndHoursToDateRange = function (daysAndHours) {
+                const [days, hours] = [parseInt(daysAndHours.split('-')[0]), parseInt(daysAndHours.split('-')[1])];
+                const dateEnd = self.utcToLocalDate(new Date());
+                const dateStart = new Date();
+                dateStart.setTime(dateEnd.getTime() - days * 86400000 - hours * 3600000);
+                const dateEndStr = dateEnd.toISOString().slice(0, 19);
+                const dateStartStr = dateStart.toISOString().slice(0, 19);
+                return dateStartStr + '__' + dateEndStr;
+            }
+            this.dayChanger = function (daysAndHours) {
+                const dateRangeStr = self.daysAndHoursToDateRange(daysAndHours);
+                $window.location.href = "#!/testpage/" + self.elemId + "/" + dateRangeStr;
+            };
+            if (!$routeParams.dateRange) {
+                self.dayChanger(defaultDaysAndHours);
+            }
+            this.dateRange = $routeParams.dateRange;
+
             this.toggleDataTable = function () {
                 const highchartsDataTable = document.getElementsByClassName(
                     "highcharts-data-table"
                 )[0];
                 highchartsDataTable.classList.toggle("hidden");
             };
-            this.dayChanger = function (timeRange) {
-                $window.location.href = "#!/testpage/" + this.elemId + "/" + timeRange;
-
-            };
 
             this.range = function (start, end) {
-                console.log(start);
-                console.log(end);
-
                 const startDate = new Date(start);
-                console.log(startDate.toISOString());
                 const endDate = new Date(end);
                 const dateRangeStr = startDate.toISOString().slice(0, 19) + "_" + endDate.toISOString().slice(0, 19);
                 const d = new Date();
-                console.log(d);
-                console.log(d.toISOString());
-
                 d.setTime(d.getTime() - d.getTimezoneOffset() * 60000);
-                console.log("current time");
-                console.log(d);
                 console.log(d.toISOString());
-
-                $window.location.href = "#!/testpage/" + this.elemId + "/" + dateRangeStr;
-
-                // console.log(end);
-                // const date = new Date(end);
-                // console.log(date.toISOString());
-                // const cd = new Date();
-                // console.log(cd);
-                // console.log(cd.toISOString());
+                $window.location.href = "#!/testpage/" + self.elemId + "/" + dateRangeStr;
                 return false;
-
             };
 
-
-            function drawChart(containerId, chartData){
+            function drawChart(containerId, chartData) {
                 Highcharts.chart(containerId, {
                     chart: {
                         zoomType: "xy",
@@ -125,31 +122,22 @@ angular.module("testpage", []).component("testpage", {
                 });
             }
 
-
             this.reload = function () {
                 $interval.cancel;
-                if (!$routeParams.timeRange) {
-                    $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&rangetype=last&range=00:07")
-                        .then(function onSuccess(response) {
-                            const dateInterval = response.data.dateInterval;
-                            delete response.data.dateInterval;
-                            console.log(dateInterval);
-                            const highchartsData = Object.entries(response.data).map(([key, value]) => {
-                                return [parseInt(key), value];
-                            });
-                            // console.log(response.data);
-                            // ----------------------------
-                            drawChart("container", highchartsData);
-                            // ------------------------------------
-                            $routeParams.timeRange = dateInterval;
-                            console.log($routeParams);
+
+                const [dateStartStr, dateEndStr] = [self.dateRange.split('__')[0], self.dateRange.split('__')[1]];
+                $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&datestart=" + dateStartStr + "&dateend=" + dateEndStr)
+                    .then(function onSuccess(response) {
+                        const highchartsData = Object.entries(response.data).map(([key, value]) => {
+                            return [parseInt(key), value];
                         });
-                }
-                else {
-
-
-                }
-
+                        // console.log(response.data);
+                        // ----------------------------
+                        drawChart("container", highchartsData);
+                        // ------------------------------------
+                        $routeParams.timeRange = dateInterval;
+                        // console.log($routeParams);
+                    });
             };
 
             this.promise;

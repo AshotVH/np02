@@ -100,7 +100,7 @@ config(['$locationProvider', '$routeProvider',
         when('/histogramvd/:elemId/:days?', {
             template: '<histogramvd></histogramvd>'
         }).
-        when('/testpage/:elemId?/:timeRange?', {
+        when('/testpage/:elemId/:dateRange?', {
             template: '<testpage></testpage>'
         }).
         otherwise('/');
