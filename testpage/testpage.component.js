@@ -104,10 +104,7 @@ angular.module("testpage", []).component("testpage", {
                         chartData = Object.entries(response.data).map(([key, value]) => {
                             return [parseInt(key), value];
                         });
-                        console.log(response.data);
-                        for (let i = 0; i < chartData.length; i++){
-                            console.log(chartData[i]);
-                        }
+
                         return chartData;
                     });
             };
@@ -129,6 +126,7 @@ angular.module("testpage", []).component("testpage", {
                 console.log(startDateStr);
                 console.log(endDateStr);
                 const chartData = self.getData(startDateStr, endDateStr);
+                console.log(chartData);
                 self.drawChart("container", chartData);
             };
             this.dayChanger = function (daysAndHours) {
