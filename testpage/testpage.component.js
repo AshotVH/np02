@@ -125,6 +125,7 @@ angular.module("testpage", []).component("testpage", {
             };
             this.setDays = function () {
                 if (!this.dd || this.dd < 1) return false;
+                this.dd = Math.round(this.dd);
                 self.daysAndHours = self.dd + '-' + '0';
                 self.reload();
             };
