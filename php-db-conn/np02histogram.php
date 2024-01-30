@@ -5,10 +5,10 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', true);
 
 $elemId = $_GET["elemid"];
-$dateStart = $_GET["datestart"];
-$dateEnd = $_GET["dateend"];
+$startDate = $_GET["startdate"];
+$endDate = $_GET["enddate"];
 
-$url = "http://188.185.78.106:5000/range/" . $dateStart . "/" . $dateEnd . "/" . $elemId;
+$url = "http://188.185.78.106:5000/range/" . $startDate . "/" . $endDate . "/" . $elemId;
 $json = json_decode(file_get_contents($url));
 $responseArr = [];
 foreach ($json as $key => $value) {

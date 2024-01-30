@@ -19,33 +19,18 @@ angular.module("testpage", []).component("testpage", {
             this.pageTitle = "Histogram";
             this.elemId = $routeParams.elemId;
             this.daysAndHours = '0-6';
-            this.utcToLocalDate = function (date) {
-                date.setTime(date.getTime() - date.getTimezoneOffset() * 60000);
-                return date;
+            this.dd = function (){
+                console.log($scope.dd);
             };
-            this.localDateToUtc = function (date) {
-                date.setTime(date.getTime() + date.getTimezoneOffset() * 60000);
-                return date;
-            };
-
-            this.daysAndHoursToDateRange = function (daysAndHours) {
+            this.daysAndHoursToUTCDateRange = function (daysAndHours) {
                 const [days, hours] = [parseInt(daysAndHours.split('-')[0]), parseInt(daysAndHours.split('-')[1])];
-                const dateEnd = self.utcToLocalDate(new Date());
-                const dateStart = new Date();
-                dateStart.setTime(dateEnd.getTime() - days * 86400000 - hours * 3600000);
-                const dateEndStr = dateEnd.toISOString().slice(0, 19);
-                const dateStartStr = dateStart.toISOString().slice(0, 19);
-                return dateStartStr + '__' + dateEndStr;
-            }
-            this.dayChanger = function (daysAndHours) {
-                self.daysAndHours = daysAndHours;
-                const dateRangeStr = self.daysAndHoursToDateRange(daysAndHours);
-                $window.location.href = "#!/testpage/" + self.elemId + "/" + dateRangeStr;
+                const endDate = new Date();
+                const startDate = new Date();
+                startDate.setTime(endDate.getTime() - days * 86400000 - hours * 3600000);
+                const endDateStr = endDate.toISOString().slice(0, 19);
+                const startDateStr = startDate.toISOString().slice(0, 19);
+                return [startDateStr, endDateStr];
             };
-            if (!$routeParams.dateRange) {
-                self.dayChanger(self.daysAndHours);
-            }
-            this.dateRange = $routeParams.dateRange;
             this.toggleDataTable = function () {
                 const highchartsDataTable = document.getElementsByClassName(
                     "highcharts-data-table"
@@ -53,18 +38,8 @@ angular.module("testpage", []).component("testpage", {
                 highchartsDataTable.classList.toggle("hidden");
             };
 
-            this.range = function (start, end) {
-                const startDate = new Date(start);
-                const endDate = new Date(end);
-                const dateRangeStr = startDate.toISOString().slice(0, 19) + "_" + endDate.toISOString().slice(0, 19);
-                const d = new Date();
-                d.setTime(d.getTime() - d.getTimezoneOffset() * 60000);
-                console.log(d.toISOString());
-                $window.location.href = "#!/testpage/" + self.elemId + "/" + dateRangeStr;
-                return false;
-            };
 
-            function drawChart(containerId, chartData) {
+            this.drawChart = function (containerId, chartData) {
                 Highcharts.chart(containerId, {
                     chart: {
                         zoomType: "xy",
@@ -122,24 +97,43 @@ angular.module("testpage", []).component("testpage", {
                 });
             }
 
-            this.reload = function () {
-                $interval.cancel;
-                const dateRange = self.daysAndHoursToDateRange(self.daysAndHours);
-                const [dateStartStr, dateEndStr] = [dateRange.split('__')[0], dateRange.split('__')[1]];
-                console.log('reload happened');
-                $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&datestart=" + dateStartStr + "&dateend=" + dateEndStr)
+            this.getData = function (startDateStr, endDateStr) {
+                let chartData;
+                $http.get("php-db-conn/np02histogram.php?elemid=" + self.elemId + "&startdate=" + startDateStr + "&enddate=" + endDateStr)
                     .then(function onSuccess(response) {
-                        const highchartsData = Object.entries(response.data).map(([key, value]) => {
+                        chartData = Object.entries(response.data).map(([key, value]) => {
                             return [parseInt(key), value];
                         });
                         // console.log(response.data);
-                        // ----------------------------
-                        drawChart("container", highchartsData);
-                        // ------------------------------------
 
-                        // console.log($routeParams);
                     });
+                return chartData;
             };
+            this.range = function (start, end) {
+                const startDate = new Date(start);
+                const endDate = new Date(end);
+                const startDateStr = startDate.toISOString().slice(0, 19);
+                const endDateStr = endDate.toISOString().slice(0, 19);
+                console.log(startDateStr);
+                console.log(endDateStr);
+                $interval.cancel;
+                self.drawChart("container", self.getData(startDateStr, endDateStr));
+                return false;
+            };
+
+            this.reload = function () {
+                $interval.cancel;
+                const [startDateStr, endDateStr] = self.daysAndHoursToUTCDateRange(self.daysAndHours);
+                console.log(startDateStr);
+                console.log(endDateStr);
+                const chartData = self.getData();
+                self.drawChart("container", chartData);
+            };
+            this.dayChanger = function (daysAndHours) {
+                self.daysAndHours = daysAndHours;
+                self.reload();
+            };
+
 
             this.promise;
 
