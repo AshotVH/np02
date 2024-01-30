@@ -1,6 +1,3 @@
 .htaccess
 .htacess
 .idea/
-php-db-conn/*
-!php-db-conn/np02cachedvals.php
-!php-db-conn/np02histogram.php

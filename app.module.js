@@ -33,6 +33,5 @@ angular.module('ng02SlowControlApp', [
     'coldbox',
     'vdcontrol',
     'pl506',
-    'vdcam',
-    'testpage'
+    'vdcam'
 ]);

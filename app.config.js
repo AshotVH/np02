@@ -1,108 +1,64 @@
-angular.
-module('ng02SlowControlApp').
-config(['$locationProvider', '$routeProvider',
+angular.module('ng02SlowControlApp').config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
-        $routeProvider.
-        when('/', {
+        $routeProvider.when('/', {
             template: '<home></home>'
-        }).
-        when('/bellegarde', {
+        }).when('/bellegarde', {
             template: '<bellegarde></bellegarde>'
-        }).
-        when('/cachedhist/:elemId', {
+        }).when('/cachedhist/:elemId', {
             template: '<cachedhist></cachedhist>'
-        }).
-        when('/comissioning', {
+        }).when('/comissioning', {
             template: '<comissioning></comissioning>'
-        }).
-        when('/crptemps', {
+        }).when('/crptemps', {
             template: '<crptemps></crptemps>'
-        }).
-        when('/cryogenics', {
+        }).when('/cryogenics', {
             template: '<cryogenics></cryogenics>'
-        }).
-        when('/cryostat', {
+        }).when('/cryostat', {
             template: '<cryostat></cryostat>'
-        }).
-        when('/floor', {
+        }).when('/floor', {
             template: '<floor></floor>'
-        }).
-        when('/gauges', {
+        }).when('/gauges', {
             template: '<gauges></gauges>'
-        }).
-        when('/groundplanes/:days?', {
+        }).when('/groundplanes/:days?', {
             template: '<groundplanes></groundplanes>'
-        }).
-        when('/histogram/:elemId/:days?', {
+        }).when('/histogram/:elemId', {
             template: '<histogram></histogram>'
-        }).
-        when('/histogramaverage/:elemId/:days?', {
-            template: '<histogramaverage></histogramaverage>'
-        }).
-        when('/histogramrange/:elemId/:start/:end', {
-            template: '<histogramrange></histogramrange>'
-        }).
-        when('/inside', {
+        }).when('/inside', {
             template: '<inside></inside>'
-        }).
-        when('/insidelayout', {
+        }).when('/insidelayout', {
             template: '<insidelayout></insidelayout>'
-        }).
-        when('/jura', {
+        }).when('/jura', {
             template: '<jura></jura>'
-        }).
-        when('/lausanne', {
+        }).when('/lausanne', {
             template: '<lausanne></lausanne>'
-        }).
-        when('/lems', {
+        }).when('/lems', {
             template: '<lems></lems>'
-        }).
-        when('/links', {
+        }).when('/links', {
             template: '<links></links>'
-        }).
-        when('/multiplexer/', {
+        }).when('/multiplexer/', {
             template: '<multiplexer></multiplexer>'
-        }).
-        when('/pds', {
+        }).when('/pds', {
             template: '<pds></pds>'
-        }).
-        when('/purity', {
+        }).when('/purity', {
             template: '<purity></purity>'
-        }).
-        when('/saleve', {
+        }).when('/saleve', {
             template: '<saleve></saleve>'
-        }).
-        when('/straingaugeshist/:days?', {
+        }).when('/straingaugeshist/:days?', {
             template: '<straingaugeshist></straingaugeshist>'
-        }).
-        when('/tinternal', {
+        }).when('/tinternal', {
             template: '<tinternal></tinternal>'
-        }).
-        when('/underfloor', {
+        }).when('/underfloor', {
             template: '<underfloor></underfloor>'
-        }).
-        when('/zmonitor', {
+        }).when('/zmonitor', {
             template: '<zmonitor></zmonitor>'
-        }).
-        when('/coldbox', {
+        }).when('/coldbox', {
             template: '<coldbox></coldbox>'
-        }).
-        when('/vdcontrol', {
+        }).when('/vdcontrol', {
             template: '<vdcontrol></vdcontrol>'
-        }).
-        when('/pl506', {
+        }).when('/pl506', {
             template: '<pl506></pl506>'
-        }).
-        when('/vdcam', {
+        }).when('/vdcam', {
             template: '<vdcam></vdcam>'
-        }).
-        when('/histogramvd/:elemId/:days?', {
-            template: '<histogramvd></histogramvd>'
-        }).
-        when('/testpage/:elemId', {
-            template: '<testpage></testpage>'
-        }).
-        otherwise('/');
+        }).otherwise('/');
     }
 ]);
