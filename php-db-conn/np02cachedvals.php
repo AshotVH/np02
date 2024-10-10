@@ -9,6 +9,7 @@ $api_address = getenv('API_ADDRESS');
 // $url = "http://188.185.78.106:5000/latest/" . $elemName;
 // $json = json_decode(file_get_contents($url));
 //     echo(json_encode($json));
-echo($api_address);
+// echo($api_address);
+echo $_SERVER['API_ADDRESS'];
 
 ?>
