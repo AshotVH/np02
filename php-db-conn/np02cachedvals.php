@@ -8,5 +8,5 @@ $elemName = $_GET["elemName"];
 // $url = "http://188.185.78.106:5000/latest/" . $elemName;
 // $json = json_decode(file_get_contents($url));
 //     echo(json_encode($json));
-
+echo($elemName);
 ?>
