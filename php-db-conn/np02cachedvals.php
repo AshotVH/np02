@@ -6,11 +6,11 @@ ini_set('display_errors', true);
 // $api_address = getenv("API_ADDRESS");
 
 
-// $elemName = $_GET["elemName"];
+$elemName = $_GET["elemName"];
 // $url = $api_address."/latest/" . $elemName;
 // $json = json_decode(file_get_contents($url));
 // echo(json_encode($json));
 // echo($api_address);
-echo(json_encode("alo"));
+echo(json_encode($elemName));
 
 ?>
