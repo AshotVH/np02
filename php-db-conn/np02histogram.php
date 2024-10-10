@@ -7,8 +7,9 @@ ini_set('display_errors', true);
 $elemId = $_GET["elemid"];
 $startDate = $_GET["startdate"];
 $endDate = $_GET["enddate"];
+$api_address = $_ENV["API_ADDRESS"];
 
-$url = "http://188.185.78.106:5000/range/" . $startDate . "/" . $endDate . "/" . $elemId;
+$url = $api_address . "/range/" . $startDate . "/" . $endDate . "/" . $elemId;
 $json = json_decode(file_get_contents($url));
 $responseArr = [];
 foreach ($json as $key => $value) {
