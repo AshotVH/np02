@@ -11,6 +11,6 @@ ini_set('display_errors', true);
 // $json = json_decode(file_get_contents($url));
 // echo(json_encode($json));
 // echo($api_address);
-echo("alo");
+echo(json_encode("alo"));
 
 ?>
