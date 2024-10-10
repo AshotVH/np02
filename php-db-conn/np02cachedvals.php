@@ -9,6 +9,7 @@ $api_address = $_ENV["API_ADDRESS"];
 $elemName = $_GET["elemName"];
 $url = $api_address."/latest/" . $elemName;
 $json = json_decode(file_get_contents($url));
-    echo(json_encode($json));
+// echo(json_encode($json));
+echo($api_address);
 
 ?>
