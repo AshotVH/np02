@@ -10,6 +10,6 @@ $api_address = getenv('API_ADDRESS');
 // $json = json_decode(file_get_contents($url));
 //     echo(json_encode($json));
 // echo($api_address);
-echo $_ENV['api_address'];
+echo $_ENV['API_ADDRESS'];
 
 ?>
