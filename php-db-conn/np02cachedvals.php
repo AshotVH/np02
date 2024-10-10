@@ -10,5 +10,7 @@ $elemName = $_GET["elemName"];
 // $json = json_decode(file_get_contents($url));
 //     echo(json_encode($json));
 // echo($api_address);
-echo json_encode(getenv(), JSON_PRETTY_PRINT);
+echo '<pre>';
+print_r(getenv());
+echo '</pre>';
 ?>
