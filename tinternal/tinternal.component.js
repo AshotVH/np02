@@ -28,6 +28,8 @@ angular.module('tinternal', []).component('tinternal', {
                     const res = result.data;
                     console.log(res);
                     self.NP02_DCS_01_TE[8] = res["47898968480539"]?res["47898968480539"][0]:"N/A";
+                    console.log(self.NP02_DCS_01_TE[8]);
+                    console.log(res["47898968480539"]);
                     self.NP02_DCS_01_TE[9] = res["47899002034971"]?res["47899002034971"][0]:"N/A";
                     self.NP02_DCS_01_TE[10] = res["47899018812187"]?res["47899018812187"][0]:"N/A";
                     self.NP02_DCS_01_TE[11] = res["47899052366619"]?res["47899052366619"][0]:"N/A";
