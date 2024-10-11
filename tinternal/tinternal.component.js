@@ -27,14 +27,14 @@ angular.module('tinternal', []).component('tinternal', {
                 .then(function (result) {
                     const res = result.data;
                     console.log(res);
-                    self.NP02_DCS_01_TE[8] = res["47898968480539"][0];
-                    self.NP02_DCS_01_TE[9] = res["47899002034971"][0];
-                    self.NP02_DCS_01_TE[10] = res["47899018812187"][0];
-                    self.NP02_DCS_01_TE[11] = res["47899052366619"][0];
-                    self.NP02_DCS_01_TE[0] = res["47897961847579"][0];
-                    self.NP02_DCS_01_TE[1] = res["47897978624795"][0];
-                    self.NP02_DCS_01_TE[2] = res["47897995402011"][0];
-                    self.NP02_DCS_01_TE[3] = res["47898012179227"][0];
+                    self.NP02_DCS_01_TE[8] = res["47898968480539"]?res["47898968480539"][0]:"N/A";
+                    self.NP02_DCS_01_TE[9] = res["47899002034971"]?res["47899002034971"][0]:"N/A";
+                    self.NP02_DCS_01_TE[10] = res["47899018812187"]?res["47899018812187"][0]:"N/A";
+                    self.NP02_DCS_01_TE[11] = res["47899052366619"]?res["47899052366619"][0]:"N/A";
+                    self.NP02_DCS_01_TE[0] = res["47897961847579"]?res["47897961847579"][0]:"N/A";
+                    self.NP02_DCS_01_TE[1] = res["47897978624795"]?res["47897978624795"][0]:"N/A";
+                    self.NP02_DCS_01_TE[2] = res["47897995402011"]?res["47897995402011"][0]:"N/A";
+                    self.NP02_DCS_01_TE[3] = res["47898012179227"]?res["47898012179227"][0]:"N/A";
                     self.NP02_DCS_01_TE[12] = res["47899069143835"][0];
                     self.NP02_DCS_01_TE[13] = res["47899102698267"][0];
                     self.NP02_DCS_01_TE[14] = res["47899119475483"][0];
