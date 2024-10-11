@@ -23,7 +23,7 @@ angular.module('tinternal', []).component('tinternal', {
                 });
 
             $http
-                .get("php-db-conn/np02cachedvals.php?elemName=tinternal")
+                .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=tinternal")
                 .then(function (result) {
                     const res = result.data;
                     console.log(res);
