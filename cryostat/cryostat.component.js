@@ -17,7 +17,7 @@ angular.module("cryostat", []).component("cryostat", {
                     self.NP02_PT0106AI = res["47910813195035"][0];
                 });
             $http
-                .get("https://np02-data-api-slow-control.app.cern.ch/response")
+                .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=cryostat")
                 .then(function (result) {
                     const res = result.data;
                     console.log(res);
