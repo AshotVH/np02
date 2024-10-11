@@ -53,20 +53,20 @@ angular.module('tinternal', []).component('tinternal', {
                     self.NP02_DCS_01_TE[50] = res["47900058999579"] ? parseFloat(res["47900058999579"][0]).toFixed(1) : false;
                     self.NP02_DCS_01_TE[51] = res["47900075776795"] ? parseFloat(res["47900075776795"][0]).toFixed(1) : false;
                     self.NP02_DCS_01_TE[52] = res["47900092554011"] ? parseFloat(res["47900092554011"][0]).toFixed(1) : false;
-                    self.NP02_DCS_01_TE[53] = res["47900109331227"] ? parseFloat(res["47900109331227"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[70] = res["47900444875547"] ? parseFloat(res["47900444875547"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[71] = res["47900461652763"] ? parseFloat(res["47900461652763"][0]).toFixed(1) + "&#8490;" : "N/A";
+                    self.NP02_DCS_01_TE[53] = res["47900109331227"] ? parseFloat(res["47900109331227"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[70] = res["47900444875547"] ? parseFloat(res["47900444875547"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[71] = res["47900461652763"] ? parseFloat(res["47900461652763"][0]).toFixed(1) : false;
                     // -------------------------------------------------
-                    self.NP02_DCS_01_TE[72] = res["47900478429979"] ? parseFloat(res["47900478429979"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[73] = res["47900495207195"] ? parseFloat(res["47900495207195"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[66] = res["47900377766683"] ? parseFloat(res["47900377766683"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[67] = res["47900394543899"] ? parseFloat(res["47900394543899"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[68] = res["47900411321115"] ? parseFloat(res["47900411321115"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[69] = res["47900428098331"] ? parseFloat(res["47900428098331"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[62] = res["47900310657819"] ? parseFloat(res["47900310657819"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[63] = res["47900327435035"] ? parseFloat(res["47900327435035"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[64] = res["47900344212251"] ? parseFloat(res["47900344212251"][0]).toFixed(1) + "&#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[65] = res["47900360989467"] ? parseFloat(res["47900360989467"][0]).toFixed(1) + "&#8490;" : "N/A";
+                    self.NP02_DCS_01_TE[72] = res["47900478429979"] ? parseFloat(res["47900478429979"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[73] = res["47900495207195"] ? parseFloat(res["47900495207195"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[66] = res["47900377766683"] ? parseFloat(res["47900377766683"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[67] = res["47900394543899"] ? parseFloat(res["47900394543899"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[68] = res["47900411321115"] ? parseFloat(res["47900411321115"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[69] = res["47900428098331"] ? parseFloat(res["47900428098331"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[62] = res["47900310657819"] ? parseFloat(res["47900310657819"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[63] = res["47900327435035"] ? parseFloat(res["47900327435035"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[64] = res["47900344212251"] ? parseFloat(res["47900344212251"][0]).toFixed(1) : false;
+                    self.NP02_DCS_01_TE[65] = res["47900360989467"] ? parseFloat(res["47900360989467"][0]).toFixed(1) : false;
                     // -------------------------------------------------
                     self.NP02_DCS_01_TE[58] = res["47900243548955"] ? parseFloat(res["47900243548955"][0]).toFixed(1) + "&#8490;" : "N/A";
                     self.NP02_DCS_01_TE[59] = res["47900260326171"] ? parseFloat(res["47900260326171"][0]).toFixed(1) + "&#8490;" : "N/A";

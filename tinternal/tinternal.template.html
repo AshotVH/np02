@@ -73,7 +73,7 @@
             <a target="_blank" ng-href="#!/histogram/47897961847579"
               ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[0]"
                 >{{ $ctrl.NP02_DCS_01_TE[0] }} &#8490;</span
-              > <span class="value" ng-if="$ctrl.NP02_DCS_01_TE[0]">
+              > <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[0]">
                   N/A
               </span>
               </a
@@ -82,25 +82,34 @@
           <td class="table_text">
             TE0202:
             <a target="_blank" ng-href="#!/histogram/47897978624795"
-              ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[1] | number: 1}} &#8490;</span
-              ></a
+              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[1]"
+                >{{ $ctrl.NP02_DCS_01_TE[1] }} &#8490;</span
+              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[1]">
+                N/A
+              </span>
+              </a
             >
           </td>
           <td class="table_text">
             TE0203:
             <a target="_blank" ng-href="#!/histogram/47897995402011"
-              ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[2] | number: 1}} &#8490;</span
-              ></a
+              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[2]"
+                >{{ $ctrl.NP02_DCS_01_TE[2] }} &#8490;</span
+              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[2]">
+                N/A
+              </span>
+              </a
             >
           </td>
           <td class="table_text">
             TE0204:
             <a target="_blank" ng-href="#!/histogram/47898012179227"
-              ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[3] | number: 1}} &#8490;</span
-              ></a
+              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[3]"
+                >{{ $ctrl.NP02_DCS_01_TE[3] }} &#8490;</span
+              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[3]">
+                N/A
+              </span>
+              </a
             >
           </td>
         </tr>
