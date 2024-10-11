@@ -23,9 +23,14 @@
           <td class="table_text">
             TE0413:
             <a target="_blank" ng-href="#!/histogram/47898968480539"
-              ><br /><span class="value"
+              ><br />
+              <span class="value" ng-if="!isNaN($ctrl.NP02_DCS_01_TE[8])"
                 >{{ $ctrl.NP02_DCS_01_TE[8] | number: 1}} &#8490;</span
-              ></a
+              > 
+               <span class="value" ng-if="isNaN($ctrl.NP02_DCS_01_TE[8])">
+                N/A
+              </span>
+              </a
             >
           </td>
           <td class="table_text">
