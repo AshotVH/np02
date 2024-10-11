@@ -24,9 +24,12 @@
             TE0413:
             <a target="_blank" ng-href="#!/histogram/47898968480539"
               ><br />
-                <span class="value">
-                {{ $ctrl.NP02_DCS_01_TE[8] }} 
+                <span class="value" ng-if="$ctrl.NP02_DCS_01_TE[8]">
+                {{ $ctrl.NP02_DCS_01_TE[8] }} &#8490;
               </span>
+               <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[8]">
+                N/A
+               </span>
               </a
             >
           </td>
@@ -34,7 +37,7 @@
             TE0415:
             <a target="_blank" ng-href="#!/histogram/47899002034971"
               ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[9] }}</span
+                >{{ $ctrl.NP02_DCS_01_TE[9] | number: 1}} &#8490;</span
               ></a
             >
           </td>
@@ -42,7 +45,7 @@
             TE0416:
             <a target="_blank" ng-href="#!/histogram/47899018812187"
               ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[10] }}</span
+                >{{ $ctrl.NP02_DCS_01_TE[10] | number: 1}} &#8490;</span
               ></a
             >
           </td>
@@ -50,16 +53,19 @@
             TE0418:
             <a target="_blank" ng-href="#!/histogram/47899052366619"
               ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[11] }}</span
+                >{{ $ctrl.NP02_DCS_01_TE[11] | number: 1}} &#8490;</span
               ></a
             >
           </td>
           <td class="table_text">
             TE0201:
             <a target="_blank" ng-href="#!/histogram/47897961847579"
-              ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[0] }}</span
-              ></a
+              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[0]"
+                >{{ $ctrl.NP02_DCS_01_TE[0] }} &#8490;</span
+              > <span class="value" ng-if="$ctrl.NP02_DCS_01_TE[0]">
+                  N/A
+              </span>
+              </a
             >
           </td>
           <td class="table_text">

@@ -27,11 +27,11 @@ angular.module('tinternal', []).component('tinternal', {
                 .then(function (result) {
                     const res = result.data;
                     console.log(res);
-                    self.NP02_DCS_01_TE[8] = res["47898968480539"]?parseFloat(res["47898968480539"][0]).toFixed(1)+" &#8490;":"N/A";
-                    self.NP02_DCS_01_TE[9] = res["47899002034971"] ? parseFloat(res["47899002034971"][0]).toFixed(1) + " &#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[10] = res["47899018812187"] ? parseFloat(res["47899018812187"][0]).toFixed(1) + " &#8490;" : "N/A";
+                    self.NP02_DCS_01_TE[8] = res["47898968480539"]?parseFloat(res["47898968480539"][0]).toFixed(1)+" &#8490;": null;
+                    self.NP02_DCS_01_TE[9] = res["47899002034971"] ? parseFloat(res["47899002034971"][0]).toFixed(1) + " &#8490;" : null;
+                    self.NP02_DCS_01_TE[10] = res["47899018812187"] ? parseFloat(res["47899018812187"][0]).toFixed(1) + " &#8490;" : null;
                     self.NP02_DCS_01_TE[11] = res["47899052366619"] ? parseFloat(res["47899052366619"][0]).toFixed(1) + " &#8490;" : "N/A";
-                    self.NP02_DCS_01_TE[0] = res["47897961847579"] ? parseFloat(res["47897961847579"][0]).toFixed(1) + " &#8490;" : "N/A";
+                    self.NP02_DCS_01_TE[0] = res["47897961847579"] ? parseFloat(res["47897961847579"][0]).toFixed(1) + " &#8490;" : null;
                     self.NP02_DCS_01_TE[1] = res["47897978624795"] ? parseFloat(res["47897978624795"][0]).toFixed(1) + " &#8490;" : "N/A";
                     self.NP02_DCS_01_TE[2] = res["47897995402011"] ? parseFloat(res["47897995402011"][0]).toFixed(1) + " &#8490;" : "N/A";
                     // -------------------------------------------------
