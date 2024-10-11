@@ -103,6 +103,7 @@ angular.module("histogram", []).component("histogram", {
         $interval.cancel;
         $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
             .then(function onSuccess(response) {
+              console.log(response.data);
               const chartData = Object.entries(response.data).map(([key, value]) => {
                 return [parseInt(key), value];
               });
