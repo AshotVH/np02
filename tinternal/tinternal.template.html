@@ -117,25 +117,34 @@
           <td class="table_text">
             TE0419:
             <a target="_blank" ng-href="#!/histogram/47899069143835"
-              ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[12] | number: 1}} &#8490;</span
-              ></a
+              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[12]"
+                >{{ $ctrl.NP02_DCS_01_TE[12] }} &#8490;</span
+              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[12]">
+                N/A
+              </span>
+              </a
             >
           </td>
           <td class="table_text">
             TE0421:
             <a target="_blank" ng-href="#!/histogram/47899102698267"
-              ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[13] | number: 1}} &#8490;</span
-              ></a
+              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[13]"
+                >{{ $ctrl.NP02_DCS_01_TE[13] }} &#8490;</span
+              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[13]">
+                N/A
+              </span>
+              </a
             >
           </td>
           <td class="table_text">
             TE0422:
             <a target="_blank" ng-href="#!/histogram/47899119475483"
-              ><br /><span class="value"
-                >{{ $ctrl.NP02_DCS_01_TE[14] | number: 1}} &#8490;</span
-              ></a
+              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[14]"
+                >{{ $ctrl.NP02_DCS_01_TE[14] }} &#8490;</span
+              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[14]">
+                  N/A
+              </span>
+              </a
             >
           </td>
           <td class="table_text">
