@@ -10,7 +10,7 @@ angular.module('comissioning', []).component('comissioning', {
 
             self.timestamp = new Date();
             $http
-                .get("php-db-conn/np02cachedvals.php?elemName=np02cryo")
+                .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=np02cryo")
                 .then(function (result) {
                     const res = result.data;
                     self.NP02_MHT0100AI = res["47910779640603"][0];
@@ -19,7 +19,7 @@ angular.module('comissioning', []).component('comissioning', {
                 });
 
             $http
-                .get("php-db-conn/np02cachedvals.php?elemName=comissioning")
+                .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=comissioning")
                 .then(function (result) {
                     const res = result.data;
 

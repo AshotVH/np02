@@ -27,7 +27,7 @@ angular.module('vdcontrol', []).component('vdcontrol', {
         this.reload = function () {
             self.timestamp = new Date();
             $http
-                .get("php-db-conn/np02cachedvals.php?elemName=np02cryo")
+                .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=np02cryo")
                 .then(function (result) {
                     const res = result.data;
                     self.NP02_MHT0100AI = res["47910779640603"][0];
@@ -35,7 +35,7 @@ angular.module('vdcontrol', []).component('vdcontrol', {
                     self.NP02_PT0106AI = res["47910813195035"][0];
                 });
 
-            $http.get("php-db-conn/cachedValsVd.conn.php?elemId=vd").then(function (resultArr) {
+            $http.get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=vd").then(function (resultArr) {
                 var rArr = [];
                 var resjson = angular.toJson(resultArr.data);
                 var res = JSON.parse(resjson);

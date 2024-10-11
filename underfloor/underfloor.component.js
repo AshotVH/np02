@@ -13,7 +13,7 @@ angular.module('underfloor', []).component('underfloor', {
         this.reload = function () {
             self.timestamp = new Date();
             $http
-                .get("php-db-conn/np02cachedvals.php?elemName=np02cryo")
+                .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=np02cryo")
                 .then(function (result) {
                     const res = result.data;
                     self.NP02_MHT0100AI = res["47910779640603"][0];
@@ -22,7 +22,7 @@ angular.module('underfloor', []).component('underfloor', {
                 });
 
             $http
-                .get("php-db-conn/np02cachedvals.php?elemName=underfloor")
+                .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=underfloor")
                 .then(function (result) {
                     const res = result.data;
                     console.log(res);

@@ -12,7 +12,7 @@ angular.module('crptemps', []).component('crptemps', {
 
         this.reload = function () {
 
-            $http.get("php-db-conn/cachedVals.conn.php?elemId=np02cryo").then(function (resultArr) {
+            $http.get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=np02cryo").then(function (resultArr) {
                 var rArr = [];
                 var resjson = angular.toJson(resultArr.data);
                 var res = JSON.parse(resjson);
@@ -28,7 +28,7 @@ angular.module('crptemps', []).component('crptemps', {
 
             });
 
-            $http.get("php-db-conn/cachedVals.conn.php?elemId=crptemps").then(function (resultArr) {
+            $http.get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=crptemps").then(function (resultArr) {
                 var rArr = [];
                 var resjson = angular.toJson(resultArr.data);
                 var res = JSON.parse(resjson);

@@ -29,7 +29,7 @@ angular.module("multiplexer", []).component("multiplexer", {
                 self.NP02_DCS_01_TE = [];
                 self.timestamp = new Date();
                 $http
-                    .get("php-db-conn/np02cachedvals.php?elemName=np02cryo")
+                    .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=np02cryo")
                     .then(function (result) {
                         const res = result.data;
                         self.NP02_MHT0100AI = res["47910779640603"][0];
@@ -37,7 +37,7 @@ angular.module("multiplexer", []).component("multiplexer", {
                         self.NP02_PT0106AI = res["47910813195035"][0];
                     });
                 $http
-                    .get("php-db-conn/cachedVals.conn.php?elemName=multiplexer")
+                    .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=multiplexer")
                     .then(function (result) {
                         console.log(result.data);
                         // var rArr = [];
