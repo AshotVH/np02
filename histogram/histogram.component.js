@@ -106,9 +106,10 @@ angular.module("histogram", []).component("histogram", {
         const startDateStr = startDate.toISOString().slice(0, 19);
         const endDateStr = endDate.toISOString().slice(0, 19);
         $interval.cancel;
+        console.log(startDateStr);
+  
         $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
             .then(function onSuccess(response) {
-              
               const chartData = Object.entries(response.data).map(([key, value]) => {
                 return [parseInt(key), value];
               });
