@@ -96,6 +96,10 @@ angular.module("histogram", []).component("histogram", {
           console.log("no start or end");
           return false;
         }
+        if(start>=end){
+          console.log("incorrect range");
+          return false;
+        }
         const startDate = new Date(start);
         const endDate = new Date(end);
         const startDateStr = startDate.toISOString().slice(0, 19);
