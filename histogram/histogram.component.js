@@ -91,7 +91,8 @@ angular.module("histogram", []).component("histogram", {
           ],
         });
       }
-      this.range = function (start, end) {
+      this.range = function (event, start, end) {
+        event.preventDefault();
         if (!start || !end) {
           console.log("no start or end");
           return false;
@@ -135,10 +136,8 @@ angular.module("histogram", []).component("histogram", {
         if (!this.dd || this.dd < 1) return false;
         this.dd = Math.round(this.dd);
         self.daysAndHours = self.dd + '-' + '0';
-        console.log(event);
         self.reload();
         
-
       };
       this.promise;
       this.reload();
