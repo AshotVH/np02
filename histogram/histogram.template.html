@@ -27,7 +27,7 @@
         <button
         type="submit"
           class="button-12 button-12--small"
-          ng-click="$ctrl.setDays()"
+          ng-click="$ctrl.setDays($event)"
         >
           Go
         </button>
@@ -49,9 +49,7 @@
           <button type="submit" class="button-12 button-12--small" ng-click="$ctrl.range($ctrl.start, $ctrl.end)" >Go</button>
         </div>
       </form>
-      <div class="navbar__range_info">
-        Please enter correct time range
-      </div>
+     
 
      
     </div>

@@ -130,11 +130,15 @@ angular.module("histogram", []).component("histogram", {
         self.daysAndHours = daysAndHours;
         self.reload();
       };
-      this.setDays = function () {
+      this.setDays = function (event) {
+        event.preventDefault();
         if (!this.dd || this.dd < 1) return false;
         this.dd = Math.round(this.dd);
         self.daysAndHours = self.dd + '-' + '0';
+        console.log(event);
         self.reload();
+        
+
       };
       this.promise;
       this.reload();
