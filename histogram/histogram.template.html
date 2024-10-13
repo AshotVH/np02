@@ -64,7 +64,7 @@
         </button>
       </form>
     </div>
-    <div class="col-auto pt-2">
+    <div class="col-auto pt-2 d-flex justify-content-center">
       <form action="" class="navbar__range_input_form">
         <input
           type="date"
@@ -82,10 +82,7 @@
           <button type="submit" class="btn btn-dark histogram__button" ng-class="{'btn-outline-light':requestsList[8]}" ng-click="$ctrl.range($event, $ctrl.start, $ctrl.end)" >
             <span class="spinner-border spinner-border-sm" ng-class="{'hidden':!rangeBtnLoading}" aria-hidden="true"></span>
             <span ng-if="!rangeBtnLoading">Go</span>
-            
-
-        
-          </button>
+           </button>
         </div>
       </form>
     </div>

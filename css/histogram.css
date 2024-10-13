@@ -8,11 +8,9 @@ body {
 .histogram__buttons_caption{
   color: #fff;
   font-size: 22px;
-
 }
 .histogram__button.btn {
   padding: 4px 15px;
-  min-width: 113px;
   margin-left: 5px;
 }
 .hidden {
@@ -77,7 +75,7 @@ body {
 }
 .navbar__time_input_form {
   display: flex;
-  
+ 
 }
 .histogram__range_input {
   padding: 1px;
@@ -171,6 +169,11 @@ body {
 @media screen and (min-width: 501px) {
   .navbar__buttons ul li {
     flex-basis: 16%;
+  }
+  .histogram__button.btn {
+    padding: 4px 15px;
+    min-width: 113px;
+    margin-left: 5px;
   }
 }
 @media screen and (min-width: 501px) {
