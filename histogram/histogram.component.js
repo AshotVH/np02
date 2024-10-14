@@ -29,7 +29,16 @@ angular.module("histogram", []).component("histogram", {
       $scope.rangeBtnLoading = false;
       $scope.requestsList = new Array(9).fill(false);
       $scope.requestsList[1] = true;
-     
+    // -------------------------------------------------------
+      // $http.get('config/lems.conf') 
+    
+      //   .then(function(response) {
+      //     console.log(response.data);
+      //     return response.data; 
+      //   }, function(error) {
+      //     console.error('Error loading config file', error);
+      //   });
+    // -------------------------------------------------------
       
       this.daysAndHoursToBtnNum = function (daysAndHours){
         switch(daysAndHours){
