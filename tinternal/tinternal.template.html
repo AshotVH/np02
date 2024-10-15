@@ -1,1088 +1,1120 @@
 <link rel="stylesheet" href="css/tinternal.css" />
-<div class="container">
-  <div class="tinternal_header">
-    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
-    <div id="timestamp_label" class="timestamp_label">
-      Timestamp:<br />
-      <span id="timestamp" class="timestamp"
-        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
-      >
+
+<header class="container page_header">
+  <div class="row">
+    <div class="col page-title">{{$ctrl.pageTitle}}</div>
+    <div class="col timestamp_label">
+      <div class="row">
+        <div class="col">Timestamp</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span id="timestamp" class="timestamp"
+            >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="container pb-2">
+<div class="row">
+  <div class="col-12 col-xl-6">
+    <div class="row">
+      <div class="col-12 pt-2 d-flex justify-content-center">
+        <table>
+          <tr>
+            <th class="table_header" colspan="4">CRP4</th>
+            <th class="table_header" colspan="4">CRP2</th>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0413:
+              <a target="_blank" ng-href="#!/histogram/47898968480539"
+                ><br />
+                  <span class="value" ng-if="$ctrl.NP02_DCS_01_TE[8]">
+                  {{ $ctrl.NP02_DCS_01_TE[8] }} &#8490;
+                </span>
+                 <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[8]">
+                  N/A
+                 </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0415:
+              <a target="_blank" ng-href="#!/histogram/47899002034971"
+                ><br /><span class="value" ng-if=" $ctrl.NP02_DCS_01_TE[9]"
+                  >{{ $ctrl.NP02_DCS_01_TE[9] }} &#8490;</span
+                > <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[9]">
+                    N/A
+                </span>
+                
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0416:
+              <a target="_blank" ng-href="#!/histogram/47899018812187"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[10]"
+                  >{{ $ctrl.NP02_DCS_01_TE[10] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[10]">
+                    N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0418:
+              <a target="_blank" ng-href="#!/histogram/47899052366619"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[11]"
+                  >{{ $ctrl.NP02_DCS_01_TE[11] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[11]">
+                    N/A
+                </span>
+                
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0201:
+              <a target="_blank" ng-href="#!/histogram/47897961847579"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[0]"
+                  >{{ $ctrl.NP02_DCS_01_TE[0] }} &#8490;</span
+                > <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[0]">
+                    N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0202:
+              <a target="_blank" ng-href="#!/histogram/47897978624795"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[1]"
+                  >{{ $ctrl.NP02_DCS_01_TE[1] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[1]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0203:
+              <a target="_blank" ng-href="#!/histogram/47897995402011"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[2]"
+                  >{{ $ctrl.NP02_DCS_01_TE[2] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[2]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0204:
+              <a target="_blank" ng-href="#!/histogram/47898012179227"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[3]"
+                  >{{ $ctrl.NP02_DCS_01_TE[3] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[3]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0419:
+              <a target="_blank" ng-href="#!/histogram/47899069143835"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[12]"
+                  >{{ $ctrl.NP02_DCS_01_TE[12] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[12]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0421:
+              <a target="_blank" ng-href="#!/histogram/47899102698267"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[13]"
+                  >{{ $ctrl.NP02_DCS_01_TE[13] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[13]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0422:
+              <a target="_blank" ng-href="#!/histogram/47899119475483"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[14]"
+                  >{{ $ctrl.NP02_DCS_01_TE[14] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[14]">
+                    N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0424:
+              <a target="_blank" ng-href="#!/histogram/47899153029915"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[15]"
+                  >{{ $ctrl.NP02_DCS_01_TE[15] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[15]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0301:
+              <a target="_blank" ng-href="#!/histogram/47898364500763"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[4]"
+                  >{{ $ctrl.NP02_DCS_01_TE[4] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[4]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0306:
+              <a target="_blank" ng-href="#!/histogram/47898448386843"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[5]"
+                  >{{ $ctrl.NP02_DCS_01_TE[5] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[5] ">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0314:
+              <a target="_blank" ng-href="#!/histogram/47898582604571"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[6]"
+                  >{{ $ctrl.NP02_DCS_01_TE[6] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[6]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              TE0318:
+              <a target="_blank" ng-href="#!/histogram/47898649713435"
+                ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[7]"
+                  >{{ $ctrl.NP02_DCS_01_TE[7] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[7]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-12 pt-2 d-flex justify-content-center">
+        <img
+        id="detector"
+        class="tinternal-detector"
+        src="img/tinternal_detector.png"
+        alt="tinternal"
+      />
+      </div>
+      <div class="col-12 pt-2 d-flex justify-content-center">
+        <table class="floor">
+          <tr>
+            <th class="table_header" colspan="3">
+              <a href="#!/floor">Floor temperatures</a>
+            </th>
+          </tr>
+          <tr>
+            <td class="table_text">
+              AIR_08_13:
+              <a target="_blank" href="#!/histogram/47900579093275"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_13"
+                  >{{ $ctrl.NP02_DCS_01_AIR_08_13 }} &#8490;</span
+                >
+                <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_13">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+            <td class="table_text">
+              AIR_08_14:
+              <a target="_blank" href="#!/histogram/47900595870491"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_14"
+                  >{{ $ctrl.NP02_DCS_01_AIR_08_14 }} &#8490;</span
+                >  <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_14">
+                  N/A
+                </span>
+                
+                </a
+              >
+            </td>
+            <td class="table_text">
+              AIR_08_15:
+              <a target="_blank" href="#!/histogram/47900612647707"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_15"
+                  >{{ $ctrl.NP02_DCS_01_AIR_08_15 }} &#8490;</span
+                > <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_15">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              AIR_08_16:
+              <a target="_blank" href="#!/histogram/47900629424923"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_16"
+                >{{ $ctrl.NP02_DCS_01_AIR_08_16 }} &#8490;</span
+              > <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_16">
+                N/A
+              </span></a
+              >
+            </td>
+            <td class="table_text">
+              AIR_08_17:
+              <a target="_blank" href="#!/histogram/47900646202139"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_17"
+                >{{ $ctrl.NP02_DCS_01_AIR_08_17 }} &#8490;</span
+              > <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_17">
+                N/A
+              </span></a
+              >
+            </td>
+            <td class="table_text">
+              AIR_08_18:
+              <a target="_blank" href="#!/histogram/47900662979355"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_18"
+                >{{ $ctrl.NP02_DCS_01_AIR_08_18 }} &#8490;</span
+              > <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_18">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-xl-6">
+    <div class="row">
+      <div class="col-6 pt-2 d-flex justify-content-center">
+        <table>
+          <tr>
+            <td class="table_text">
+              LT0701<span> (7.402m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899975113499"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[45]"
+                  >{{ $ctrl.NP02_DCS_01_TE[45] }} &#8490;</span
+                > <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[45]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0702<span> (7.392m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899991890715"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[46]"
+                  >{{ $ctrl.NP02_DCS_01_TE[46] }} &#8490;</span
+                >
+                <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[46]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0703<span> (7.382m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900008667931"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[47]"
+                  >{{ $ctrl.NP02_DCS_01_TE[47] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[47]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0704<span> (7.372m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900025445147"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[48]"
+                  >{{ $ctrl.NP02_DCS_01_TE[48] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[48]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0705<span> (7.362m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900042222363"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[49]"
+                  >{{ $ctrl.NP02_DCS_01_TE[49] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[49]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0706<span> (7.352m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900058999579"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[50]"
+                  >{{ $ctrl.NP02_DCS_01_TE[50] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[50]">
+                    N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0707<span> (7.182m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900075776795"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[51]"
+                  >{{ $ctrl.NP02_DCS_01_TE[51] }} &#8490;</span
+                ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[51]">
+                  N/A
+                </span>
+                </a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0708<span> (7.012m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900092554011"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[52]"
+                  >{{ $ctrl.NP02_DCS_01_TE[52] }} &#8490;</span
+                >
+                <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[52]">
+                  N/A
+                </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0709<span> (6.842m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900109331227"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[53]"
+                >{{ $ctrl.NP02_DCS_01_TE[53] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[53]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0805<span> (6.681m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900444875547"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[70]"
+                  >{{ $ctrl.NP02_DCS_01_TE[70] }} &#8490;</span
+                >
+                <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[70]">
+                  N/A
+                </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0806<span> (6.511m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900461652763"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[71]"
+                >{{ $ctrl.NP02_DCS_01_TE[71] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[71]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0807<span> (6.341m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900478429979"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[72]"
+                >{{ $ctrl.NP02_DCS_01_TE[72] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[72]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0808<span> (6.171m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900495207195"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[73]"
+                >{{ $ctrl.NP02_DCS_01_TE[73] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[73]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0801<span> (5.331m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900377766683"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[66]"
+                  >{{ $ctrl.NP02_DCS_01_TE[66] }} &#8490;</span
+                >
+                <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[66]">
+                  N/A
+                </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0802<span> (5.161m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900394543899"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[67]"
+                >{{ $ctrl.NP02_DCS_01_TE[67] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[67]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0803<span> (4.991m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900411321115"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[68]"
+                >{{ $ctrl.NP02_DCS_01_TE[68] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[68]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0804<span> (4.821m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900428098331"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[69]"
+                >{{ $ctrl.NP02_DCS_01_TE[69] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[69]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0721<span> (3.963m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900310657819"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[62]"
+                >{{ $ctrl.NP02_DCS_01_TE[62] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[62]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0722<span> (3.793m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900327435035"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[63]"
+                >{{ $ctrl.NP02_DCS_01_TE[63] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[63]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0723<span> (3.623m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900344212251"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[64]"
+                >{{ $ctrl.NP02_DCS_01_TE[64] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[64]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0724<span> (3.453m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900360989467"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[65]"
+                >{{ $ctrl.NP02_DCS_01_TE[65] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[65]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0717<span> (2.604m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900243548955"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[58]"
+                >{{ $ctrl.NP02_DCS_01_TE[58] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[58]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0718<span> (2.434m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900260326171"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[59]"
+                >{{ $ctrl.NP02_DCS_01_TE[59] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[59]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0719<span> (2.264m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900277103387"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[60]"
+                >{{ $ctrl.NP02_DCS_01_TE[60] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[60]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0720<span> (2.094m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900293880603"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[61]"
+                >{{ $ctrl.NP02_DCS_01_TE[61] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[61]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0713<span> (1.247m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900176440091"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[54]"
+                >{{ $ctrl.NP02_DCS_01_TE[54] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[54]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0714<span> (1.077m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900193217307"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[55]"
+                >{{ $ctrl.NP02_DCS_01_TE[55] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[55]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0715<span> (0.907m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900209994523"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[56]"
+                >{{ $ctrl.NP02_DCS_01_TE[56] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[56]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0716<span> (0.737m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47900226771739"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[57]"
+                >{{ $ctrl.NP02_DCS_01_TE[57] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[57]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-6 pt-2 d-flex justify-content-center">
+        <table>
+          <tr>
+            <td class="table_text">
+              LT0501<span> (7.406m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899169807131"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[16]"
+                >{{ $ctrl.NP02_DCS_01_TE[16] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[16]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0502<span> (7.396m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899186584347"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[17]"
+                >{{ $ctrl.NP02_DCS_01_TE[17] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[17]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0503<span> (7.386m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899203361563"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[18]"
+                >{{ $ctrl.NP02_DCS_01_TE[18] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[18]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0504<span> (7.376m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899220138779"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[19]"
+                  >{{ $ctrl.NP02_DCS_01_TE[19] }} &#8490;</span
+                >
+                <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[19]">
+                  N/A
+                </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0505<span> (7.366m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899236915995"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[20]"
+                >{{ $ctrl.NP02_DCS_01_TE[20] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[20]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0506<span> (7.356m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899253693211"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[21]"
+                >{{ $ctrl.NP02_DCS_01_TE[21] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[21]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0507<span> (7.186m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899270470427"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[22]"
+                >{{ $ctrl.NP02_DCS_01_TE[22] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[22]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0508<span> (7.016m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899287247643"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[23]"
+                >{{ $ctrl.NP02_DCS_01_TE[23] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[23]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              LT0509<span> (6.846m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899304024859"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[24]"
+                >{{ $ctrl.NP02_DCS_01_TE[24] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[24]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0605<span> (6.006m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899639569179"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[41]"
+                >{{ $ctrl.NP02_DCS_01_TE[41] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[41]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0606<span> (5.836m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899656346395"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[42]"
+                >{{ $ctrl.NP02_DCS_01_TE[42] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[42]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0607<span> (5.666m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899673123611"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[43]"
+                >{{ $ctrl.NP02_DCS_01_TE[43] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[43]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0608<span> (5.496m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899689900827"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[44]"
+                >{{ $ctrl.NP02_DCS_01_TE[44] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[44]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0601<span> (4.660m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899572460315"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[37]"
+                >{{ $ctrl.NP02_DCS_01_TE[37] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[37]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0602<span> (4.490m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899589237531"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[38]"
+                >{{ $ctrl.NP02_DCS_01_TE[38] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[38]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0603<span> (4.320m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899606014747"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[39]"
+                >{{ $ctrl.NP02_DCS_01_TE[39] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[39]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0604<span> (4.150m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899622791963"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[40]"
+                >{{ $ctrl.NP02_DCS_01_TE[40] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[40]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0521<span> (3.287m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899505351451"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[33]"
+                >{{ $ctrl.NP02_DCS_01_TE[33] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[33]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0522<span> (3.117m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899522128667"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[34]"
+                >{{ $ctrl.NP02_DCS_01_TE[34] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[34]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0523<span> (2.947m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899538905883"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[35]"
+                >{{ $ctrl.NP02_DCS_01_TE[35] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[35]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0524<span> (2.777m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899555683099"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[36]"
+                >{{ $ctrl.NP02_DCS_01_TE[36] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[36]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0517<span> (1.933m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899438242587"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[29]"
+                >{{ $ctrl.NP02_DCS_01_TE[29] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[29]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0518<span> (1.763m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899455019803"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[30]"
+                >{{ $ctrl.NP02_DCS_01_TE[30] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[30]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0519<span> (1.593m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899471797019"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[31]"
+                >{{ $ctrl.NP02_DCS_01_TE[31] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[31]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0520<span> (1.423m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899488574235"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[32]"
+                >{{ $ctrl.NP02_DCS_01_TE[32] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[32]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td class="table_text">
+              TE0513<span> (0.544m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899371133723"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[25]"
+                >{{ $ctrl.NP02_DCS_01_TE[25] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[25]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0514<span> (0.374m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899387910939"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[26]"
+                >{{ $ctrl.NP02_DCS_01_TE[26] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[26]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0515<span> (0.204m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899404688155"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[27]"
+                >{{ $ctrl.NP02_DCS_01_TE[27] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[27]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TE0516<span> (0.034m)</span>:
+              <a target="_blank" ng-href="#!/histogram/47899421465371"
+                ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[28]"
+                >{{ $ctrl.NP02_DCS_01_TE[28] }} &#8490;</span
+              >
+              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[28]">
+                N/A
+              </span></a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+
     </div>
   </div>
 
-  <!--    <button id="spbottom" ng-click='$ctrl.pageChooser("crptemps")'>CRP temperatures</button>-->
-
-  <div class="crp4-wrapper">
-    <div id="crp4" class="crp4">
-      <table>
-        <tr>
-          <th class="table_header" colspan="4">CRP4</th>
-          <th class="table_header" colspan="4">CRP2</th>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0413:
-            <a target="_blank" ng-href="#!/histogram/47898968480539"
-              ><br />
-                <span class="value" ng-if="$ctrl.NP02_DCS_01_TE[8]">
-                {{ $ctrl.NP02_DCS_01_TE[8] }} &#8490;
-              </span>
-               <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[8]">
-                N/A
-               </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0415:
-            <a target="_blank" ng-href="#!/histogram/47899002034971"
-              ><br /><span class="value" ng-if=" $ctrl.NP02_DCS_01_TE[9]"
-                >{{ $ctrl.NP02_DCS_01_TE[9] }} &#8490;</span
-              > <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[9]">
-                  N/A
-              </span>
-              
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0416:
-            <a target="_blank" ng-href="#!/histogram/47899018812187"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[10]"
-                >{{ $ctrl.NP02_DCS_01_TE[10] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[10]">
-                  N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0418:
-            <a target="_blank" ng-href="#!/histogram/47899052366619"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[11]"
-                >{{ $ctrl.NP02_DCS_01_TE[11] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[11]">
-                  N/A
-              </span>
-              
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0201:
-            <a target="_blank" ng-href="#!/histogram/47897961847579"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[0]"
-                >{{ $ctrl.NP02_DCS_01_TE[0] }} &#8490;</span
-              > <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[0]">
-                  N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0202:
-            <a target="_blank" ng-href="#!/histogram/47897978624795"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[1]"
-                >{{ $ctrl.NP02_DCS_01_TE[1] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[1]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0203:
-            <a target="_blank" ng-href="#!/histogram/47897995402011"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[2]"
-                >{{ $ctrl.NP02_DCS_01_TE[2] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[2]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0204:
-            <a target="_blank" ng-href="#!/histogram/47898012179227"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[3]"
-                >{{ $ctrl.NP02_DCS_01_TE[3] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[3]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0419:
-            <a target="_blank" ng-href="#!/histogram/47899069143835"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[12]"
-                >{{ $ctrl.NP02_DCS_01_TE[12] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[12]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0421:
-            <a target="_blank" ng-href="#!/histogram/47899102698267"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[13]"
-                >{{ $ctrl.NP02_DCS_01_TE[13] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[13]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0422:
-            <a target="_blank" ng-href="#!/histogram/47899119475483"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[14]"
-                >{{ $ctrl.NP02_DCS_01_TE[14] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[14]">
-                  N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0424:
-            <a target="_blank" ng-href="#!/histogram/47899153029915"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[15]"
-                >{{ $ctrl.NP02_DCS_01_TE[15] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[15]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0301:
-            <a target="_blank" ng-href="#!/histogram/47898364500763"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[4]"
-                >{{ $ctrl.NP02_DCS_01_TE[4] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[4]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0306:
-            <a target="_blank" ng-href="#!/histogram/47898448386843"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[5]"
-                >{{ $ctrl.NP02_DCS_01_TE[5] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[5] ">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0314:
-            <a target="_blank" ng-href="#!/histogram/47898582604571"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[6]"
-                >{{ $ctrl.NP02_DCS_01_TE[6] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[6]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-          <td class="table_text">
-            TE0318:
-            <a target="_blank" ng-href="#!/histogram/47898649713435"
-              ><br /><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[7]"
-                >{{ $ctrl.NP02_DCS_01_TE[7] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[7]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="tinternal-detector-wrapper">
-    <img
-      id="detector"
-      class="tinternal-detector"
-      src="img/tinternal_detector.png"
-      alt="tinternal"
-    />
-  </div>
-
-  <div class="leftright-wrapper">
-    <div id="left" class="left">
-      <table>
-        <tr>
-          <td class="table_text">
-            LT0701<span> (7.402m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899975113499"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[45]"
-                >{{ $ctrl.NP02_DCS_01_TE[45] }} &#8490;</span
-              > <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[45]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0702<span> (7.392m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899991890715"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[46]"
-                >{{ $ctrl.NP02_DCS_01_TE[46] }} &#8490;</span
-              >
-              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[46]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0703<span> (7.382m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900008667931"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[47]"
-                >{{ $ctrl.NP02_DCS_01_TE[47] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[47]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0704<span> (7.372m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900025445147"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[48]"
-                >{{ $ctrl.NP02_DCS_01_TE[48] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[48]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0705<span> (7.362m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900042222363"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[49]"
-                >{{ $ctrl.NP02_DCS_01_TE[49] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[49]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0706<span> (7.352m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900058999579"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[50]"
-                >{{ $ctrl.NP02_DCS_01_TE[50] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[50]">
-                  N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0707<span> (7.182m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900075776795"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[51]"
-                >{{ $ctrl.NP02_DCS_01_TE[51] }} &#8490;</span
-              ><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[51]">
-                N/A
-              </span>
-              </a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0708<span> (7.012m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900092554011"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[52]"
-                >{{ $ctrl.NP02_DCS_01_TE[52] }} &#8490;</span
-              >
-              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[52]">
-                N/A
-              </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0709<span> (6.842m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900109331227"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[53]"
-              >{{ $ctrl.NP02_DCS_01_TE[53] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[53]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0805<span> (6.681m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900444875547"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[70]"
-                >{{ $ctrl.NP02_DCS_01_TE[70] }} &#8490;</span
-              >
-              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[70]">
-                N/A
-              </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0806<span> (6.511m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900461652763"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[71]"
-              >{{ $ctrl.NP02_DCS_01_TE[71] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[71]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0807<span> (6.341m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900478429979"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[72]"
-              >{{ $ctrl.NP02_DCS_01_TE[72] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[72]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0808<span> (6.171m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900495207195"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[73]"
-              >{{ $ctrl.NP02_DCS_01_TE[73] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[73]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0801<span> (5.331m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900377766683"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[66]"
-                >{{ $ctrl.NP02_DCS_01_TE[66] }} &#8490;</span
-              >
-              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[66]">
-                N/A
-              </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0802<span> (5.161m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900394543899"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[67]"
-              >{{ $ctrl.NP02_DCS_01_TE[67] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[67]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0803<span> (4.991m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900411321115"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[68]"
-              >{{ $ctrl.NP02_DCS_01_TE[68] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[68]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0804<span> (4.821m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900428098331"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[69]"
-              >{{ $ctrl.NP02_DCS_01_TE[69] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[69]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0721<span> (3.963m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900310657819"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[62]"
-              >{{ $ctrl.NP02_DCS_01_TE[62] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[62]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0722<span> (3.793m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900327435035"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[63]"
-              >{{ $ctrl.NP02_DCS_01_TE[63] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[63]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0723<span> (3.623m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900344212251"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[64]"
-              >{{ $ctrl.NP02_DCS_01_TE[64] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[64]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0724<span> (3.453m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900360989467"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[65]"
-              >{{ $ctrl.NP02_DCS_01_TE[65] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[65]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0717<span> (2.604m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900243548955"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[58]"
-              >{{ $ctrl.NP02_DCS_01_TE[58] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[58]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0718<span> (2.434m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900260326171"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[59]"
-              >{{ $ctrl.NP02_DCS_01_TE[59] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[59]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0719<span> (2.264m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900277103387"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[60]"
-              >{{ $ctrl.NP02_DCS_01_TE[60] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[60]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0720<span> (2.094m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900293880603"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[61]"
-              >{{ $ctrl.NP02_DCS_01_TE[61] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[61]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0713<span> (1.247m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900176440091"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[54]"
-              >{{ $ctrl.NP02_DCS_01_TE[54] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[54]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0714<span> (1.077m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900193217307"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[55]"
-              >{{ $ctrl.NP02_DCS_01_TE[55] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[55]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0715<span> (0.907m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900209994523"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[56]"
-              >{{ $ctrl.NP02_DCS_01_TE[56] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[56]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0716<span> (0.737m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47900226771739"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[57]"
-              >{{ $ctrl.NP02_DCS_01_TE[57] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[57]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div id="right" class="right">
-      <table>
-        <tr>
-          <td class="table_text">
-            LT0501<span> (7.406m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899169807131"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[16]"
-              >{{ $ctrl.NP02_DCS_01_TE[16] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[16]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0502<span> (7.396m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899186584347"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[17]"
-              >{{ $ctrl.NP02_DCS_01_TE[17] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[17]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0503<span> (7.386m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899203361563"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[18]"
-              >{{ $ctrl.NP02_DCS_01_TE[18] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[18]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0504<span> (7.376m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899220138779"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[19]"
-                >{{ $ctrl.NP02_DCS_01_TE[19] }} &#8490;</span
-              >
-              <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[19]">
-                N/A
-              </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0505<span> (7.366m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899236915995"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[20]"
-              >{{ $ctrl.NP02_DCS_01_TE[20] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[20]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0506<span> (7.356m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899253693211"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[21]"
-              >{{ $ctrl.NP02_DCS_01_TE[21] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[21]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0507<span> (7.186m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899270470427"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[22]"
-              >{{ $ctrl.NP02_DCS_01_TE[22] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[22]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0508<span> (7.016m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899287247643"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[23]"
-              >{{ $ctrl.NP02_DCS_01_TE[23] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[23]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            LT0509<span> (6.846m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899304024859"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[24]"
-              >{{ $ctrl.NP02_DCS_01_TE[24] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[24]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0605<span> (6.006m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899639569179"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[41]"
-              >{{ $ctrl.NP02_DCS_01_TE[41] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[41]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0606<span> (5.836m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899656346395"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[42]"
-              >{{ $ctrl.NP02_DCS_01_TE[42] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[42]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0607<span> (5.666m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899673123611"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[43]"
-              >{{ $ctrl.NP02_DCS_01_TE[43] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[43]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0608<span> (5.496m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899689900827"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[44]"
-              >{{ $ctrl.NP02_DCS_01_TE[44] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[44]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0601<span> (4.660m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899572460315"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[37]"
-              >{{ $ctrl.NP02_DCS_01_TE[37] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[37]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0602<span> (4.490m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899589237531"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[38]"
-              >{{ $ctrl.NP02_DCS_01_TE[38] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[38]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0603<span> (4.320m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899606014747"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[39]"
-              >{{ $ctrl.NP02_DCS_01_TE[39] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[39]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0604<span> (4.150m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899622791963"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[40]"
-              >{{ $ctrl.NP02_DCS_01_TE[40] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[40]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0521<span> (3.287m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899505351451"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[33]"
-              >{{ $ctrl.NP02_DCS_01_TE[33] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[33]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0522<span> (3.117m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899522128667"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[34]"
-              >{{ $ctrl.NP02_DCS_01_TE[34] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[34]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0523<span> (2.947m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899538905883"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[35]"
-              >{{ $ctrl.NP02_DCS_01_TE[35] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[35]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0524<span> (2.777m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899555683099"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[36]"
-              >{{ $ctrl.NP02_DCS_01_TE[36] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[36]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0517<span> (1.933m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899438242587"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[29]"
-              >{{ $ctrl.NP02_DCS_01_TE[29] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[29]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0518<span> (1.763m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899455019803"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[30]"
-              >{{ $ctrl.NP02_DCS_01_TE[30] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[30]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0519<span> (1.593m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899471797019"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[31]"
-              >{{ $ctrl.NP02_DCS_01_TE[31] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[31]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0520<span> (1.423m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899488574235"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[32]"
-              >{{ $ctrl.NP02_DCS_01_TE[32] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[32]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td class="table_text">
-            TE0513<span> (0.544m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899371133723"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[25]"
-              >{{ $ctrl.NP02_DCS_01_TE[25] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[25]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0514<span> (0.374m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899387910939"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[26]"
-              >{{ $ctrl.NP02_DCS_01_TE[26] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[26]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0515<span> (0.204m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899404688155"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[27]"
-              >{{ $ctrl.NP02_DCS_01_TE[27] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[27]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-        <tr>
-          <td class="table_text">
-            TE0516<span> (0.034m)</span>:
-            <a target="_blank" ng-href="#!/histogram/47899421465371"
-              ><span class="value" ng-if="$ctrl.NP02_DCS_01_TE[28]"
-              >{{ $ctrl.NP02_DCS_01_TE[28] }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_TE[28]">
-              N/A
-            </span></a
-            >
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="floor-wrapper">
-    <table id="floor" class="floor">
-      <tr>
-        <th class="table_header" colspan="3">
-          <a href="#!/floor">Floor temperatures</a>
-        </th>
-      </tr>
-      <tr>
-        <td class="table_text">
-          AIR_08_13:
-          <a target="_blank" href="#!/histogram/47900579093275"
-            ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_13"
-              >{{ $ctrl.NP02_DCS_01_AIR_08_13 }} &#8490;</span
-            >
-            <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_13">
-              N/A
-            </span>
-            </a
-          >
-        </td>
-        <td class="table_text">
-          AIR_08_14:
-          <a target="_blank" href="#!/histogram/47900595870491"
-            ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_14"
-              >{{ $ctrl.NP02_DCS_01_AIR_08_14 }} &#8490;</span
-            >  <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_14">
-              N/A
-            </span>
-            
-            </a
-          >
-        </td>
-        <td class="table_text">
-          AIR_08_15:
-          <a target="_blank" href="#!/histogram/47900612647707"
-            ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_15"
-              >{{ $ctrl.NP02_DCS_01_AIR_08_15 }} &#8490;</span
-            > <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_15">
-              N/A
-            </span>
-            </a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td class="table_text">
-          AIR_08_16:
-          <a target="_blank" href="#!/histogram/47900629424923"
-            ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_16"
-            >{{ $ctrl.NP02_DCS_01_AIR_08_16 }} &#8490;</span
-          > <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_16">
-            N/A
-          </span></a
-          >
-        </td>
-        <td class="table_text">
-          AIR_08_17:
-          <a target="_blank" href="#!/histogram/47900646202139"
-            ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_17"
-            >{{ $ctrl.NP02_DCS_01_AIR_08_17 }} &#8490;</span
-          > <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_17">
-            N/A
-          </span></a
-          >
-        </td>
-        <td class="table_text">
-          AIR_08_18:
-          <a target="_blank" href="#!/histogram/47900662979355"
-            ><span class="value" ng-if="$ctrl.NP02_DCS_01_AIR_08_18"
-            >{{ $ctrl.NP02_DCS_01_AIR_08_18 }} &#8490;</span
-          > <span class="value" ng-if="!$ctrl.NP02_DCS_01_AIR_08_18">
-            N/A
-          </span></a
-          >
-        </td>
-      </tr>
-    </table>
-    <div id="ambient" class="ambient table_text" >
-      Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"
-        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
-      ><br />Ambient temperature:<br /><a
-        target="_blank"
-        href="#!/histogram/47910796417819"
-        ><span class="value"
-          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
-        ></a
-      ><br />Ambient pressure:<br /><a
-        target="_blank"
-        href="#!/histogram/47910813195035"
-        ><span class="value"
-          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
-        ></a
-      >
-    </div>
-  </div>
 </div>
+
+
+
+  
+
+
+
+</main>
+<footer class="container page_footer">
+  <div class="row justify-content-end">
+   <div class="col-auto">
+    <div class="ambient">
+      <div class="ambient_content table_text">
+        Humidity:
+        <br />
+        <a target="_blank" href="#!/histogram/47910779640603">
+          <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+        </a>
+        <br />
+        Ambient temperature:
+        <br />
+        <a target="_blank" href="#!/histogram/47910796417819">
+          <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+        </a>
+        <br />
+        Ambient pressure:
+        <br />
+        <a target="_blank" href="#!/histogram/47910813195035">
+          <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+        </a>
+      </div>
+    </div>
+   </div>
+  </div>
+
+ 
+</footer>

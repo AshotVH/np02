@@ -1,10 +1,4 @@
-body {
-  height: 100%;
-  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
+
 .histogram__buttons_caption{
   color: #fff;
   font-size: 22px;
@@ -12,7 +6,9 @@ body {
 .histogram__button.btn {
   padding: 4px 15px;
   margin-left: 5px;
+  font-size: 14px;
 }
+
 .hidden {
   display: none;
 }

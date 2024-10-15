@@ -1,271 +1,261 @@
 <link rel="stylesheet" href="css/cryostat.css" />
-
-<div class="container">
-  <div class="page_title_and_timestamps">
-    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
-    <div id="timestamp_label" class="timestamp_label">
-      Timestamp:<br />
-      <span id="timestamp" class="timestamp"
-        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
-      >
+<header class="container page_header">
+  <div class="row">
+    <div class="col page-title">{{$ctrl.pageTitle}}</div>
+    <div class="col timestamp_label">
+      <div class="row">
+        <div class="col">Timestamp</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span id="timestamp" class="timestamp"
+            >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+          >
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="cryostat-img-wrapper">
-    <img
-      id="detector"
-      class="cryostat-img"
-      src="img/cryostat_main.png"
-      alt="Cryostat"
-    />
+</header>
+<main class="container pb-2">
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 col-lg-4 pt-2">
+    
+      <img
+        id="detector"
+        class="cryostat-img"
+        src="img/cryostat_main.png"
+        alt="Cryostat"
+      />
+    
   </div>
-
-  
-  <div
-    id="penetration_pipe1"
-    ng-model="toggle1"
-    ng-class="toggle1 ? 'data-container--large' : ''"
-    ng-click="toggle1=!toggle1"
-    class="penetration-pipe1"
-  >
-    <table id="penetration1">
-      <tr>
-        <th class="table_header">Pen. pipe 33.1</th>
-      </tr>
-      <tr>
-        <td class="table_text">
-          TSS-001 AA/BA <span>(Type 1)</span>:
-          <a target="_blank" href="#!/histogram/47897559194395"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_001_AA_BA < 80 ||
-              $ctrl.NP02_DCS_01_TSS_001_AA_BA > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_001_AA_BA | number: 1) + ' &#8490;' }} </span
-            ></a
-          ><br />
-          TSS-001 AA/BB <span>(Type 1)</span>:
-          <a target="_blank" href="#!/histogram/47897575971611"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_001_AA_BB < 80 ||
-              $ctrl.NP02_DCS_01_TSS_001_AA_BB > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_001_AA_BB | number: 1) + ' &#8490;' }} </span
-            ></a
-          ><br />
-          TSS-002 AA/BA <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897592748827"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AA_BA < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AA_BA > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AA_BA | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AH/BH <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897609526043"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AH_BH < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AH_BH > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AH_BH | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AI/BI <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897626303259"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AI_BI < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AI_BI > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AI_BI | number: 1) + ' &#8490;'}} </span
-            ></a
-          >
-        </td>
-      </tr>
-    </table>
+  <div class="col-12 col-md-12 col-lg-8">
+    <div class="row justify-content-center">
+      <div class="col-6 pt-2 d-flex justify-content-center">
+        <div>
+        <table>
+          <tr>
+            <th class="table_header">Pen. pipe 33.1</th>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TSS-001 AA/BA <span>(Type 1)</span>:
+              <a target="_blank" href="#!/histogram/47897559194395"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_001_AA_BA < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_001_AA_BA > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_001_AA_BA | number: 1) + ' &#8490;' }} </span
+                ></a
+              ><br />
+              TSS-001 AA/BB <span>(Type 1)</span>:
+              <a target="_blank" href="#!/histogram/47897575971611"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_001_AA_BB < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_001_AA_BB > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_001_AA_BB | number: 1) + ' &#8490;' }} </span
+                ></a
+              ><br />
+              TSS-002 AA/BA <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897592748827"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AA_BA < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AA_BA > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AA_BA | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AH/BH <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897609526043"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AH_BH < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AH_BH > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AH_BH | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AI/BI <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897626303259"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AI_BI < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AI_BI > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AI_BI | number: 1) + ' &#8490;'}} </span
+                ></a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      </div>
+      <div class="col-6 pt-2 d-flex justify-content-center">
+        <div>
+        <table>
+          <tr>
+            <th class="table_header">Pen. pipe 33.2</th>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TSS-001 AD/BD <span>(Type 1)</span>:
+              <a target="_blank" href="#!/histogram/47897659857691"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_001_AD_BD < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_001_AD_BD > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_001_AD_BD | number: 1)  + ' &#8490;'}}</span
+                ></a
+              ><br />
+              TSS-002 AB/BB <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897676634907"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AB_BB < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AB_BB > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AB_BB | number: 1)+ ' &#8490;' }} </span
+                ></a
+              ><br />
+              TSS-002 AF/BF <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897693412123"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AF_BF < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AF_BF > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AF_BF | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AM/BM <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897710189339"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AM_BM < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AM_BM > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AM_BM | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AN/BN <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897726966555"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AN_BN < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AN_BN > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AN_BN | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AO/BO <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897743743771"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AO_BO < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AO_BO > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AO_BO | number: 1) + ' &#8490;'}} </span
+                ></a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      </div>
+      <div class="col-6 pt-2 d-flex justify-content-center">
+        <div>
+        <table>
+          <tr>
+            <th class="table_header">Pen. pipe 33.4</th>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TSS-001 AE/BE <span>(Type 1)</span>:
+              <a target="_blank" href="#!/histogram/47897861184283"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_001_AE_BE < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_001_AE_BE > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_001_AE_BE | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AE/BE <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897894738715"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AE_BE < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AE_BE > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AE_BE | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AP/BP <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897911515931"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AP_BP < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AP_BP > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AP_BP | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AQ/BQ <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897928293147"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AQ_BQ < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AQ_BQ > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AQ_BQ | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AR/BR <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897945070363"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AR_BR < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AR_BR > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AR_BR | number: 1) + ' &#8490;'}} </span
+                ></a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      </div>
+      <div class="col-6 pt-2 d-flex justify-content-center">
+        <div>
+        <table>
+          <tr>
+            <th class="table_header">Pen. pipe 33.3</th>
+          </tr>
+          <tr>
+            <td class="table_text">
+              TSS-001 AC/BC <span>(Type 1)</span>:
+              <a target="_blank" href="#!/histogram/47897760520987"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_001_AC_BC < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_001_AC_BC > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_001_AC_BC | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AD/BD <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897794075419"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AD_BD < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AD_BD > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AD_BD | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AJ/BJ <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897810852635"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AJ_BJ < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AJ_BJ > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AJ_BJ | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AK/BK <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897827629851"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AK_BK < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AK_BK > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AK_BK | number: 1) + ' &#8490;'}} </span
+                ></a
+              ><br />
+              TSS-002 AL/BL <span>(Type 2)</span>:
+              <a target="_blank" href="#!/histogram/47897844407067"
+                ><span class="value"
+                  >{{ ($ctrl.NP02_DCS_01_TSS_002_AL_BL < 80 ||
+                  $ctrl.NP02_DCS_01_TSS_002_AL_BL > 350) ? "Error" :
+                  ($ctrl.NP02_DCS_01_TSS_002_AL_BL | number: 1)+ ' &#8490;' }} </span
+                ></a
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      </div>
+    </div>
   </div>
-  <div
-    id="penetration_pipe2"
-    ng-model="toggle2"
-    ng-class="toggle2 ? 'data-container--large' : ''"
-    ng-click="toggle2=!toggle2"
-    class="penetration-pipe2"
-  >
-    <table id="penetration2">
-      <tr>
-        <th class="table_header">Pen. pipe 33.2</th>
-      </tr>
-      <tr>
-        <td class="table_text">
-          TSS-001 AD/BD <span>(Type 1)</span>:
-          <a target="_blank" href="#!/histogram/47897659857691"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_001_AD_BD < 80 ||
-              $ctrl.NP02_DCS_01_TSS_001_AD_BD > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_001_AD_BD | number: 1)  + ' &#8490;'}}</span
-            ></a
-          ><br />
-          TSS-002 AB/BB <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897676634907"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AB_BB < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AB_BB > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AB_BB | number: 1)+ ' &#8490;' }} </span
-            ></a
-          ><br />
-          TSS-002 AF/BF <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897693412123"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AF_BF < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AF_BF > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AF_BF | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AM/BM <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897710189339"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AM_BM < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AM_BM > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AM_BM | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AN/BN <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897726966555"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AN_BN < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AN_BN > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AN_BN | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AO/BO <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897743743771"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AO_BO < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AO_BO > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AO_BO | number: 1) + ' &#8490;'}} </span
-            ></a
-          >
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div
-    id="penetration_pipe4"
-    ng-model="toggle4"
-    ng-class="toggle4 ? 'data-container--large' : ''"
-    ng-click="toggle4=!toggle4"
-    class="penetration-pipe4"
-  >
-    <table id="penetration4">
-      <tr>
-        <th class="table_header">Pen. pipe 33.4</th>
-      </tr>
-      <tr>
-        <td class="table_text">
-          TSS-001 AE/BE <span>(Type 1)</span>:
-          <a target="_blank" href="#!/histogram/47897861184283"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_001_AE_BE < 80 ||
-              $ctrl.NP02_DCS_01_TSS_001_AE_BE > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_001_AE_BE | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AE/BE <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897894738715"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AE_BE < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AE_BE > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AE_BE | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AP/BP <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897911515931"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AP_BP < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AP_BP > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AP_BP | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AQ/BQ <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897928293147"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AQ_BQ < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AQ_BQ > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AQ_BQ | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AR/BR <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897945070363"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AR_BR < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AR_BR > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AR_BR | number: 1) + ' &#8490;'}} </span
-            ></a
-          >
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div
-    id="penetration_pipe3"
-    ng-model="toggle3"
-    ng-class="toggle3 ? 'data-container--large' : ''"
-    ng-click="toggle3=!toggle3"
-    class="penetration-pipe3"
-  >
-    <table id="penetration3">
-      <tr>
-        <th class="table_header">Pen. pipe 33.3</th>
-      </tr>
-      <tr>
-        <td class="table_text">
-          TSS-001 AC/BC <span>(Type 1)</span>:
-          <a target="_blank" href="#!/histogram/47897760520987"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_001_AC_BC < 80 ||
-              $ctrl.NP02_DCS_01_TSS_001_AC_BC > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_001_AC_BC | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AD/BD <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897794075419"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AD_BD < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AD_BD > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AD_BD | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AJ/BJ <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897810852635"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AJ_BJ < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AJ_BJ > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AJ_BJ | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AK/BK <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897827629851"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AK_BK < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AK_BK > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AK_BK | number: 1) + ' &#8490;'}} </span
-            ></a
-          ><br />
-          TSS-002 AL/BL <span>(Type 2)</span>:
-          <a target="_blank" href="#!/histogram/47897844407067"
-            ><span class="value"
-              >{{ ($ctrl.NP02_DCS_01_TSS_002_AL_BL < 80 ||
-              $ctrl.NP02_DCS_01_TSS_002_AL_BL > 350) ? "Error" :
-              ($ctrl.NP02_DCS_01_TSS_002_AL_BL | number: 1)+ ' &#8490;' }} </span
-            ></a
-          >
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div
-    id="bottom"
-    ng-model="toggle5"
-    ng-class="toggle5 ? 'data-container--large' : ''"
-    ng-click="toggle5=!toggle5"
-    class="bottom"
-  >
+</div>
+<div class="row">
+    <div class="col-3 pt-2">
+    <div class="bottom">
     <table id="bottom_t" class="bottom_table">
       <tr>
         <th class="table_header">External bottom temp</th>
@@ -330,132 +320,123 @@
       </tr>
     </table>
   </div>
-
-  <div
-    id="inner_pressure"
-    ng-model="toggle7"
-    ng-class="toggle7 ? 'data-container--large' : ''"
-    ng-click="toggle7=!toggle7"
-    class="inner_pressure_1 table_text"
-  >
-    <div class="inner_pressure_1__content">
-      Inner pressure ABS (PE0100):
-      <br />
-      <a target="_blank" href="#!/histogram/47910964189979"
-        ><span class="value"
-          >{{ $ctrl.NP02_PE0100AI | number: 3 }} mbar</span
-        ></a
+  </div>
+  <div class="col-7">
+    <div class="row justify-content-start">
+      <div class="col-6 col-lg-auto pt-2">
+        <div class="inner_pressure_1 table_text">
+        <div class="inner_pressure_1__content">
+          Inner pressure ABS (PE0100):
+          <br />
+          <a target="_blank" href="#!/histogram/47910964189979"
+            ><span class="value"
+              >{{ $ctrl.NP02_PE0100AI | number: 3 }} mbar</span
+            ></a
+          >
+          <br />
+          Inner pressure Diff (2PT3210):
+          <br />
+          <a target="_blank" href="#!/histogram/47943277084955">
+            <span class="value"
+              >{{ $ctrl.NP02_DCS_01_2PT3210 | number: 1 }} mbar</span
+            >
+          </a>
+        </div>
+      </div>
+      </div>
+      <div class="col-6 col-lg-auto pt-2">
+        <div class="inner_pressure_2 table_text">
+        <div class="inner_pressure_2__content">
+          Inner Pressure ABS 2 (PE0102):
+          <br />
+          <a target="_blank" href="#!/histogram/47910997744411">
+            <span class="value">{{ $ctrl.NP02_PE0102AI | number: 3 }} mbar</span></a
+          >
+          <br />
+          Inner Pressure Diff 2 (2PT3220):
+          <br />
+          <a target="_blank" href="#!/histogram/47943293862171">
+            <span class="value"
+              >{{ $ctrl.NP02_DCS_01_2PT3220 | number: 1 }} mbar</span
+            >
+          </a>
+        </div>
+      </div>
+      </div>
+      <div class="col-6 col-lg-auto pt-2">
+        <div class="cryostat_pressures_wrapper1">
+        <div class="cryostat_pressures_wrapper2 table_text">
+          <div id="sgft" class="sgft">
+            SGFT pressure:
+            <a target="_blank" ng-href="#!/histogram/47910980967195"
+              ><span class="value"
+                >{{ $ctrl.NP02_PE0101AI | number: 1 }} mbar</span
+              ></a
+            >
+          </div>
+          <div id="CV4100" class="CV4100">
+            Detector pressure abs:
+            <a target="_blank" ng-href="#!/histogram/47911064853275"
+              ><span class="value"
+                >{{ $ctrl.NP02_DCS_01_AI2_6_Spare | number: 3 }} bar</span
+              ></a
+            >
+          </div>
+          <div id="CV4101" class="CV4101">
+            Detector pressure diff:
+            <a target="_blank" ng-href="#!/histogram/47911081630491"
+              ><span class="value"
+                >{{ $ctrl.NP02_DCS_01_AI2_7_Spare | number: 1 }}mbar</span
+              ></a
+            >
+          </div>
+          <div id="cryostat_pressure" class="cryostat_pressure">
+            Detector cryo abs:
+            <a target="_blank" ng-href="#!/histogram/47926298542363"
+              ><span class="value"
+                >{{ $ctrl.NP02_DCS_01_2PT4910 | number: 3 }} bar</span
+              ></a
+            ><br />Detector cryo gauge:&nbsp;<a
+              target="_blank"
+              ng-href="#!/histogram/47926332096795"
+              ><span class="value"
+                >{{ $ctrl.NP02_DCS_01_2PDT4915 | number: 1 }} mbar</span
+              ></a
+            ><br />
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-6 col-lg-auto pt-2">
+        <div
+        id="outer_pressure"
+        class="outer_pressure"
+        ng-model="toggle9"
+        ng-class="toggle9 ? 'data-container--large' : ''"
+        ng-click="toggle9=!toggle9"
       >
-      <br />
-      Inner pressure Diff (2PT3210):
-      <br />
-      <a target="_blank" href="#!/histogram/47943277084955">
-        <span class="value"
-          >{{ $ctrl.NP02_DCS_01_2PT3210 | number: 1 }} mbar</span
-        >
-      </a>
-    </div>
-  </div>
-  <div
-    id="inner_pressure_2"
-    class="inner_pressure_2 table_text"
-    ng-model="toggle8"
-    ng-class="toggle8 ? 'data-container--large' : ''"
-    ng-click="toggle8=!toggle8"
-  >
-    <div class="inner_pressure_2__content">
-      Inner Pressure ABS 2 (PE0102):
-      <br />
-      <a target="_blank" href="#!/histogram/47910997744411">
-        <span class="value">{{ $ctrl.NP02_PE0102AI | number: 3 }} mbar</span></a
-      >
-      <br />
-      Inner Pressure Diff 2 (2PT3220):
-      <br />
-      <a target="_blank" href="#!/histogram/47943293862171">
-        <span class="value"
-          >{{ $ctrl.NP02_DCS_01_2PT3220 | number: 1 }} mbar</span
-        >
-      </a>
-    </div>
-  </div>
+        <div class="outer_pressure_content table_text">
+          Outer pressure ABS (PE0104):
+          <br />
+          <a target="_blank" href="#!/histogram/47911031298843">
+            <span class="value">{{ $ctrl.NP02_PE0104AI | number: 3 }} mbar</span>
+          </a>
+          <br />
+          Outer pressure Diff (PE0105):
+          <br />
+          <a target="_blank" href="#!/histogram/47911048076059">
+            <span class="value">{{ $ctrl.NP02_PE0105AI | number: 1 }} mbar</span>
+          </a>
+        </div>
+      </div>
+      </div>
 
-  <div
-    class="cryostat_pressures_wrapper1"
-    ng-model="toggle6"
-    ng-class="toggle6 ? 'data-container--large' : ''"
-    ng-click="toggle6=!toggle6"
-  >
-    <div class="cryostat_pressures_wrapper2 table_text">
-      <div id="sgft" class="sgft">
-        SGFT pressure:
-        <a target="_blank" ng-href="#!/histogram/47910980967195"
-          ><span class="value"
-            >{{ $ctrl.NP02_PE0101AI | number: 1 }} mbar</span
-          ></a
-        >
-      </div>
-      <div id="CV4100" class="CV4100">
-        Detector pressure abs:
-        <a target="_blank" ng-href="#!/histogram/47911064853275"
-          ><span class="value"
-            >{{ $ctrl.NP02_DCS_01_AI2_6_Spare | number: 3 }} bar</span
-          ></a
-        >
-      </div>
-      <div id="CV4101" class="CV4101">
-        Detector pressure diff:
-        <a target="_blank" ng-href="#!/histogram/47911081630491"
-          ><span class="value"
-            >{{ $ctrl.NP02_DCS_01_AI2_7_Spare | number: 1 }}mbar</span
-          ></a
-        >
-      </div>
-      <div id="cryostat_pressure" class="cryostat_pressure">
-        Detector cryo abs:
-        <a target="_blank" ng-href="#!/histogram/47926298542363"
-          ><span class="value"
-            >{{ $ctrl.NP02_DCS_01_2PT4910 | number: 3 }} bar</span
-          ></a
-        ><br />Detector cryo gauge:&nbsp;<a
-          target="_blank"
-          ng-href="#!/histogram/47926332096795"
-          ><span class="value"
-            >{{ $ctrl.NP02_DCS_01_2PDT4915 | number: 1 }} mbar</span
-          ></a
-        ><br />
-      </div>
     </div>
   </div>
-  <div
-    id="outer_pressure"
-    class="outer_pressure"
-    ng-model="toggle9"
-    ng-class="toggle9 ? 'data-container--large' : ''"
-    ng-click="toggle9=!toggle9"
-  >
-    <div class="outer_pressure_content table_text">
-      Outer pressure ABS (PE0104):
-      <br />
-      <a target="_blank" href="#!/histogram/47911031298843">
-        <span class="value">{{ $ctrl.NP02_PE0104AI | number: 3 }} mbar</span>
-      </a>
-      <br />
-      Outer pressure Diff (PE0105):
-      <br />
-      <a target="_blank" href="#!/histogram/47911048076059">
-        <span class="value">{{ $ctrl.NP02_PE0105AI | number: 1 }} mbar</span>
-      </a>
-    </div>
-  </div>
-
-  <div
-    id="ambient"
-    class="ambient"
-    ng-model="toggle10"
-    ng-class="toggle10 ? 'data-container--large' : ''"
-    ng-click="toggle10=!toggle10"
-  >
+</div>
+ </main>
+<footer class="container page_footer">
+  <div class="ambient">
     <div class="ambient_content table_text">
       Humidity:
       <br />
@@ -476,4 +457,4 @@
       </a>
     </div>
   </div>
-</div>
+</footer>

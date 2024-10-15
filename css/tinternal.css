@@ -1,19 +1,9 @@
-body {
-  height: 100%;
-  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
 .table_header,
 .table_text, a{
   font-family: "Arial Black", Gadget, sans-serif;
   color: azure;
 }
-.left, .right, .crp4, .floor {
-  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
-  background-repeat: no-repeat;
-}
+
 .ambient {
   text-align: right;
   font-family: "Arial Black", Gadget, sans-serif;
@@ -69,16 +59,10 @@ body {
     width: 99%;
     padding-top: 10px;
   }
-  .floor-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 99%;
-    padding: 10px 0 30px 0;
-  }
+ 
   .floor {
     font-size: 12px;
-    margin-left: 6px;
+  
   }
   .floor td,
   .floor span {
@@ -96,8 +80,7 @@ body {
   }
 
   .ambient {
-    margin-right: 6px;
-    padding: 8px;
+     padding: 8px;
   }
   .ambient,
   .ambient span {
@@ -157,16 +140,9 @@ body {
     width: 99%;
     padding-top: 10px;
   }
-  .floor-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 99%;
-    padding: 10px 0 30px 0;
-  }
   .floor {
     font-size: 12px;
-    margin-left: 6px;
+   
   }
   .floor td,
   .floor span {
@@ -184,7 +160,6 @@ body {
   }
 
   .ambient {
-    margin-right: 6px;
     padding: 8px;
   }
   .ambient,
@@ -250,16 +225,10 @@ body {
     width: 99%;
     padding-top: 10px;
   }
-  .floor-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 99%;
-    padding: 10px 0 30px 0;
-  }
+ 
   .floor {
     font-size: 12px;
-    margin-left: 20px;
+ 
   }
   .floor td,
   .floor span {
@@ -277,7 +246,6 @@ body {
   }
 
   .ambient {
-    margin-right: 20px;
     padding: 8px;
   }
   .ambient,
@@ -353,21 +321,10 @@ body {
     left: 540px;
     top: 20px;
   }
-  .floor-wrapper {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    top: 780px;
-    left: 335px;
-    padding: 10px 0 30px 0;
-  }
   .floor {
     color: gray;
     font-size: 12px;
-    position: relative;
-    left: 201px;
-    top: -21px;
-  }
+    }
   .floor td,
   .floor span {
     font-size: 16px;
@@ -384,10 +341,7 @@ body {
     font-size: 18px;
   }
   .ambient {
-    top: -21px;
-    position: relative;
-    right: -237px;
-    padding: 8px;
+     padding: 8px;
   }
   .ambient,
   .ambient span {

@@ -1,13 +1,3 @@
-body {
-  height: 100%;
-  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.container {
-  position: relative;
-}
 .table_header,
 .table_text {
   font-family: "Arial Black", Gadget, sans-serif;
@@ -17,24 +7,13 @@ body {
   font-size: 12px;
 }
 .table_text {
-  font-size: 8px;
+  font-size: 6px;
   line-height: 130%;
 }
-.page_title_and_timestamps {
-  padding-bottom: 40px;
-}
-.cryostat-img-wrapper {
-  display: flex;
-  width: 95%;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 212px;
-}
+
 .cryostat-img {
-  display: block;
-  height: 170px;
-  margin-left: -5px;
+  
+  width: 100%;
 }
 .penetration-pipe1 {
   position: absolute;
@@ -63,47 +42,27 @@ body {
   transition: all 0.2s;
 }
 .bottom {
-  position: absolute;
-  top: 475px;
-  display: flex;
-  justify-content: center;
   text-align: right;
-  font-size: 8px;
-  transition: all 0.2s;
-  width: 100%;
 }
 .bottom_table {
   padding: 5px 6px;
 }
 .inner_pressure_1 {
-  position: absolute;
-  left: 2vw;
-  top: 620px;
   text-align: right;
-  transition: all 0.2s;
 }
 .inner_pressure_1__content {
   border: 1px solid white;
   padding: 5px 6px;
 }
 .inner_pressure_2 {
-  position: absolute;
-  right: 2vw;
-  top: 620px;
-  text-align: right;
-  transition: all 0.2s;
+   text-align: right;
+
 }
 .inner_pressure_2__content {
   padding: 5px 6px;
   border: 1px solid white;
 }
 
-.cryostat_pressures_wrapper1 {
-  position: absolute;
-  left: 2vw;
-  top: 690px;
-  transition: all 0.2s;
-}
 .cryostat_pressures_wrapper2 {
   border: 1px solid white;
   padding: 5px 6px;
@@ -115,63 +74,21 @@ body {
   text-align: right;
 }
 .outer_pressure {
-  position: absolute;
-  right: 2vw;
-  top: 690px;
   text-align: right;
-  transition: all 0.2s;
-}
+ }
 .outer_pressure_content {
   border: 1px solid white;
   padding: 5px 6px;
 }
 .ambient {
-  position: absolute;
-  right: 2vw;
-  top: 765px;
-  display: flex;
+   display: flex;
   justify-content: flex-end;
-  transition: all 0.2s;
+
 }
 .ambient_content {
   border: 1px solid white;
   padding: 5px 6px;
   text-align: right;
-}
-
-@media screen and (max-width: 1024px) {
-  .data-container--large {
-    position: fixed !important;
-    display: flex;
-    align-items: center;
-    left: 0 !important;
-    top: 0 !important;
-    justify-content: center;
-    width: 99vw;
-    height: 105vh;
-    z-index: 110;
-    background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
-    background-repeat: no-repeat;
-  }
-  .data-container--large.cryostat_pressures_wrapper1,
-  .data-container--large.inner_pressure_1,
-  .data-container--large.inner_pressure_2,
-  .data-container--large.outer_pressure,
-  .data-container--large.ambient,
-  .data-container--large.bottom {
-    font-size: 18px;
-    width: 99vw;
-    height: 105vh;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .data-container--large .table_header {
-    font-size: 38px;
-  }
-  .data-container--large .table_text {
-    font-size: 18px;
-    line-height: 115%;
-  }
 }
 
 /* *********************************************************** */
@@ -185,12 +102,7 @@ body {
     font-size: 10px;
     line-height: 125%;
   }
-  .cryostat-img-wrapper {
-    top: 200px;
-  }
-  .cryostat-img {
-    height: 215px;
-  }
+ 
   .bottom{
     top: 495px;
   }
@@ -202,12 +114,6 @@ body {
   }
   .cryostat_pressures_wrapper1 {
     top: 730px;
-  }
-  .outer_pressure {
-    top: 730px;
-  }
-  .ambient {
-    top: 805px;
   }
 }
 /* *********************************************************** */
@@ -221,12 +127,7 @@ body {
     font-size: 14px;
     line-height: 125%;
   }
-  .cryostat-img-wrapper {
-    top: 258px;
-  }
-  .cryostat-img {
-    height: 285px;
-  }
+
   .bottom {
     top: 550px;
   }
@@ -239,13 +140,8 @@ body {
   .cryostat_pressures_wrapper1 {
     top: 695px;
   }
-  .outer_pressure {
-    top: 695px;
-  }
-  .ambient {
-    top: 800px;
-    padding-bottom: 30px;
-  }
+
+
 }
 /* *********************************************************** */
 /* *********************************************************** */
@@ -258,12 +154,7 @@ body {
     font-size: 16px;
     line-height: 125%;
   }
-  .cryostat-img-wrapper {
-    top: 258px;
-  }
-  .cryostat-img {
-    height: 325px;
-  }
+
   .bottom {
     top: 600px;
   }
@@ -280,14 +171,7 @@ body {
     line-height: 125%;
   }
 
-  .cryostat-img-wrapper {
-    top: 250px;
-    left: 205px;
-    width: auto;
-  }
-  .cryostat-img {
-    height: 325px;
-  }
+
   .inner_pressure_1 {
     top: 70px;
     left: calc(96vw - 250px);
@@ -303,11 +187,7 @@ body {
     left: calc(96vw - 250px);
     width: 280px;
   }
-  .outer_pressure{
-    top: 450px;
-    left: calc(96vw - 250px);
-    width: 280px;
-  }
+ 
   .penetration-pipe2{
     top: 70px;
     left: calc(96vw - 550px);
@@ -332,19 +212,13 @@ body {
     width: 280px;
     display: inline-block;
   }
-  .cryostat-img-wrapper{
-    top: 220px;
-    left: calc(96vw - 940px);
-  }
+ 
   .bottom{
     top: 550px;
     left: calc(96vw - 790px);
     display: inline-block;
     width: auto;
   }
-  .ambient{
-    top: 680px;
-
-  }
+ 
 
 }
