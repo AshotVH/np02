@@ -2,11 +2,8 @@ html {
   font-size: 12px;
 }
 body {
-  background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
+  background-color: #033463;
+ }
 .page_header {
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.76);
