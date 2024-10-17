@@ -1,96 +1,679 @@
 <link rel="stylesheet" href="css/crptemps.css">
-<div class="container">
-    <div id="pageTitle">{{$ctrl.pageTitle}}</div>
-    <img id="detector" src="img/crptemps.png" alt="crptemps"/>
-    <div id="timestamp_label">Timestamp:<br/><span id="timestamp">{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span></div>
-    <div id="ambient">Humidity:<br/><a target="_blank" href="#!/histogram/47910779640603"><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a><br/>Ambient temperature:<br/><a target="_blank" href="#!/histogram/47910796417819"><span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span></a><br/>Ambient pressure:<br/><a target="_blank" href="#!/histogram/47910813195035"><span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span></a></div>
-    <div id="v422-424">
-        <a target="_blank" href="#!/histogram/47898968480539">TE0413: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[0] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47899002034971">TE0415: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[1] | number: 1 }}K</span><br/>
+<header class="container page_header">
+    <div class="row">
+      <div class="col page-title">{{$ctrl.pageTitle}}</div>
+      <div class="col timestamp_label">
+        <div class="row">
+          <div class="col">Timestamp</div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <span id="timestamp" class="timestamp"
+              >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="v419-421">
-        <a target="_blank" href="#!/histogram/47899018812187">TE0416: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[2] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47899052366619">TE0418: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[3] | number: 1 }}K</span><br/>
+  </header>
+<main class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 pt-2 pb-3">
+          <img class="crptemps_img" src="img/crptemps.png" alt="crptemps"/>
+        </div>
+        <div class="col-12 col-md-6 pt-2">
+            <div class="row">
+                <div class="col-6 col-xl-4">
+                <table class="table table-sm table-bordered caption-top">
+                    <caption>
+                      <div class="data_table__circle">1</div>
+                      <span></span>
+                    </caption>
+                    <tbody>
+                      <tr>
+                        <td>TE0324</td>
+                        <td>
+                          <a target="_blank" href="#!/histogram/47898750376731">
+                          <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[23] | number: 1 }}K</span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>TE0323</td>
+                        <td>
+                          <a target="_blank" href="#!/histogram/47898733599515">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[22] | number: 1 }}K</span>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>TE0322</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47898716822299">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[21] | number: 1 }}K</span>
+                          </a>
+                        </td>
+                      </tr>
+                 
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-6 col-xl-4">
+              <table class="table table-sm table-bordered caption-top">
+                  <caption>
+                      <div class="data_table__circle">2</div>
+                      <span></span>
+                  </caption>
+                  <tbody>
+                      <tr>
+                          <td>TE0321</td>
+                          <td>
+                              <a target="_blank" href="#!/histogram/47898700045083">
+                                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[20] | number: 1 }}K</span>
+                              </a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>TE0320</td>
+                          <td>
+                              <a target="_blank" href="#!/histogram/47898683267867">
+                                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[19] | number: 1 }}K</span>
+                              </a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>TE0319</td>
+                          <td>
+                              <a target="_blank" href="#!/histogram/47898666490651">
+                                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[18] | number: 1 }}K</span>
+                              </a>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+                </div>
+                <div class="col-6 col-xl-4">
+                  <table class="table table-sm table-bordered caption-top">
+                      <caption>
+                          <div class="data_table__circle">3</div>
+                          <span></span>
+                      </caption>
+                      <tbody>
+                          <tr>
+                              <td>TE0312</td>
+                              <td>
+                                  <a target="_blank" href="#!/histogram/47898549050139">
+                                      <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[11] | number: 1 }}K</span>
+                                  </a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>TE0311</td>
+                              <td>
+                                  <a target="_blank" href="#!/histogram/47898532272923">
+                                      <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[10] | number: 1 }}K</span>
+                                  </a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>TE0310</td>
+                              <td>
+                                  <a target="_blank" href="#!/histogram/47898515495707">
+                                      <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[9] | number: 1 }}K</span>
+                                  </a>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <div class="col-6 col-xl-4">
+                          <table class="table table-sm table-bordered caption-top">
+                              <caption>
+                                  <div class="data_table__circle">4</div>
+                                  <span></span>
+                              </caption>
+                              <tbody>
+                                  <tr>
+                                      <td>TE0309</td>
+                                      <td>
+                                          <a target="_blank" href="#!/histogram/47898498718491">
+                                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[8] | number: 1 }}K</span>
+                                          </a>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>TE0308</td>
+                                      <td>
+                                          <a target="_blank" href="#!/histogram/47898481941275">
+                                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[7] | number: 1 }}K</span>
+                                          </a>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>TE0307</td>
+                                      <td>
+                                          <a target="_blank" href="#!/histogram/47898465164059">
+                                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[6] | number: 1 }}K</span>
+                                          </a>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                </div>
+                <div class="col-6 col-xl-4">
+            <table class="table table-sm table-bordered caption-top">
+                <caption>
+                    <div class="data_table__circle">5</div>
+                    <span></span>
+                </caption>
+                <tbody>
+                    <tr>
+                        <td>TE0318</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47898649713435">
+                                <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[17] | number: 1 }}K</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TE0317</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47898632936219">
+                                <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[16] | number: 1 }}K</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TE0316</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47898616159003">
+                                <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[15] | number: 1 }}K</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TE0315</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47898599381787">
+                                <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[14] | number: 1 }}K</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TE0314</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47898582604571">
+                                <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[13] | number: 1 }}K</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TE0313</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47898565827355">
+                                <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[12] | number: 1 }}K</span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                </div>
+                <div class="col-6 col-xl-4">
+          <table class="table table-sm table-bordered caption-top">
+              <caption>
+                  <div class="data_table__circle">6</div>
+                  <span></span>
+              </caption>
+              <tbody>
+                  <tr>
+                      <td>TE0306</td>
+                      <td>
+                          <a target="_blank" href="#!/histogram/47898448386843">
+                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[5] | number: 1 }}K</span>
+                          </a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>TE0305</td>
+                      <td>
+                          <a target="_blank" href="#!/histogram/47898431609627">
+                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[4] | number: 1 }}K</span>
+                          </a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>TE0304</td>
+                      <td>
+                          <a target="_blank" href="#!/histogram/47898414832411">
+                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[3] | number: 1 }}K</span>
+                          </a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>TE0303</td>
+                      <td>
+                          <a target="_blank" href="#!/histogram/47898398055195">
+                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[2] | number: 1 }}K</span>
+                          </a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>TE0302</td>
+                      <td>
+                          <a target="_blank" href="#!/histogram/47898381277979">
+                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[1] | number: 1 }}K</span>
+                          </a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>TE0301</td>
+                      <td>
+                          <a target="_blank" href="#!/histogram/47898364500763">
+                              <span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[0] | number: 1 }}K</span>
+                          </a>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="v410-412">
-        <a target="_blank" href="#!/histogram/47899069143835">TE0419: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[4] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47899102698267">TE0421: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[5] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v407-409">
-        <a target="_blank" href="#!/histogram/47899119475483">TE0422: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[6] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47899153029915">TE0424: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[7] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v222-224">
-        <a target="_blank" href="#!/histogram/47898750376731">TE0324: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[23] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898733599515">TE0323: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[22] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898716822299">TE0322: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[21] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v219-221">
-        <a target="_blank" href="#!/histogram/47898700045083">TE0321: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[20] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898683267867">TE0320: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[19] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898666490651">TE0319: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[18] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v213-218">
-        <a target="_blank" href="#!/histogram/47898649713435">TE0318: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[17] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898632936219">TE0317: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[16] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898616159003">TE0316: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[15] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898599381787">TE0315: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[14] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898582604571">TE0314: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[13] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898565827355">TE0313: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[12] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v210-212">
-        <a target="_blank" href="#!/histogram/47898549050139">TE0312: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[11] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898532272923">TE0311: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[10] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898515495707">TE0310: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[9] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v207-209">
-        <a target="_blank" href="#!/histogram/47898498718491">TE0309: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[8] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898481941275">TE0308: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[7] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898465164059">TE0307: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[6] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v201-206">
-        <a target="_blank" href="#!/histogram/47898448386843">TE0306: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[5] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898431609627">TE0305: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[4] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898414832411">TE0304: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[3] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898398055195">TE0303: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[2] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898381277979">TE0302: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[1] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898364500763">TE0301: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card3.Value[0] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v122-124">
-        <a target="_blank" href="#!/histogram/47898347723547">TE0224: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[23] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898330946331">TE0223: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[22] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898314169115">TE0222: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[21] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v119-121">
-        <a target="_blank" href="#!/histogram/47898297391899">TE0221: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[20] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898280614683">TE0220: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[19] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898263837467">TE0219: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[18] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v113-118">
-        <a target="_blank" href="#!/histogram/47898247060251">TE0218: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[17] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898230283035">TE0217: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[16] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898213505819">TE0216: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[15] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898196728603">TE0215: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[14] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898179951387">TE0214: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[13] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898163174171">TE0213: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[12] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v110-112">
-        <a target="_blank" href="#!/histogram/47898146396955">TE0212: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[11] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898129619739">TE0211: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[10] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898112842523">TE0210: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[9] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v107-109">
-        <a target="_blank" href="#!/histogram/47898096065307">TE0209: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[8] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898079288091">TE0208: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[7] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898062510875">TE0207: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[6] | number: 1 }}K</span><br/>
-    </div>
-    <div id="v101-106">
-        <a target="_blank" href="#!/histogram/47898045733659">TE0206: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[5] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898028956443">TE0205: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[4] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47898012179227">TE0204: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[3] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47897995402011">TE0203: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[2] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47897978624795">TE0202: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[1] | number: 1 }}K</span><br/>
-        <a target="_blank" href="#!/histogram/47897961847579">TE0201: </a><span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[0] | number: 1 }}K</span><br/>
-    </div>
+    <div class="row">
+      <div class="col-6 col-xl-3">
+        <table class="table table-sm table-bordered caption-top">
+            <caption>
+              <div class="data_table__circle">7</div>
+              <span></span>
+            </caption>
 
-</div>
+            <tbody>
+              <tr>
+                <td>TE0413</td>
+                <td>
+                    <a target="_blank" href="#!/histogram/47898968480539">
+                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[0] | number: 1 }} K</span>
+                    </a>
+                </td>
+              </tr>
+              <tr>
+                <td>TE0415</td>
+                <td>
+                    <a target="_blank" href="#!/histogram/47899002034971">
+                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[1] | number: 1 }}K</span>
+                    </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="col-6 col-xl-3">
+        <table class="table table-sm table-bordered caption-top">
+            <caption>
+              <div class="data_table__circle">8</div>
+              <span></span>
+            </caption>
+
+            <tbody>
+              <tr>
+                <td>TE0422</td>
+                <td>
+                  <a target="_blank" href="#!/histogram/47899119475483"> 
+                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[6] | number: 1 }}K</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>TE0424</td>
+                <td>
+                  <a target="_blank" href="#!/histogram/47899153029915">
+                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[7] | number: 1 }}K</span>
+                </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="col-6 col-xl-3">
+        <table class="table table-sm table-bordered caption-top">
+            <caption>
+              <div class="data_table__circle">9</div>
+              <span></span>
+            </caption>
+
+            <tbody>
+              <tr>
+                <td>TE0419</td>
+                <td>
+                    <a target="_blank" href="#!/histogram/47899069143835"> 
+                    <span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[4] | number: 1 }}K</span>
+                    </a>
+                </td>
+              </tr>
+              <tr>
+                <td>TE0421</td>
+                <td>
+                  <a target="_blank" href="#!/histogram/47899102698267">
+                    <span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[5] | number: 1 }}K</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="col-6 col-xl-3">
+      <table class="table table-sm table-bordered caption-top">
+          <caption>
+            <div class="data_table__circle">10</div>
+            <span></span>
+          </caption>
+
+          <tbody>
+            <tr>
+              <td>TE0416</td>
+              <td>
+                  <a target="_blank" href="#!/histogram/47899018812187">
+                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[2] | number: 1 }}K</span>
+              </a>
+              </td>
+            </tr>
+            <tr>
+              <td>TE0418</td>
+              <td>
+                  <a target="_blank" href="#!/histogram/47899052366619"> 
+                      <span class="value">{{ $ctrl.NP02_DCS_01_TE_card4.Value[3] | number: 1 }}K</span>
+                  </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-6 col-xl-3">
+    <table class="table table-sm table-bordered caption-top">
+        <caption>
+            <div class="data_table__circle">11</div>
+            <span></span>
+        </caption>
+        <tbody>
+            <tr>
+                <td>TE0221</td>
+                <td>
+                    <a target="_blank" href="#!/histogram/47898297391899">
+                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[20] | number: 1 }}K</span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>TE0220</td>
+                <td>
+                    <a target="_blank" href="#!/histogram/47898280614683">
+                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[19] | number: 1 }}K</span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>TE0219</td>
+                <td>
+                    <a target="_blank" href="#!/histogram/47898263837467">
+                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[18] | number: 1 }}K</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+      </div>
+      <div class="col-6 col-xl-3">
+              <table class="table table-sm table-bordered caption-top">
+                  <caption>
+                      <div class="data_table__circle">12</div>
+                      <span></span>
+                  </caption>
+                  <tbody>
+                      <tr>
+                          <td>TE0224</td>
+                          <td>
+                              <a target="_blank" href="#!/histogram/47898347723547">
+                                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[23] | number: 1 }}K</span>
+                              </a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>TE0223</td>
+                          <td>
+                              <a target="_blank" href="#!/histogram/47898330946331">
+                                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[22] | number: 1 }}K</span>
+                              </a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>TE0222</td>
+                          <td>
+                              <a target="_blank" href="#!/histogram/47898314169115">
+                                  <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[21] | number: 1 }}K</span>
+                              </a>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+      </div>
+      <div class="col-6 col-xl-3">
+                        <table class="table table-sm table-bordered caption-top">
+                            <caption>
+                                <div class="data_table__circle">13</div>
+                                <span></span>
+                            </caption>
+                            <tbody>
+                                <tr>
+                                    <td>TE0212</td>
+                                    <td>
+                                        <a target="_blank" href="#!/histogram/47898146396955">
+                                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[11] | number: 1 }}K</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TE0211</td>
+                                    <td>
+                                        <a target="_blank" href="#!/histogram/47898129619739">
+                                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[10] | number: 1 }}K</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TE0210</td>
+                                    <td>
+                                        <a target="_blank" href="#!/histogram/47898112842523">
+                                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[9] | number: 1 }}K</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+      </div>
+      <div class="col-6 col-xl-3">
+        <table class="table table-sm table-bordered caption-top">
+            <caption>
+                <div class="data_table__circle">14</div>
+                <span></span>
+            </caption>
+            <tbody>
+                <tr>
+                    <td>TE0209</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47898096065307">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[8] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TE0208</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47898079288091">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[7] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TE0207</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47898062510875">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[6] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      <div class="col-6 col-xl-3">
+                                    <table class="table table-sm table-bordered caption-top">
+                                        <caption>
+                                            <div class="data_table__circle">15</div>
+                                            <span></span>
+                                        </caption>
+                                        <tbody>
+                                            <tr>
+                                                <td>TE0218</td>
+                                                <td>
+                                                    <a target="_blank" href="#!/histogram/47898247060251">
+                                                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[17] | number: 1 }}K</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>TE0217</td>
+                                                <td>
+                                                    <a target="_blank" href="#!/histogram/47898230283035">
+                                                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[16] | number: 1 }}K</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>TE0216</td>
+                                                <td>
+                                                    <a target="_blank" href="#!/histogram/47898213505819">
+                                                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[15] | number: 1 }}K</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>TE0215</td>
+                                                <td>
+                                                    <a target="_blank" href="#!/histogram/47898196728603">
+                                                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[14] | number: 1 }}K</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>TE0214</td>
+                                                <td>
+                                                    <a target="_blank" href="#!/histogram/47898179951387">
+                                                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[13] | number: 1 }}K</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>TE0213</td>
+                                                <td>
+                                                    <a target="_blank" href="#!/histogram/47898163174171">
+                                                        <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[12] | number: 1 }}K</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+      </div>
+      <div class="col-6 col-xl-3">
+        <table class="table table-sm table-bordered caption-top">
+            <caption>
+                <div class="data_table__circle">16</div>
+                <span></span>
+            </caption>
+            <tbody>
+                <tr>
+                    <td>TE0206</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47898045733659">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[5] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TE0205</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47898028956443">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[4] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TE0204</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47898012179227">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[3] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TE0203</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47897995402011">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[2] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TE0202</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47897978624795">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[1] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TE0201</td>
+                    <td>
+                        <a target="_blank" href="#!/histogram/47897961847579">
+                            <span class="value">{{ $ctrl.NP02_DCS_01_TE_card2.Value[0] | number: 1 }}K</span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+</main>
+
+<footer class="container page_footer">
+    <div class="row justify-content-end">
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <table class="table table-sm table-bordered">
+          <tbody>
+            <tr>
+              <td>Humidity</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910779640603">
+                  <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ambient temperature</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910796417819">
+                  <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ambient pressure</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910813195035">
+                  <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </footer>

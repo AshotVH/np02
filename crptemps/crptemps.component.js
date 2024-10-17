@@ -11,21 +11,15 @@ angular.module('crptemps', []).component('crptemps', {
         };
 
         this.reload = function () {
+            self.timestamp = new Date();
 
-            $http.get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=np02cryo").then(function (resultArr) {
-                var rArr = [];
-                var resjson = angular.toJson(resultArr.data);
-                var res = JSON.parse(resjson);
-                for (var i = 0; i < res.length; i++) {
-                    rArr.push(res[i]);
-                }
-
-                self.NP02_MHT0100AI = rArr[0];
-                self.NP02_TT0100AI = rArr[1];
-                self.NP02_PT0106AI = rArr[2];
-
-                self.timestamp = rArr[rArr.length-1] * 1000;
-
+            $http
+            .get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=np02cryo")
+            .then(function (result) {
+                const res = result.data;
+                self.NP02_MHT0100AI = res["47910779640603"][0];
+                self.NP02_TT0100AI = res["47910796417819"][0];
+                self.NP02_PT0106AI = res["47910813195035"][0];
             });
 
             $http.get("https://np02-data-api-slow-control.app.cern.ch/np02cachedvals?elemname=crptemps").then(function (resultArr) {
