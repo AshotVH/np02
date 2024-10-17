@@ -1,21 +1,28 @@
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-/>
 <link rel="stylesheet" href="css/multiplexer.css" />
-<div class="container">
-  <div class="page_title_and_timestamps">
-    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
-    <div id="timestamp_label" class="timestamp_label">
-      Timestamp:<br /><span id="timestamp" class="timestamp"
-        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
-      >
+<header class="container page_header">
+  <div class="row">
+    <div class="col page-title">{{$ctrl.pageTitle}}</div>
+    <div class="col timestamp_label">
+      <div class="row">
+        <div class="col">Timestamp</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span id="timestamp" class="timestamp"
+            >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+          >
+        </div>
+      </div>
     </div>
   </div>
-  <main class="multiplexer__main_container">
+</header>
+<main class="container">
+  <div class="multiplexer__main_container">
     <div class="multiplexer__data_table">
       <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(0)">
-        Card 1 <i class="fa-solid fa-circle-plus fa-lg"></i>
+        Card 1 
+        <i ng-if="!isMCardOpen[0]" class="fa-solid fa-circle-plus fa-lg"></i>
+        <i ng-if="isMCardOpen[0]" class="fa-solid fa-circle-minus"></i>
       </div>
       <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[0]}">
         <div class="multiplexer__data_table_left_column">
@@ -27,12 +34,30 @@
           </div>
         </div>
         <div class="multiplexer__data_table_right_column">
-          <div
-            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card1.Value track by $index"
-            class="multiplexer__data_table_item"
-          >
-            {{i}}&nbsp;&#8490;
-          </div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897559194395"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][0]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][0] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][0]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897575971611"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][1]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][1] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][1]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897592748827"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][2]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][2] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][2]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897609526043"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][3]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][3] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][3]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897626303259"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][4]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][4] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][4]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897643080475"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][5]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][5] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][5]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897659857691"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][6]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][6] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][6]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897676634907"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][7]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][7] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][7]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897693412123"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][8]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][8] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][8]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897710189339"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][9]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][9] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][9]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897726966555"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][10]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][10] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][10]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897743743771"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][11]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][11] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][11]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897760520987"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][12]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][12] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][12]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897777298203"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][13]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][13] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][13]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897794075419"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][14]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][14] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][14]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897810852635"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][15]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][15] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][15]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897827629851"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][16]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][16] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][16]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897844407067"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][17]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][17] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][17]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897861184283"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][18]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][18] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][18]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897877961499"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][19]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][19] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][19]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897894738715"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][20]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][20] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][20]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897911515931"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][21]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][21] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][21]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897928293147"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][22]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][22] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][22]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897945070363"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card1['Value'][23]">{{ $ctrl.NP02_DCS_01_TE_card1['Value'][23] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card1['Value'][23]">N/A</span></a></div>
         </div>
       </div>
     </div>
@@ -41,7 +66,9 @@
 
     <div class="multiplexer__data_table">
       <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(1)">
-        Card 2 <i class="fa-solid fa-circle-plus fa-lg"></i>
+        Card 2 
+        <i ng-if="!isMCardOpen[1]" class="fa-solid fa-circle-plus fa-lg"></i>
+        <i ng-if="isMCardOpen[1]" class="fa-solid fa-circle-minus"></i>
       </div>
       <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[1]}">
         <div class="multiplexer__data_table_left_column">
@@ -53,12 +80,30 @@
           </div>
         </div>
         <div class="multiplexer__data_table_right_column">
-          <div
-            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card2.Value track by $index"
-            class="multiplexer__data_table_item"
-          >
-            {{i}}&nbsp;&#8490;
-          </div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897961847579"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][0]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][0] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][0]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897978624795"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][1]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][1] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][1]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47897995402011"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][2]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][2] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][2]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898012179227"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][3]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][3] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][3]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898028956443"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][4]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][4] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][4]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898045733659"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][5]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][5] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][5]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898062510875"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][6]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][6] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][6]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898079288091"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][7]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][7] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][7]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898096065307"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][8]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][8] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][8]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898112842523"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][9]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][9] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][9]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898129619739"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][10]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][10] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][10]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898146396955"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][11]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][11] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][11]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898163174171"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][12]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][12] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][12]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898179951387"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][13]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][13] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][13]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898196728603"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][14]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][14] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][14]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898213505819"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][15]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][15] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][15]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898230283035"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][16]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][16] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][16]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898247060251"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][17]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][17] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][17]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898263837467"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][18]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][18] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][18]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898280614683"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][19]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][19] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][19]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898297391899"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][20]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][20] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][20]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898314169115"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][21]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][21] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][21]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898330946331"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][22]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][22] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][22]">N/A</span></a></div>
+            <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898347723547"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card2['Value'][23]">{{ $ctrl.NP02_DCS_01_TE_card2['Value'][23] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card2['Value'][23]">N/A</span></a></div>
         </div>
       </div>
     </div>
@@ -66,7 +111,9 @@
     <!-- **** -->
     <div class="multiplexer__data_table">
       <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(2)">
-        Card 3 <i class="fa-solid fa-circle-plus fa-lg"></i>
+        Card 3 
+        <i ng-if="!isMCardOpen[2]" class="fa-solid fa-circle-plus fa-lg"></i>
+        <i ng-if="isMCardOpen[2]" class="fa-solid fa-circle-minus"></i>
       </div>
       <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[2]}">
         <div class="multiplexer__data_table_left_column">
@@ -78,12 +125,31 @@
           </div>
         </div>
         <div class="multiplexer__data_table_right_column">
-          <div
-            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card3.Value track by $index"
-            class="multiplexer__data_table_item"
-          >
-            {{i}}&nbsp;&#8490;
-          </div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898364500763"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][0]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][0] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][0]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898381277979"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][1]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][1] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][1]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898398055195"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][2]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][2] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][2]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898414832411"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][3]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][3] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][3]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898431609627"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][4]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][4] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][4]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898448386843"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][5]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][5] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][5]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898465164059"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][6]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][6] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][6]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898481941275"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][7]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][7] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][7]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898498718491"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][8]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][8] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][8]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898515495707"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][9]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][9] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][9]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898532272923"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][10]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][10] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][10]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898549050139"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][11]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][11] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][11]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898565827355"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][12]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][12] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][12]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898582604571"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][13]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][13] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][13]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898599381787"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][14]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][14] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][14]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898616159003"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][15]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][15] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][15]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898632936219"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][16]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][16] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][16]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898649713435"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][17]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][17] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][17]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898666490651"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][18]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][18] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][18]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898683267867"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][19]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][19] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][19]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898700045083"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][20]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][20] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][20]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898716822299"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][21]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][21] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][21]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898733599515"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][22]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][22] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][22]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898750376731"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card3['Value'][23]">{{ $ctrl.NP02_DCS_01_TE_card3['Value'][23] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card3['Value'][23]">N/A</span></a></div>
+          ​
         </div>
       </div>
     </div>
@@ -91,7 +157,9 @@
     <!-- *** -->
     <div class="multiplexer__data_table">
       <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(3)">
-        Card 4 <i class="fa-solid fa-circle-plus fa-lg"></i>
+        Card 4 
+        <i ng-if="!isMCardOpen[3]" class="fa-solid fa-circle-plus fa-lg"></i>
+        <i ng-if="isMCardOpen[3]" class="fa-solid fa-circle-minus"></i>
       </div>
       <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[3]}">
         <div class="multiplexer__data_table_left_column">
@@ -103,12 +171,32 @@
           </div>
         </div>
         <div class="multiplexer__data_table_right_column">
-          <div
-            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card4.Value track by $index"
-            class="multiplexer__data_table_item"
-          >
-            {{i}}&nbsp;&#8490;
-          </div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898767153947"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][0]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][0] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][0]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898783931163"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][1]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][1] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][1]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898800708379"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][2]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][2] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][2]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898817485595"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][3]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][3] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][3]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898834262811"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][4]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][4] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][4]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898851040027"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][5]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][5] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][5]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898867817243"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][6]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][6] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][6]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898884594459"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][7]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][7] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][7]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898901371675"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][8]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][8] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][8]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898918148891"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][9]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][9] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][9]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898934926107"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][10]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][10] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][10]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898951703323"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][11]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][11] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][11]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898968480539"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][12]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][12] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][12]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47898985257755"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][13]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][13] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][13]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899002034971"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][14]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][14] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][14]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899018812187"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][15]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][15] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][15]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899035589403"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][16]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][16] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][16]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899052366619"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][17]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][17] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][17]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899069143835"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][18]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][18] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][18]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899085921051"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][19]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][19] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][19]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899102698267"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][20]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][20] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][20]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899119475483"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][21]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][21] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][21]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899136252699"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][22]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][22] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][22]">N/A</span></a></div>
+              <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899153029915"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card4['Value'][23]">{{ $ctrl.NP02_DCS_01_TE_card4['Value'][23] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card4['Value'][23]">N/A</span></a></div>
+​
+
         </div>
       </div>
     </div>
@@ -117,7 +205,9 @@
 
     <div class="multiplexer__data_table">
       <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(4)">
-        Card 5 <i class="fa-solid fa-circle-plus fa-lg"></i>
+        Card 5 
+        <i ng-if="!isMCardOpen[4]" class="fa-solid fa-circle-plus fa-lg"></i>
+        <i ng-if="isMCardOpen[4]" class="fa-solid fa-circle-minus"></i>
       </div>
       <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[4]}">
         <div class="multiplexer__data_table_left_column">
@@ -129,12 +219,30 @@
           </div>
         </div>
         <div class="multiplexer__data_table_right_column">
-          <div
-            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card5.Value track by $index"
-            class="multiplexer__data_table_item"
-          >
-            {{i}}&nbsp;&#8490;
-          </div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899169807131"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][0]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][0] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][0]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899186584347"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][1]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][1] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][1]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899203361563"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][2]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][2] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][2]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899220138779"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][3]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][3] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][3]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899236915995"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][4]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][4] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][4]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899253693211"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][5]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][5] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][5]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899270470427"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][6]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][6] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][6]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899287247643"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][7]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][7] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][7]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899304024859"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][8]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][8] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][8]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899320802075"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][9]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][9] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][9]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899337579291"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][10]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][10] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][10]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899354356507"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][11]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][11] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][11]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899371133723"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][12]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][12] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][12]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899387910939"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][13]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][13] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][13]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899404688155"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][14]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][14] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][14]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899421465371"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][15]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][15] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][15]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899438242587"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][16]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][16] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][16]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899455019803"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][17]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][17] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][17]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899471797019"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][18]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][18] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][18]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899488574235"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][19]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][19] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][19]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899505351451"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][20]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][20] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][20]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899522128667"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][21]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][21] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][21]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899538905883"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][22]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][22] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][22]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899555683099"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card5['Value'][23]">{{ $ctrl.NP02_DCS_01_TE_card5['Value'][23] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card5['Value'][23]">N/A</span></a></div>
         </div>
       </div>
     </div>
@@ -143,7 +251,9 @@
 
     <div class="multiplexer__data_table">
       <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(5)">
-        Card 6 <i class="fa-solid fa-circle-plus fa-lg"></i>
+        Card 6 
+        <i ng-if="!isMCardOpen[5]" class="fa-solid fa-circle-plus fa-lg"></i>
+        <i ng-if="isMCardOpen[5]" class="fa-solid fa-circle-minus"></i>
       </div>
       <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[5]}">
         <div class="multiplexer__data_table_left_column">
@@ -155,12 +265,31 @@
           </div>
         </div>
         <div class="multiplexer__data_table_right_column">
-          <div
-            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card6.Value track by $index"
-            class="multiplexer__data_table_item"
-          >
-            {{i}}&nbsp;&#8490;
-          </div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899572460315"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][0]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][0] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][0]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899589237531"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][1]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][1] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][1]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899606014747"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][2]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][2] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][2]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899622791963"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][3]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][3] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][3]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899639569179"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][4]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][4] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][4]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899656346395"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][5]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][5] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][5]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899673123611"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][6]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][6] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][6]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899689900827"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][7]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][7] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][7]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899706678043"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][8]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][8] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][8]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899723455259"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][9]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][9] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][9]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899740232475"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][10]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][10] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][10]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899757009691"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][11]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][11] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][11]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899773786907"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][12]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][12] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][12]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899790564123"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][13]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][13] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][13]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899807341339"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][14]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][14] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][14]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899824118555"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][15]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][15] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][15]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899840895771"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][16]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][16] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][16]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899857672987"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][17]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][17] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][17]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899874450203"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][18]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][18] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][18]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899891227419"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][19]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][19] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][19]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899908004635"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][20]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][20] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][20]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899924781851"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][21]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][21] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][21]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899941559067"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][22]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][22] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][22]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899958336283"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card6['Value'][23]">{{ $ctrl.NP02_DCS_01_TE_card6['Value'][23] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card6['Value'][23]">N/A</span></a></div>
+            
         </div>
       </div>
     </div>
@@ -169,7 +298,9 @@
 
     <div class="multiplexer__data_table">
       <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(6)">
-        Card 7 <i class="fa-solid fa-circle-plus fa-lg"></i>
+        Card 7
+        <i ng-if="!isMCardOpen[6]" class="fa-solid fa-circle-plus fa-lg"></i>
+        <i ng-if="isMCardOpen[6]" class="fa-solid fa-circle-minus"></i>
       </div>
       <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[6]}">
         <div class="multiplexer__data_table_left_column">
@@ -181,12 +312,30 @@
           </div>
         </div>
         <div class="multiplexer__data_table_right_column">
-          <div
-            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card7.Value track by $index"
-            class="multiplexer__data_table_item"
-          >
-            {{i}}&nbsp;&#8490;
-          </div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899975113499"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][0]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][0] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][0]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47899991890715"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][1]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][1] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][1]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900008667931"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][2]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][2] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][2]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900025445147"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][3]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][3] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][3]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900042222363"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][4]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][4] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][4]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900058999579"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][5]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][5] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][5]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900075776795"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][6]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][6] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][6]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900092554011"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][7]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][7] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][7]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900109331227"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][8]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][8] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][8]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900126108443"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][9]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][9] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][9]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900142885659"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][10]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][10] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][10]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900159662875"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][11]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][11] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][11]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900176440091"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][12]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][12] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][12]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900193217307"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][13]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][13] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][13]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900209994523"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][14]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][14] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][14]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900226771739"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][15]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][15] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][15]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900243548955"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][16]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][16] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][16]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900260326171"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][17]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][17] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][17]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900277103387"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][18]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][18] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][18]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900293880603"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][19]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][19] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][19]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900310657819"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][20]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][20] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][20]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900327435035"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][21]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][21] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][21]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900344212251"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][22]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][22] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][22]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900360989467"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card7['Value'][23]">{{ $ctrl.NP02_DCS_01_TE_card7['Value'][23] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card7['Value'][23]">N/A</span></a></div>
         </div>
       </div>
     </div>
@@ -195,7 +344,9 @@
 
     <div class="multiplexer__data_table">
       <div class="multiplexer__data_table_header" ng-click="$ctrl.toggleCard(7)">
-        Card 8 <i class="fa-solid fa-circle-plus fa-lg"></i>
+        Card 8 
+        <i ng-if="!isMCardOpen[7]" class="fa-solid fa-circle-plus fa-lg"></i>
+        <i ng-if="isMCardOpen[7]" class="fa-solid fa-circle-minus"></i>
       </div>
       <div class="multiplexer__data_table_data" ng-class="{show_multiplexer__data_table_data:isMCardOpen[7]}">
         <div class="multiplexer__data_table_left_column">
@@ -207,34 +358,68 @@
           </div>
         </div>
         <div class="multiplexer__data_table_right_column">
-          <div
-            ng-repeat="i in $ctrl.NP02_DCS_01_TE_card8.Value track by $index"
-            class="multiplexer__data_table_item"
-          >
-            {{i}}&nbsp;&#8490;
-          </div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900377766683"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][0]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][0] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][0]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900394543899"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][1]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][1] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][1]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900411321115"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][2]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][2] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][2]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900428098331"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][3]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][3] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][3]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900444875547"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][4]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][4] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][4]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900461652763"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][5]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][5] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][5]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900478429979"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][6]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][6] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][6]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900495207195"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][7]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][7] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][7]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900511984411"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][8]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][8] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][8]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900528761627"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][9]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][9] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][9]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900545538843"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][10]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][10] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][10]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900562316059"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][11]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][11] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][11]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900579093275"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][12]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][12] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][12]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900595870491"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][13]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][13] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][13]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900612647707"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][14]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][14] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][14]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900629424923"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][15]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][15] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][15]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900646202139"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][16]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][16] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][16]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900662979355"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][17]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][17] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][17]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900679756571"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][18]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][18] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][18]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900696533787"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][19]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][19] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][19]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900713311003"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][20]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][20] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][20]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900730088219"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][21]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][21] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][21]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900746865435"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][22]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][22] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][22]">N/A</span></a></div>
+          <div class="multiplexer__data_table_item"><a target="_blank" ng-href="#!/histogram/47900763642651"><span class="value" ng-if="$ctrl.NP02_DCS_01_TE_card8['Value'][23]">{{ $ctrl.NP02_DCS_01_TE_card8['Value'][23] }} &#8490;</span><span class="value" ng-if="!$ctrl.NP02_DCS_01_TE_card8['Value'][23]">N/A</span></a></div>
         </div>
       </div>
     </div>
-  </main>
+  </div>
 
-  <div id="ambient" class="ambient">
-    <div class="ambient_content">
-      Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"
-        ><span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a
-      ><br />Ambient temperature:<br /><a
-        target="_blank"
-        href="#!/histogram/47910796417819"
-        ><span class="value"
-          >{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span
-        ></a
-      ><br />Ambient pressure:<br /><a
-        target="_blank"
-        href="#!/histogram/47910813195035"
-        ><span class="value"
-          >{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span
-        ></a
-      >
+ 
+</main>
+<footer class="container page_footer">
+  <div class="row justify-content-end">
+    <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+      <table class="table table-sm table-bordered">
+        <tbody>
+          <tr>
+            <td>Humidity</td>
+            <td>
+              <a target="_blank" href="#!/histogram/47910779640603">
+                <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>Ambient temperature</td>
+            <td>
+              <a target="_blank" href="#!/histogram/47910796417819">
+                <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>Ambient pressure</td>
+            <td>
+              <a target="_blank" href="#!/histogram/47910813195035">
+                <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-</div>
+</footer>
