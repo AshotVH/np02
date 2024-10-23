@@ -24,12 +24,17 @@ angular.module('zmonitor', []).component('zmonitor', {
                 .then(function (result) {
                     const res = result.data;
                     console.log(res);
-                    self.NP02_DCS_01_gizmo_RES = res["47364161143323"][0];
-                    self.NP02_DCS_01_gizmo_TH = res["47364161143579"][0];
-                    self.NP02_DCS_01_gizmo_mag = res["47364161143835"][0];
-                    self.NP02_DCS_01_gizmo_I = res["47364161144091"][0];
-                    self.NP02_DCS_01_gizmo_Q = res["47364161144347"][0];
-
+                    // self.NP02_DCS_01_gizmo_RES = res["47364161143323"][0];
+                    // self.NP02_DCS_01_gizmo_TH = res["47364161143579"][0];
+                    // self.NP02_DCS_01_gizmo_mag = res["47364161143835"][0];
+                    // self.NP02_DCS_01_gizmo_I = res["47364161144091"][0];
+                    // self.NP02_DCS_01_gizmo_Q = res["47364161144347"][0];
+                    self.NP02_DCS_01_gizmo_RES = res["47364161143323"] ? parseFloat(res["47364161143323"][0]).toFixed(2) : false;
+                    self.NP02_DCS_01_gizmo_TH = res["47364161143579"] ? parseFloat(res["47364161143579"][0]).toFixed(2) : false;
+                    self.NP02_DCS_01_gizmo_mag = res["47364161143835"] ? parseFloat(res["47364161143835"][0]).toFixed(2) : false;
+                    self.NP02_DCS_01_gizmo_I = res["47364161144091"] ? parseFloat(res["47364161144091"][0]).toFixed(2) : false;
+                    self.NP02_DCS_01_gizmo_Q = res["47364161144347"] ? parseFloat(res["47364161144347"][0]).toFixed(2) : false;
+                    
                     console.log("interval occured");
 
                 });

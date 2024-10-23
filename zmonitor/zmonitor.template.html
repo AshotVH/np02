@@ -1,45 +1,155 @@
 <link rel="stylesheet" href="css/zmonitor.css">
-<div class="zmonitor_container">
-    <div class="container">
-        <div class="page_title_and_timestamps">
-          <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
-          <div id="timestamp_label" class="timestamp_label">
-            Timestamp:<br />
+
+<header class="container page_header">
+    <div class="row">
+      <div class="col page-title">{{$ctrl.pageTitle}}</div>
+      <div class="col timestamp_label">
+        <div class="row">
+          <div class="col">Timestamp</div>
+        </div>
+        <div class="row">
+          <div class="col">
             <span id="timestamp" class="timestamp"
               >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
             >
           </div>
         </div>
+      </div>
     </div>
+</header>
+<main class="container zmonitor_container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6 col-xxl-2">
+            <table class="table table-sm table-bordered zmonitor_table">
+                <tbody>
+                    <tr>
+                        <td>RES</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47364161143323">
+                                <span ng-if="$ctrl.NP02_DCS_01_gizmo_RES" class="value">{{ $ctrl.NP02_DCS_01_gizmo_RES }} &#8486;</span>
+                                <span class="value" ng-if="!$ctrl.NP02_DCS_01_gizmo_RES">N/A</span>
+                            </a>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 col-lg-6 col-xxl-2">
+            <table class="table table-sm table-bordered zmonitor_table">
+                <tbody>
+                    <tr>
+                        <td>TH</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47364161143579">
+                                <span ng-if="$ctrl.NP02_DCS_01_gizmo_TH" class="value">{{ $ctrl.NP02_DCS_01_gizmo_TH | number: 2 }} &#8486;</span>
+                                <span class="value" ng-if="!$ctrl.NP02_DCS_01_gizmo_TH">N/A</span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 col-lg-6 col-xxl-2">
+            <table class="table table-sm table-bordered zmonitor_table">
+                <tbody>
+                    <tr>
+                        <td>Mag</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47364161143835">
+                                <span ng-if="$ctrl.NP02_DCS_01_gizmo_mag" class="value">{{ $ctrl.NP02_DCS_01_gizmo_mag | number: 2 }}</span>
+                                <span class="value" ng-if="!$ctrl.NP02_DCS_01_gizmo_mag">N/A</span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 col-lg-6 col-xxl-2">
+            <table class="table table-sm table-bordered zmonitor_table">
+                <tbody>
+                    <tr>
+                        <td>I</td>
+                        <td>
+                            <a target="_blank" href="#!/histogram/47364161144091">
+                                <span ng-if="$ctrl.NP02_DCS_01_gizmo_I" class="value">{{ $ctrl.NP02_DCS_01_gizmo_I | number: 2 }}</span>
+                                <span class="value" ng-if="!$ctrl.NP02_DCS_01_gizmo_I">N/A</span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 col-lg-6 col-xxl-2">
+            <table class="table table-sm table-bordered zmonitor_table">
+                <tbody>
+                    <tr>
+                        <td>Q</td>
+                        <td>
+                           <a target="_blank" href="#!/histogram/47364161144347">
+                            <span ng-if="$ctrl.NP02_DCS_01_gizmo_Q" class="value">{{ $ctrl.NP02_DCS_01_gizmo_Q | number: 2 }}</span>
+                            <span class="value" ng-if="!$ctrl.NP02_DCS_01_gizmo_Q">N/A</span>
+                        </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+  <!-- <div class="zmonitor_container">
+
 
     <div class="zmonitor_table">
-        <div class="zmonitor_table__item table_text">RES: <a target="_blank" href="#!/histogram/47364161143323"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_RES | number: 2 }} &#8486;</span></a></div>
-        <div class="zmonitor_table__item table_text">TH: <a target="_blank" href="#!/histogram/47364161143579"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_TH | number: 2 }} &#8486;</span></a></div>
-        <div class="zmonitor_table__item table_text">Mag: <a target="_blank" href="#!/histogram/47364161143835"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_mag | number: 2 }}</span></a></div>
-        <div class="zmonitor_table__item table_text">I: <a target="_blank" href="#!/histogram/47364161144091"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_I | number: 2 }}</span></a></div>
-        <div class="zmonitor_table__item table_text">Q: <a target="_blank" href="#!/histogram/47364161144347"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_Q | number: 2 }}</span></a></div>
+        <div class="zmonitor_table__item table_text">RES: 
+            <a target="_blank" href="#!/histogram/47364161143323"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_RES | number: 2 }} &#8486;</span></a>
+        </div>
+        <div class="zmonitor_table__item table_text">TH: 
+            <a target="_blank" href="#!/histogram/47364161143579"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_TH | number: 2 }} &#8486;</span></a>
+        </div>
+        <div class="zmonitor_table__item table_text">Mag: 
+            <a target="_blank" href="#!/histogram/47364161143835"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_mag | number: 2 }}</span></a>
+        </div>
+        <div class="zmonitor_table__item table_text">I: 
+            <a target="_blank" href="#!/histogram/47364161144091"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_I | number: 2 }}</span></a>
+        </div>
+        <div class="zmonitor_table__item table_text">Q: 
+            <a target="_blank" href="#!/histogram/47364161144347"><span class="value">{{ $ctrl.NP02_DCS_01_gizmo_Q | number: 2 }}</span></a>
+        </div>
     </div>
-    
-    <div id="ambient" class="ambient">
-        <div class="ambient_content table_text">
-        Humidity:
-        <br/>
-        <a target="_blank" href="#!/histogram/47910779640603">
-            <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
-        </a>
-        <br/>
-        Ambient temperature:
-        <br/>
-        <a target="_blank" href="#!/histogram/47910796417819">
-            <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
-        </a>
-        <br/>
-        Ambient pressure:
-        <br/>
-        <a target="_blank" href="#!/histogram/47910813195035">
-            <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
-        </a>
+ 
+</div> -->
+<footer class="container page_footer">
+    <div class="row justify-content-end">
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <table class="table table-sm table-bordered">
+          <tbody>
+            <tr>
+              <td>Humidity</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910779640603">
+                  <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ambient temperature</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910796417819">
+                  <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ambient pressure</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910813195035">
+                  <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    </div>
-
-</div>
+  </footer>

@@ -1,18 +1,30 @@
 <link rel="stylesheet" href="./css/coldbox.css">
-<div class="container">
-    <div class="page_title_and_timestamps">
-        <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
-        <div id="timestamp_label" class="timestamp_label">Timestamp:<br /><span id="timestamp" class="timestamp"
-            >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span></div>
+<header class="container page_header">
+    <div class="row">
+      <div class="col page-title">{{$ctrl.pageTitle}}</div>
+      <div class="col timestamp_label">
+        <div class="row">
+          <div class="col">Timestamp</div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <span id="timestamp" class="timestamp"
+              >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
+</header>
+<main class="container">
     <!-- <img id="cb" src={{$ctrl.imgPath}} /> -->
 
     <div class="para_datas">
         <div class="upper_sensors_wrapper">
             <div id="HV" class="data_cell hv table_text">HV Bertan</div>
-            <div id="V_mon" class="data_cell v_mon table_text">V_mon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank"
-                    href="#!/histogram/48205186203935"><span class="value table_text">{{ $ctrl.NP_VD_HV_Vmon | number:1
-                        }}</span></a></div>
+            <div id="V_mon" class="data_cell v_mon table_text">V_mon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="#!/histogram/48205186203935"><span class="value table_text">{{ $ctrl.NP_VD_HV_Vmon | number:1
+                        }} </span></a></div>
             <div id="I_mon" class="data_cell i_mon table_text">I_mon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank"
                             ng-href="#!/histogramvd/48205202981151"><span class="value table_text">{{ $ctrl.NP_VD_HV_Imon | number:1
                                 }}</span></a></div>
@@ -139,15 +151,41 @@
             </div>
         </div>
       
-        <div id="ambient" class="ambient">
-            <div class="ambient_content table_text">
-            Humidity:<br /><a target="_blank" href="#!/histogram/47910779640603"><span class="value">{{
-            $ctrl.NP02_MHT0100AI | number: 1 }} %</span></a><br />Ambient temperature:<br /><a target="_blank"
-        href="#!/histogram/47910796417819"><span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }}
-            &#8451;</span></a><br />Ambient pressure:<br /><a target="_blank"
-        href="#!/histogram/47910813195035"><span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span></a>
-            </div>
-    </div>
+
 
 </div>
-</div>
+</main>
+<footer class="container page_footer">
+    <div class="row justify-content-end">
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <table class="table table-sm table-bordered">
+          <tbody>
+            <tr>
+              <td>Humidity</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910779640603">
+                  <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ambient temperature</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910796417819">
+                  <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ambient pressure</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910813195035">
+                  <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </footer>

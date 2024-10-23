@@ -1,76 +1,16 @@
-body {
-    height: 100%;
-    background-image: linear-gradient(to bottom right, #033463, rgb(28 44 56));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+a .value, td  {
+    font-size: 1.4rem;
 }
 .zmonitor_container {
-    position: relative;
-}
-.container {
-    position: relative;
-}
-.page_title_and_timestamps {
-    padding-bottom: 40px;
-}
-.page-title {
-    width: 165px;
+   padding-top: 100px;
+   padding-bottom: 100px;
 }
 .zmonitor_table {
-    margin-top: 200px;
-    display: flex;
-    justify-content: center;
-}
-.zmonitor_table__item{
-    padding: 10px;
-    font-family: "Arial Black", Gadget, sans-serif;
-    color: azure;
-    font-size: 24px;
-    border: 1px solid white;
-    min-width: 15vw;
-    margin: 0 1px;
-}
-.ambient {
-    position: relative;
-    margin-top: 150px;
-    margin-right: 4vw;
-    display: flex;
-    justify-content: flex-end;
-    transition: all 0.2s;
-}
-.ambient_content {
-    border: 1px solid white;
-    padding: 5px 6px;
-    text-align: right;
-}
-.table_header {
-    font-size: 12px;
-}
-.table_text {
-    font-size: 12px;
-    line-height: 130%;
-}
-.table_text {
-  font-family: "Arial Black", Gadget, sans-serif;
-  color: azure;
-}
-
-@media screen and (min-width: 480px) {
-    .page-title {
-        width: auto;
-      }
-    .table_text {
-        font-size: 18px;
-        line-height: 125%;
-    }  
-    .ambient {
-        margin-top: 250px;
-    }
+    table-layout: fixed;
+    width: 100%;
 }
 @media screen and (min-width: 768px) {
-    .ambient {
-       margin-top: 300px;
-      
-    }
+    a .value, td  {
+        font-size: 1.6rem;
+    }   
 }
