@@ -17,7 +17,9 @@ caption {
   color: #212529;
   border: 1px solid #f8f9fa;
 }
-
+.container {
+  max-width: 95%;
+}
 .data_table__circle {
   display: inline-block;
   border: 1px solid;
