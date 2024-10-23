@@ -73,7 +73,7 @@ angular.module("histogram", []).component("histogram", {
         )[0];
         highchartsDataTable.classList.toggle("hidden");
       };
-      this.drawChart = function (containerId, chartData,charttitle) {
+      this.drawChart = function (containerId, chartData, charttitle) {
         Highcharts.chart(containerId, {
           chart: {
             zoomType: "xy",
@@ -149,6 +149,7 @@ angular.module("histogram", []).component("histogram", {
   
         $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
             .then(function onSuccess(response) {
+              console.log(response.data);
               const chartData = Object.entries(response.data).map(([key, value]) => {
                 return [parseInt(key), value];
               });
@@ -167,6 +168,7 @@ angular.module("histogram", []).component("histogram", {
         const [startDateStr, endDateStr] = self.daysAndHoursToUTCDateRange(self.daysAndHours);
         $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
             .then(function onSuccess(response) {
+              console.log(response.data);
               const chartData = Object.entries(response.data).map(([key, value]) => {
                 return [parseInt(key), value];
               });
