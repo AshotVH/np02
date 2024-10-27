@@ -2,7 +2,7 @@
 angular.module('cryogenics', []).component('cryogenics', {
     templateUrl: 'cryogenics/cryogenics.template.html',
     controller: function cryogenicsController($scope, $http, $interval) {
-        this.pageTitle = "NP02 cryogenics";
+        this.pageTitle = "NP02 Cryogenics";
         this.natalie = 1;
         const self = this;
 
