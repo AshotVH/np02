@@ -1,224 +1,31 @@
-.table_header,
-.table_text {
-  font-family: "Arial Black", Gadget, sans-serif;
-  color: azure;
-}
-.table_header {
-  font-size: 12px;
-}
-.table_text {
-  font-size: 6px;
-  line-height: 130%;
+a .value, td, th {
+  font-size: 0.5rem;
 }
 
 .cryostat-img {
-  
-  width: 100%;
+    width: 100%;
 }
-.penetration-pipe1 {
-  position: absolute;
-  left: 2vw;
-  text-align: right;
-  transition: all 0.2s;
-}
-.penetration-pipe2 {
-  position: absolute;
-  right: 2vw;
-  text-align: right;
-  transition: all 0.2s;
+.inside_table__big_cell{
+  text-align: center; 
+  vertical-align: middle;
 }
 
-.penetration-pipe3 {
-  position: absolute;
-  right: 2vw;
-  top: 385px;
-  transition: all 0.2s;
-}
-.penetration-pipe4 {
-  position: absolute;
-  left: 2vw;
-  top: 385px;
-  text-align: right;
-  transition: all 0.2s;
-}
-.bottom {
-  text-align: right;
-}
-.bottom_table {
-  padding: 5px 6px;
-}
-.inner_pressure_1 {
-  text-align: right;
-}
-.inner_pressure_1__content {
-  border: 1px solid white;
-  padding: 5px 6px;
-}
-.inner_pressure_2 {
-   text-align: right;
-
-}
-.inner_pressure_2__content {
-  padding: 5px 6px;
-  border: 1px solid white;
-}
-
-.cryostat_pressures_wrapper2 {
-  border: 1px solid white;
-  padding: 5px 6px;
-}
-.sgft,
-.CV4100,
-.CV4101,
-.cryostat_pressure {
-  text-align: right;
-}
-.outer_pressure {
-  text-align: right;
- }
-.outer_pressure_content {
-  border: 1px solid white;
-  padding: 5px 6px;
-}
-.ambient {
-   display: flex;
-  justify-content: flex-end;
-
-}
-.ambient_content {
-  border: 1px solid white;
-  padding: 5px 6px;
-  text-align: right;
-}
 
 /* *********************************************************** */
 /* *********************************************************** */
 /* *********************************************************** */
-@media screen and (min-width: 480px) {
-  .table_header {
-    font-size: 14px;
-  }
-  .table_text {
-    font-size: 10px;
-    line-height: 125%;
-  }
- 
-  .bottom{
-    top: 495px;
-  }
-  .inner_pressure_1 {
-    top: 657px;
-  }
-  .inner_pressure_2 {
-    top: 657px;
-  }
-  .cryostat_pressures_wrapper1 {
-    top: 730px;
-  }
+@media screen and (min-width: 460px) {
+  a .value, td, th {
+  font-size: 1.1rem;
 }
-/* *********************************************************** */
-/* *********************************************************** */
-/* *********************************************************** */
+}
 @media screen and (min-width: 768px) {
-  .table_header {
-    font-size: 18px;
-  }
-  .table_text {
-    font-size: 14px;
-    line-height: 125%;
-  }
-
-  .bottom {
-    top: 550px;
-  }
-  .inner_pressure_1 {
-    top: 585px;
-  }
-  .inner_pressure_2 {
-    top: 585px;
-  }
-  .cryostat_pressures_wrapper1 {
-    top: 695px;
-  }
-
-
+  a .value, td, th {
+  font-size: 1.4rem;
 }
-/* *********************************************************** */
-/* *********************************************************** */
-/* *********************************************************** */
-@media screen and (min-width: 1024px) {
-  .table_header {
-    font-size: 22px;
-  }
-  .table_text {
-    font-size: 16px;
-    line-height: 125%;
-  }
-
-  .bottom {
-    top: 600px;
-  }
 }
-/* *********************************************************** */
-/* *********************************************************** */
-/* *********************************************************** */
 @media screen and (min-width: 1400px) {
-  .table_header {
-    font-size: 22px;
-  }
-  .table_text {
-    font-size: 16px;
-    line-height: 125%;
-  }
-
-
-  .inner_pressure_1 {
-    top: 70px;
-    left: calc(96vw - 250px);
-    width: 280px;
-  }
-  .inner_pressure_2{
-    top: 190px;
-    left: calc(96vw - 250px);
-    width: 280px;
-  }
-  .cryostat_pressures_wrapper1{
-    top: 310px;
-    left: calc(96vw - 250px);
-    width: 280px;
-  }
- 
-  .penetration-pipe2{
-    top: 70px;
-    left: calc(96vw - 550px);
-    width: 280px;
-    display: inline-block;
-  }
-  .penetration-pipe3{
-    top: 440px;
-    left: calc(96vw - 550px);
-    width: 280px;
-    display: inline-block;
-  }
-  .penetration-pipe1{
-    top: 70px;
-    left: calc(96vw - 1025px);
-    width: 280px;
-    display: inline-block;
-  }
-  .penetration-pipe4{
-    top: 450px;
-    left: calc(96vw - 1080px);
-    width: 280px;
-    display: inline-block;
-  }
- 
-  .bottom{
-    top: 550px;
-    left: calc(96vw - 790px);
-    display: inline-block;
-    width: auto;
-  }
- 
-
+  a .value, td, th {
+  font-size: 1.6rem;
+}
 }
