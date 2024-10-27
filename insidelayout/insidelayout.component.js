@@ -2,7 +2,7 @@
 angular.module('insidelayout', []).component('insidelayout', {
     templateUrl: 'insidelayout/insidelayout.template.html',
     controller: function insidelayoutController($scope, $http, $interval) {
-        this.pageTitle = "NP02 T-Insulation";
+        this.pageTitle = "NP02 Membrane";
         this.natalie = 1;
         this.TT0101 = "";
         var self = this;

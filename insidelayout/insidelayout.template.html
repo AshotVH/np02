@@ -1,95 +1,356 @@
-<link rel="stylesheet" href="css/insidelayout.css">
-<div class="container">
-    <div id="pageTitle" class="page-title">{{$ctrl.pageTitle}}</div>
-    <div id="timestamp_label" class="timestamp_label">
-      Timestamp:<br />
-      <span id="timestamp" class="timestamp"
-        >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span
-      >
-    </div>
-
-    <img id="detector" src="img/insidelayout.png" alt="gttprobes"/>
-
-    <div id="tss001aaba">
-        001 AA/BA<br/><a target="_blank" href="#!/histogram/47897559194395"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AA_BA < 80 || $ctrl.NP02_DCS_01_TSS_001_AA_BA > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AA_BA | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss001abbb">
-        001 AB/BB<br/><a target="_blank" href="#!/histogram/47897575971611"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AB_BB < 80 || $ctrl.NP02_DCS_01_TSS_001_AB_BB > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AB_BB | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss001acbc">
-        001 AC/BC<br/><a target="_blank" href="#!/histogram/47897760520987"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AC_BC < 80 || $ctrl.NP02_DCS_01_TSS_001_AC_BC > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AC_BC | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss001adbd">
-        001 AD/BD<br/><a target="_blank" href="#!/histogram/47897659857691"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AD_BD < 80 || $ctrl.NP02_DCS_01_TSS_001_AD_BD > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AD_BD | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss001aebe">
-        001 AE/BE<br/><a target="_blank" href="#!/histogram/47897861184283"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AE_BE < 80 || $ctrl.NP02_DCS_01_TSS_001_AE_BE > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AE_BE | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002aaba">
-        002 AA/BA<br/><a target="_blank" href="#!/histogram/47897592748827"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AA_BA < 80 || $ctrl.NP02_DCS_01_TSS_002_AA_BA > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AA_BA | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002abbb">
-        002 AB/BB<br/><a target="_blank" href="#!/histogram/47897676634907"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AB_BB < 80 || $ctrl.NP02_DCS_01_TSS_002_AB_BB > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AB_BB | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002adbd">
-        002 AD/BD<br/><a target="_blank" href="#!/histogram/47897794075419"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AD_BD < 80 || $ctrl.NP02_DCS_01_TSS_002_AD_BD > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AD_BD | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002aebe">
-        002 AE/BE<br/><a target="_blank" href="#!/histogram/47897894738715"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AE_BE < 80 || $ctrl.NP02_DCS_01_TSS_002_AE_BE > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AE_BE | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002afbf">
-        002 AF/BF<br/><a target="_blank" href="#!/histogram/47897693412123"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AF_BF < 80 || $ctrl.NP02_DCS_01_TSS_002_AF_BF > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AF_BF | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002ahbh">
-        002 AH/BH<br/><a target="_blank" href="#!/histogram/47897609526043"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AH_BH < 80 || $ctrl.NP02_DCS_01_TSS_002_AH_BH > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AH_BH | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002aibi">
-        002 AI/BI<br/><a target="_blank" href="#!/histogram/47897626303259"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AI_BI < 80 || $ctrl.NP02_DCS_01_TSS_002_AI_BI > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AI_BI | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002ajbj">
-        002 AJ/BJ<br/><a target="_blank" href="#!/histogram/47897810852635"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AJ_BJ < 80 || $ctrl.NP02_DCS_01_TSS_002_AJ_BJ > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AJ_BJ | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002akbk">
-        002 AK/BK<br/><a target="_blank" href="#!/histogram/47897827629851"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AK_BK < 80 || $ctrl.NP02_DCS_01_TSS_002_AK_BK > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AK_BK | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002albl">
-        002 AL/BL<br/><a target="_blank" href="#!/histogram/47897844407067"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AL_BL < 80 || $ctrl.NP02_DCS_01_TSS_002_AL_BL > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AL_BL | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002ambm">
-        002 AM/BM<br/><a target="_blank" href="#!/histogram/47897710189339"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AM_BM < 80 || $ctrl.NP02_DCS_01_TSS_002_AM_BM > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AM_BM | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002anbn">
-        002 AN/BN<br/><a target="_blank" href="#!/histogram/47897726966555"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AN_BN < 80 || $ctrl.NP02_DCS_01_TSS_002_AN_BN > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AN_BN | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002aobo">
-        002 AO/BO<br/><a target="_blank" href="#!/histogram/47897743743771"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AO_BO < 80 || $ctrl.NP02_DCS_01_TSS_002_AO_BO > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AO_BO | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002apbp">
-        002 AP/BP<br/><a target="_blank" href="#!/histogram/47897911515931"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AP_BP < 80 || $ctrl.NP02_DCS_01_TSS_002_AP_BP > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AP_BP | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002aqbq">
-        002 AQ/BQ<br/><a target="_blank" href="#!/histogram/47897928293147"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AQ_BQ < 80 || $ctrl.NP02_DCS_01_TSS_002_AQ_BQ > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AQ_BQ | number: 1) }} &#8490;</span></a>
-    </div>
-    <div id="tss002arbr">
-        002 AR/BR<br/><a target="_blank" href="#!/histogram/47897945070363"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AR_BR < 80 || $ctrl.NP02_DCS_01_TSS_002_AR_BR > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AR_BR | number: 1) }} &#8490;</span></a>
-    </div>
-    
-    <div id="ambient">Humidity:<br/>
-        <a target="_blank" href="#!/histogram/47910779640603">
-            <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
-        </a>
-            <br/>
-            Ambient temperature:
-            <br/>
-            <a target="_blank" href="#!/histogram/47910796417819">
-                <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
-            </a>
-            <br/>
-            Ambient pressure:
-            <br/>
-            <a target="_blank" href="#!/histogram/47910813195035">
-                <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
-            </a>
+<link rel="stylesheet" href="css/insidelayout.css?v=58">
+<header class="container page_header">
+    <div class="row">
+      <div class="col page-title">{{$ctrl.pageTitle}}</div>
+      <div class="col timestamp_label">
+        <div class="row">
+          <div class="col">Timestamp</div>
         </div>
+        <div class="row">
+          <div class="col">
+            <span id="timestamp" class="timestamp"
+              >{{ $ctrl.timestamp | date: 'dd-MM-yyyy HH:mm:ss' }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<main class="container">
+    <div class="row pt-2 pb-2">
+        <div class="col-12 col-lg-7">
+            <img class="membrane_img" src="img/insidelayout.png" alt="gttprobes"/>
+        </div>
+        <div class="col-12 col-lg-5">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                        <tbody> 
+                            <tr>
+                                <td><div class="data_table__circle">1</div></td>
+                                <td>
 
-</div>
+                                </td>
+                                <td>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="data_table__circle">2</div>
+                                </td>
+                                <td>
+                                    TSS-002 AI/BI
+                                </td>
+                                <td>
+                                    <a target="_blank" href="#!/histogram/47897626303259"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AI_BI < 80 || $ctrl.NP02_DCS_01_TSS_002_AI_BI > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AI_BI | number: 1) }} &#8490;</span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                        <tbody>
+                            <tr>
+                                <td><div class="data_table__circle">3</div></td>
+                                <td>TSS-002 AP/BP</td>
+                                <td>
+                                    <a target="_blank" href="#!/histogram/47897911515931"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AP_BP < 80 || $ctrl.NP02_DCS_01_TSS_002_AP_BP > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AP_BP | number: 1) }} &#8490;</span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">4</div></td>
+                                        <td>TSS-001 AE/BE</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897861184283"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AE_BE < 80 || $ctrl.NP02_DCS_01_TSS_001_AE_BE > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AE_BE | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">5</div></td>
+                                        <td>TSS-002 AR/BR</td>
+                                        <td>
+                                          <a target="_blank" href="#!/histogram/47897945070363"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AR_BR < 80 || $ctrl.NP02_DCS_01_TSS_002_AR_BR > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AR_BR | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">6</div></td>
+                                        <td>TSS-002 AQ/BQ</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897928293147"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AQ_BQ < 80 || $ctrl.NP02_DCS_01_TSS_002_AQ_BQ > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AQ_BQ | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">7</div></td>
+                                        <td>TSS-002 AF/BF</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897693412123"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AF_BF < 80 || $ctrl.NP02_DCS_01_TSS_002_AF_BF > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AF_BF | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">8</div></td>
+                                        <td>TSS-002 AA/BA</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897592748827"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AA_BA < 80 || $ctrl.NP02_DCS_01_TSS_002_AA_BA > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AA_BA | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">9</div></td>
+                                        <td>TSS-002 AB/BB</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897676634907"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AB_BB < 80 || $ctrl.NP02_DCS_01_TSS_002_AB_BB > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AB_BB | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">10</div></td>
+                                        <td>TSS-001 AA/BA</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897559194395"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AA_BA < 80 || $ctrl.NP02_DCS_01_TSS_001_AA_BA > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AA_BA | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">11</div></td>
+                                        <td>
+                                            TSS-002 AD/BD
+                                        </td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897794075419"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AD_BD < 80 || $ctrl.NP02_DCS_01_TSS_002_AD_BD > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AD_BD | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">12</div></td>
+                                        <td>TSS-002 AE/BE</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897894738715"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AE_BE < 80 || $ctrl.NP02_DCS_01_TSS_002_AE_BE > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AE_BE | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">13</div></td>
+                                        <td>TSS-002 AM/BM</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897710189339"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AM_BM < 80 || $ctrl.NP02_DCS_01_TSS_002_AM_BM > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AM_BM | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">14</div></td>
+                                        <td>TSS-002 AN/BN</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897726966555"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AN_BN < 80 || $ctrl.NP02_DCS_01_TSS_002_AN_BN > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AN_BN | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">15</div></td>
+                                        <td>TSS-001 AD/BD</td>
+                                        <td>
+                                           <a target="_blank" href="#!/histogram/47897659857691"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AD_BD < 80 || $ctrl.NP02_DCS_01_TSS_001_AD_BD > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AD_BD | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">16</div></td>
+                                        <td>TSS-002 AO/BO</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897743743771"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AO_BO < 80 || $ctrl.NP02_DCS_01_TSS_002_AO_BO > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AO_BO | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">17</div></td>
+                                        <td>TSS-002 AJ/BJ</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897810852635"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AJ_BJ < 80 || $ctrl.NP02_DCS_01_TSS_002_AJ_BJ > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AJ_BJ | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">18</div></td>
+                                        <td>TSS-001 AC/BC</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897760520987"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AC_BC < 80 || $ctrl.NP02_DCS_01_TSS_001_AC_BC > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AC_BC | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">19</div></td>
+                                        <td>TSS-002 AK/BK</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897827629851"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AK_BK < 80 || $ctrl.NP02_DCS_01_TSS_002_AK_BK > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AK_BK | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">20</div></td>
+                                        <td>TSS-002 AL/BL</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897844407067"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AL_BL < 80 || $ctrl.NP02_DCS_01_TSS_002_AL_BL > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AL_BL | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">21</div></td>
+                                        <td>TSS-001 AB/BB</td>
+                                        <td>
+                                           <a target="_blank" href="#!/histogram/47897575971611"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_001_AB_BB < 80 || $ctrl.NP02_DCS_01_TSS_001_AB_BB > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_001_AB_BB | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-sm table-bordered caption-top">
+                           <tbody>
+                                   <tr>
+                                        <td><div class="data_table__circle">22</div></td>
+                                        <td>TSS-002 AH/BH</td>
+                                        <td>
+                                            <a target="_blank" href="#!/histogram/47897609526043"><span class="value">{{ ($ctrl.NP02_DCS_01_TSS_002_AH_BH < 80 || $ctrl.NP02_DCS_01_TSS_002_AH_BH > 350) ? "Error" : ($ctrl.NP02_DCS_01_TSS_002_AH_BH | number: 1) }} &#8490;</span></a>
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="container page_footer">
+    <div class="row justify-content-end">
+      <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <table class="table table-sm table-bordered">
+          <tbody>
+            <tr>
+              <td>Humidity</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910779640603">
+                  <span class="value">{{ $ctrl.NP02_MHT0100AI | number: 1 }} %</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ambient temperature</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910796417819">
+                  <span class="value">{{ $ctrl.NP02_TT0100AI | number: 1 }} &#8451;</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ambient pressure</td>
+              <td>
+                <a target="_blank" href="#!/histogram/47910813195035">
+                  <span class="value">{{ $ctrl.NP02_PT0106AI | number: 1 }} mbar</span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</footer>
