@@ -21,7 +21,7 @@ angular.module("histogram", []).component("histogram", {
       this.sensorName = "";
       this.daysAndHours = '0-6';
       self.activeDayBtn = 1;
-      
+      self.average = false;
       $scope.buttonIsActive = [false, false, false, false, false, false, false];
       $scope.buttonIsActive[self.activeDayBtn] = true;
       $scope.buttonIsLodaing = [false, false, false, false, false, false, false];
@@ -39,7 +39,8 @@ angular.module("histogram", []).component("histogram", {
       //     console.error('Error loading config file', error);
       //   });
     // -------------------------------------------------------
-      
+      $scope.average_selected = false;
+     
       this.daysAndHoursToBtnNum = function (daysAndHours){
         switch(daysAndHours){
           case '0-1': 
@@ -73,7 +74,7 @@ angular.module("histogram", []).component("histogram", {
         )[0];
         highchartsDataTable.classList.toggle("hidden");
       };
-      this.drawChart = function (containerId, chartData, charttitle) {
+      this.drawChart = function (containerId, chartData, charttitle, chartColor = "red") {
         Highcharts.chart(containerId, {
           chart: {
             zoomType: "xy",
@@ -125,7 +126,7 @@ angular.module("histogram", []).component("histogram", {
                 xDateFormat: '%Y-%b-%e, %H:%M:%S'
               },
               name: "Values",
-              color: "#ff0000",
+              color: chartColor,
             },
           ],
         });
@@ -146,50 +147,94 @@ angular.module("histogram", []).component("histogram", {
         const endDateStr = endDate.toISOString().slice(0, 19);
         $interval.cancel;
         $scope.rangeBtnLoading = true;
-  
-        $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
-            .then(function onSuccess(response) {
-              console.log(response.data);
-              const chartData = Object.entries(response.data).map(([key, value]) => {
-                return [parseInt(key), value];
-              });
-              self.drawChart("container", chartData);
-              $scope.rangeBtnLoading = false;
-              $scope.requestsList.fill(false);
-              $scope.requestsList[8] = true;
-
+        if($scope.average_selected){
+          $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram_average/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
+          .then(function onSuccess(response) {
+            // console.log(response.data);
+            const chartData = Object.entries(response.data).map(([key, value]) => {
+              return [parseInt(key), value];
             });
-        return false;
+            self.drawChart("container", chartData, "Average", "blue");
+            $scope.rangeBtnLoading = false;
+            $scope.requestsList.fill(false);
+            $scope.requestsList[8] = true;
+
+          });
+        } else {
+          
+          $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
+          .then(function onSuccess(response) {
+            // console.log(response.data);
+            const chartData = Object.entries(response.data).map(([key, value]) => {
+              return [parseInt(key), value];
+            });
+            self.drawChart("container", chartData);
+            $scope.rangeBtnLoading = false;
+            $scope.requestsList.fill(false);
+            $scope.requestsList[8] = true;
+
+          });
+        }
+    
+      return false;
       };
       this.reload = function (setDaysBtnPressed = false) {
         $interval.cancel;
-        console.log($scope.setDaysBtnLoading);
+        // console.log($scope.setDaysBtnLoading);
        
         const [startDateStr, endDateStr] = self.daysAndHoursToUTCDateRange(self.daysAndHours);
-        $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
-            .then(function onSuccess(response) {
-              console.log(response.data);
-              const chartData = Object.entries(response.data).map(([key, value]) => {
-                return [parseInt(key), value];
-              });
-              if(!self.charttitle){
-                self.charttitle = "";
-              }
-              self.drawChart("container", chartData, self.charttitle);
-              const loadingBtnNum = self.daysAndHoursToBtnNum(self.daysAndHours);
-              $scope.buttonIsLodaing[loadingBtnNum] = false;
-             
-              if(setDaysBtnPressed){
-                $scope.requestsList.fill(false);
-                $scope.requestsList[7] = true;
-                $scope.setDaysBtnLoading = false;
-              } else {
-                $scope.requestsList.fill(false);
-                $scope.requestsList[self.daysAndHoursToBtnNum(self.daysAndHours)] = true;
-                console.log($scope.requestsList); 
-              }
-      
+        if($scope.average_selected) {
+          $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram_average/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
+          .then(function onSuccess(response) {
+            // console.log(response.data);
+            const chartData = Object.entries(response.data).map(([key, value]) => {
+              return [parseInt(key), value];
             });
+            if(!self.charttitle){
+              self.charttitle = "";
+            }
+            self.drawChart("container", chartData, self.charttitle, "blue");
+            const loadingBtnNum = self.daysAndHoursToBtnNum(self.daysAndHours);
+            $scope.buttonIsLodaing[loadingBtnNum] = false;
+           
+            if(setDaysBtnPressed){
+              $scope.requestsList.fill(false);
+              $scope.requestsList[7] = true;
+              $scope.setDaysBtnLoading = false;
+            } else {
+              $scope.requestsList.fill(false);
+              $scope.requestsList[self.daysAndHoursToBtnNum(self.daysAndHours)] = true;
+              // console.log($scope.requestsList); 
+            }
+    
+          });
+        } else {
+          $http.get("https://np02-data-api-slow-control.app.cern.ch/np02histogram/" + self.elemId + "/" + startDateStr + "/" + endDateStr)
+          .then(function onSuccess(response) {
+            // console.log(response.data);
+            const chartData = Object.entries(response.data).map(([key, value]) => {
+              return [parseInt(key), value];
+            });
+            if(!self.charttitle){
+              self.charttitle = "";
+            }
+            self.drawChart("container", chartData, self.charttitle);
+            const loadingBtnNum = self.daysAndHoursToBtnNum(self.daysAndHours);
+            $scope.buttonIsLodaing[loadingBtnNum] = false;
+           
+            if(setDaysBtnPressed){
+              $scope.requestsList.fill(false);
+              $scope.requestsList[7] = true;
+              $scope.setDaysBtnLoading = false;
+            } else {
+              $scope.requestsList.fill(false);
+              $scope.requestsList[self.daysAndHoursToBtnNum(self.daysAndHours)] = true;
+              // console.log($scope.requestsList); 
+            }
+    
+          });
+        };
+      
       };
       this.dayChanger = function (daysAndHours, btnNum) {
         
@@ -222,19 +267,19 @@ angular.module("histogram", []).component("histogram", {
         self.reload(true);
         
       };
-      this.promise;
+      // this.promise;
       this.reload();
-      $scope.start = function () {
-        $scope.stop();
-        self.promise = $interval(self.reload, 300000);
-      };
-      $scope.stop = function () {
-        $interval.cancel(self.promise);
-      };
-      $scope.start();
-      $scope.$on("$destroy", function () {
-        $scope.stop();
-      });
+      // $scope.start = function () {
+      //   $scope.stop();
+      //   self.promise = $interval(self.reload, 300000);
+      // };
+      // $scope.stop = function () {
+      //   $interval.cancel(self.promise);
+      // };
+      // $scope.start();
+      // $scope.$on("$destroy", function () {
+      //   $scope.stop();
+      // });
     },
   ],
 });

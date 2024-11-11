@@ -49,6 +49,13 @@
   </div>
   <div class="row justify-content-center">
     <div class="col-auto pt-2">
+      <div class="form-check">
+        <input type="checkbox" class="btn-check btn_average" id="btn_average" ng-model="average_selected" autocomplete="off">
+        <label class="btn btn-dark histogram__button btn-outline-primary" for="btn_average">Average</label><br>
+      </div>
+  
+    </div>
+    <div class="col-auto pt-2">
       <form action="" class="navbar__time_input_form">
         <input class="navbar__time_input" type="number" min="1" ng-model="$ctrl.dd" placeholder="Days" />
         <button
